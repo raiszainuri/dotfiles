@@ -1,0 +1,8 @@
+> clock_activewin.sh
+	https://jrgraphix.net/r/Unicode/2400-243F
+	https://bandithijo.github.io/blog/dwm-window-manager-anti-ribet#status-bar
+	https://askubuntu.com/questions/900970/how-do-i-look-up-the-name-of-the-current-workspace
+
+> scrot_clipboard.sh
+	https://askubuntu.com/questions/759651/how-to-copy-an-image-to-the-clipboard-from-a-file-using-command-line
+	https://bbs.archlinux.org/viewtopic.php?id=163312
