@@ -186,17 +186,18 @@ bindsym $mod+r mode "resize"
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 #my config
-bindsym $mod+Print exec --no-startup-id ~/.local/bin/scrot.sh
+bindsym $mod+Print exec --no-startup-id ~/.config/MySetting/scrot_clipboard.sh
+bindsym Mod1+Tab exec --no-startup-id ~/.config/MySetting/rofi_windows_switcher.sh
 
-exec_always --no-startup-id feh --bg-fill -Z ~/Pictures/Wallpaper/wallpaper.jpg
+exec_always --no-startup-id feh --bg-fill -Z ~/Pictures/Wallpaper/wallpaper2.jpg
 exec --no-startup-id xinput set-prop 12 282 1
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 #exec --no-startup-id xfce4-power-manager
 
 title_align center
 #borderless
-for_window [class=".*"] title_format "%title"
-#for_window [class=".*"] border pixel 0
+#for_window [class=".*"] title_format "%title"
+for_window [class=".*"] border pixel 3
 #https://gist.github.com/lirenlin/9892945
 
 # Screen Brightness controls bandithijo
