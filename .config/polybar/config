@@ -304,13 +304,14 @@ label-muted-foreground = #E50000
 label-muted-underline = #E50000
 
 bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
+bar-volume-foreground-0 = #00fff2
+bar-volume-foreground-1 = #7bff00
+bar-volume-foreground-2 = #fbff00
+bar-volume-foreground-3 = #ffd900
+bar-volume-foreground-4 = #ff9100
+bar-volume-foreground-5 = #ff6600
+bar-volume-foreground-6 = #ff0000
+
 bar-volume-gradient = true
 bar-volume-indicator = -
 ;bar-volume-indicator = |
