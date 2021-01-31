@@ -197,12 +197,13 @@ exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 title_align center
 #borderless
 #for_window [class=".*"] title_format "%title"
-for_window [class=".*"] border pixel 3
 #https://gist.github.com/lirenlin/9892945
+for_window [class=".*"] border pixel 3
 
-# Screen Brightness controls bandithijo
-bindsym XF86MonBrightnessUp   exec --no-startup-id xbacklight -inc 2
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 2
+# Screen Brightness controls bandithijo, and package reference dotfiles_indonesia
+#https://t.me/dotfiles_id/71317
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s 10+
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 10-
 
 #https://bandithijo.github.io/blog/i3wm-window-manager-yang-taktis-namun-praktis
 #https://www.reddit.com/r/i3wm/comments/516e8c/tap_to_click_touchpad/
