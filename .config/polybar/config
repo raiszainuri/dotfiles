@@ -29,8 +29,8 @@
 
 ;bandithijo
 [colors] 
-foreground = #BCC3C3
-background = #232227
+foreground = #E7E4E2
+background = #131215
 foreground-alt = #56696F
 background-alt = #073642
 alert = #CB4B16
@@ -47,7 +47,7 @@ fixed-center = false
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 1
+line-size = 2
 ;line-color = #ffffff
 
 border-size = 0
@@ -64,8 +64,8 @@ module-margin-right = 0
 #font-2 = siji:pixelsize=9;1
 
 font-0 = iosevka:pixelsize=9;2
-font-1 = fira code:fontformat=truetype:size=8:antialias=false;0
-font-2 = fira code:pixelsize=9;2
+font-1 = iosevka:fontformat=truetype:size=9:antialias=false;0
+font-2 = iosevka:pixelsize=9;1
 
 modules-left = i3 xwindow
 modules-right = xbacklight pulseaudio memory cpu wlan battery date powermenu
@@ -196,7 +196,7 @@ label = BL
 
 bar-width = 10
 bar-indicator = |
-bar-indicator-foreground = #fff
+bar-indicator-foreground = #E7E4E2
 bar-indicator-font = 2
 bar-fill = ─
 bar-fill-font = 2
@@ -215,7 +215,7 @@ type = internal/cpu
 interval = 2
 format-prefix = ""
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
+format-underline = #E7E4E2
 label = " %percentage:2%% "
 ;label-foreground = #f90000
 
@@ -225,7 +225,7 @@ interval = 2
 format = <label>
 format-prefix = ""
 ;format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
+format-underline = #E7E4E2
 label = " %gb_used% "
 ;label-foreground = #4bffdc
 
@@ -236,7 +236,7 @@ interval = 3.0
 
 format-connected = <label-connected>
 ;format-connected = <label-connected>
-format-connected-underline = #9f78e1
+format-connected-underline = #E7E4E2
 
 label-connected = " %essid% "
 ;label-connected-foreground = #9f78e1
@@ -283,7 +283,7 @@ time-alt = "%H:%M:%S "
 
 format-prefix = ""
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+format-underline = #E7E4E2
 
 label = %date% %time%
 
@@ -292,7 +292,7 @@ type = internal/pulseaudio
 
 format-volume ="<label-volume><bar-volume> "
 ;format-volume ="<ramp-volume> <bar-volume> <label-volume> "
-format-volume-underline = #55aa55
+format-volume-underline = #E7E4E2
 label-volume =" "
 ;label-volume ="%percentage%%"
 label-volume-foreground = ${root.foreground}
@@ -304,13 +304,13 @@ label-muted-foreground = #E50000
 label-muted-underline = #E50000
 
 bar-volume-width = 10
-bar-volume-foreground-0 = #00fff2
-bar-volume-foreground-1 = #7bff00
-bar-volume-foreground-2 = #fbff00
-bar-volume-foreground-3 = #ffd900
-bar-volume-foreground-4 = #ff9100
-bar-volume-foreground-5 = #ff6600
-bar-volume-foreground-6 = #ff0000
+bar-volume-foreground-0 = #E7E4E2
+bar-volume-foreground-1 = #E7E4E2
+bar-volume-foreground-2 = #E7E4E2
+bar-volume-foreground-3 = #E7E4E2
+bar-volume-foreground-4 = #E7E4E2
+bar-volume-foreground-5 = #E7E4E2
+bar-volume-foreground-6 = #E7E4E2
 
 bar-volume-gradient = true
 bar-volume-indicator = -
@@ -368,19 +368,19 @@ label-full = " 100% "
 label-full-foreground = #18B915
 
 format-charging =" <animation-charging> <label-charging> "
-format-charging-underline = #18B915
+format-charging-underline = #E7E4E2
 ;label-charging-foreground = #18B915
 ;format-charging-background = #18B915
 
 format-discharging =" <animation-discharging> <label-discharging> "
-format-discharging-underline = #ffb52a
+format-discharging-underline = #E7E4E2
 ;label-discharging-foreground = #ffb52a
 ;format-discharging-background = #ffb52a
 
 format-full-prefix = ""
 format-full-prefix-foreground = ${colors.foreground-alt}
 ;format-full-prefix-background = ${colors.foreground-alt}
-format-full-underline = ${self.format-charging-underline}
+format-full-underline = #E7E4E2
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
@@ -390,7 +390,7 @@ ramp-capacity-foreground = ${colors.foreground-alt}
 animation-charging-0 = " ."
 animation-charging-1 = " -"
 animation-charging-2 = " '"
-animation-charging-foreground = #18B915
+animation-charging-foreground = #E7E4E2
 animation-charging-framerate = 1000
 ;animation-charging-framerate = 750
 
