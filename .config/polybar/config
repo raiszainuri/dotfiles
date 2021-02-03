@@ -426,7 +426,7 @@ type = custom/menu
 expand-right = false
 format-spacing = 0
 
-label-open = " RAIS ZAINURI "
+label-open = " FOXTRAP "
 label-open-foreground = ${colors.secondary}
 label-open-underline = #ffffff
 label-close = "   <X>   "
