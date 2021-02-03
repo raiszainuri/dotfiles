@@ -63,9 +63,9 @@ module-margin-right = 0
 #font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 #font-2 = siji:pixelsize=9;1
 
-font-0 = iosevka:pixelsize=9;1
-font-1 = iosevka:fontformat=truetype:size=9:antialias=false;0
-font-2 = iosevka:pixelsize=9;1
+font-0 = iosevka:pixelsize=9;2
+font-1 = fira code:fontformat=truetype:size=8:antialias=false;0
+font-2 = fira code:pixelsize=9;2
 
 modules-left = i3 xwindow
 modules-right = xbacklight pulseaudio memory cpu wlan battery date powermenu
