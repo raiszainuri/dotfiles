@@ -365,7 +365,7 @@ adapter = ACAD
 full-at = 100
 
 label-full = " 100% "
-label-full-foreground = #18B915
+;label-full-foreground = #ffb52a
 
 format-charging =" <animation-charging> <label-charging> "
 format-charging-underline = #E7E4E2
