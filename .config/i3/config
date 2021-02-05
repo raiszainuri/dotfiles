@@ -184,6 +184,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 #bar {status_command i3status,position top, colors {background #2F343F}}
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id picom
 
 #my config
 bindsym $mod+Print exec --no-startup-id ~/.config/MySetting/scrot_clipboard.sh
