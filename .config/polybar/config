@@ -133,7 +133,7 @@ label-unfocused-padding = 0
 ; urgent = Workspace with urgency hint set
 label-urgent = %name%
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 1
+label-urgent-padding = 2
 
 ; Separator in between workspaces
 ; label-separator = /
