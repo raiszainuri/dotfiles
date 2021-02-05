@@ -17,8 +17,8 @@
 ;==========================================================
 
 [colors]
-;background = #212121
-background = #992f343f
+background = #212121
+;background = #992f343f
 background-alt = #393e46
 foreground = #eeeeee
 foreground-alt = #555
@@ -26,7 +26,7 @@ alert = #4ecca3
 
 [bar/topbar]
 width = 100%
-height = 20
+height = 24
 radius = 0
 fixed-center = false
 ;monitor = ${env:MONITOR:HDMI-1}
@@ -40,10 +40,9 @@ line-size = 1
 line-color = #055e68
 
 ;border-size = 3
-border-top-size = 5
-border-left-size = 5
-border-right-size = 5
-;border-color = ${colors.background}
+
+border-size = 0
+border-color = ${colors.background}
 
 padding-left = 0
 padding-right = 0
@@ -65,13 +64,15 @@ tray-position = right
 tray-maxsize = 12
 tray-offset-y = 0
 tray-padding-bottom = 10
-tray-background = ${colors.background}
+;tray-background = ${colors.background}
 
 [module/xwindow]
 type = internal/xwindow
+format-prefix = "= "
 label = " %title:0:120:...% "
-label-background = ${colors.foreground}
-label-foreground = ${colors.background}
+;label-background = ${colors.foreground}
+label-foreground = ${colors.foreground}    
+label-underline = ${colors.foreground}
 
 
 [module/bspwm]
@@ -98,23 +99,25 @@ label-empty-padding = 2
 
 [module/i3]
 type = internal/i3
-format = "<label-state> =  "
+format = "<label-mode><label-state> "
 index-sort = true
 wrapping-scroll = false
 
 ; Only show workspaces on the same output as the bar
 ; pin-workspaces = true
 
-; label-mode = %mode%
-label-mode-padding = 0
-label-mode-foreground = #000
+;label-mode = [%mode%]
+label-mode = " [RESIZE] "
+label-mode-padding = 
+label-mode-background = ${colors.alert}
+label-mode-foreground = ${colors.foreground}
 
 ; focused = Active workspace on focused monitor
-label-focused = "[%name%]"
-;label-focused-underline= #ffffff
+label-focused = "%name%"
+label-focused-underline= #ffffff
 ;label-focused-background= #ffffff
 label-focused-foreground= ${colors.foreground}
-label-focused-padding = 1
+label-focused-padding = 2
 label-focused-margin = 0
 
 ; unfocused = Inactive workspace on any monitor
