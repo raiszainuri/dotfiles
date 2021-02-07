@@ -21,8 +21,9 @@ background = #212121
 ;background = #992f343f
 background-alt = #393e46
 foreground = #eeeeee
-foreground-alt = #555
+foreground-alt = #60555555
 alert = #4ecca3
+transparent = #00000000
 
 [bar/topbar]
 width = 100%
@@ -33,7 +34,7 @@ fixed-center = false
 ;offset-x = 1%
 ;offset-y = 1%
 
-background = ${colors.background}
+background = ${colors.transparent}
 foreground = ${colors.foreground}
 
 line-size = 0
@@ -44,7 +45,7 @@ border-top-size = 4
 border-right-size = 4
 border-left-size = 4
 
-border-color = ${colors.background}
+border-color = ${colors.transparent}
 
 padding-left = 0
 padding-right = 1

@@ -184,7 +184,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 #bar {status_command i3status,position top, colors {background #2F343F}}
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-#exec_always --no-startup-id picom
+exec_always --no-startup-id picom -cCGfF -o 0.38 -O 200 -I 200 -t 0 -l 0 -r 3 -D2 -m 0.88
 
 #my config
 bindsym $mod+Print exec --no-startup-id ~/.config/MySetting/scrot_clipboard.sh
@@ -193,7 +193,7 @@ bindsym Mod1+Tab exec --no-startup-id ~/.config/MySetting/rofi_windows_switcher.
 gaps inner 5
 client.focused #E7E4E2 #E7E4E2 #E7E4E2 #ffffff #E7E4E2
 
-exec_always --no-startup-id feh --bg-fill -Z ~/Pictures/Wallpaper/wallpaper3.png
+exec_always --no-startup-id feh --bg-fill -Z ~/Pictures/Wallpaper/wallpaper.jpg
 exec --no-startup-id xinput set-prop 12 282 1
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 #exec --no-startup-id xfce4-power-manager
