@@ -200,6 +200,9 @@ exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 bindsym $mod+p exec--no-startup-id picom -cCGfF -o 0.38 -O 200 -I 200 -t 0 -l 0 -r 3 -D2 -m 0.88
 bindsym $mod+Shift+p exec --no-startup-id pkill picom
 
+bindsym $mod+Control+w exec --no-startup-id google-chrome-stable
+bindsym $mod+Control+e exec --no-startup-id thunar
+
 title_align center
 #borderless
 #for_window [class=".*"] title_format "%title"

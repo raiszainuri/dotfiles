@@ -194,16 +194,16 @@ label-muted-background = ${colors.foreground-alt}
 label-muted-foreground = ${colors.foreground}
 
 bar-volume-width = 7
-bar-volume-foreground-0 = ${colors.foreground-alt}
+bar-volume-foreground-0 = ${colors.background}
 bar-volume-gradient = true
 bar-volume-indicator = -
-bar-volume-indicator-font = 5
+bar-volume-indicator-font = 10
+bar-volume-indicator-foreground = ${colors.alert}
 bar-volume-fill = ─
 bar-volume-fill-font = 5
 bar-volume-empty = ─
-;bar-volume-empty = -
 bar-volume-empty-font = 5
-bar-volume-empty-foreground = #55aa55
+bar-volume-empty-foreground = ${colors.foreground-alt}
 
 ramp-volume-0 = "  "
 ;ramp-volume-0-foreground = #55aa55
