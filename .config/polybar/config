@@ -20,7 +20,8 @@
 background = #212121
 ;background = #992f343f
 background-alt = #393e46
-foreground = #eeeeee
+;foreground = #eeeeee
+foreground = #90ffffff
 foreground-alt = #60555555
 alert = #4ecca3
 transparent = #00000000
@@ -138,6 +139,7 @@ label-unfocused-foreground= ${colors.foreground}
 ; urgent = Workspace with urgency hint set
 label-urgent = %name%
 label-urgent-background = ${colors.alert}
+label-urgent-foreground = ${colors.foreground}
 label-urgent-padding = 2
 
 ; Separator in between workspaces
@@ -193,12 +195,13 @@ label-muted = "  MUTED  "
 label-muted-background = ${colors.foreground-alt}
 label-muted-foreground = ${colors.foreground}
 
-bar-volume-width = 7
+bar-volume-width = 8
 bar-volume-foreground-0 = ${colors.background}
-bar-volume-gradient = true
+bar-volume-gradient = false
+
 bar-volume-indicator = -
 bar-volume-indicator-font = 10
-bar-volume-indicator-foreground = ${colors.alert}
+bar-volume-indicator-foreground = ${colors.background}
 bar-volume-fill = ─
 bar-volume-fill-font = 5
 bar-volume-empty = ─
@@ -223,7 +226,7 @@ label-full-foreground = ${colors.background}
 label-full-background =  ${colors.foreground}
 
 ;format-charging ="<animation-charging> <label-charging> <animation-charging>"
-format-charging-background = #578FCA
+format-charging-background = #90578FCA
 label-charging-foreground = ${colors.foreground}
 label-charging = " %percentage%% "
 
@@ -231,7 +234,7 @@ label-charging = " %percentage%% "
 ;format-discharging ="<animation-discharging> <label-discharging> <animation-discharging>"
 label-discharging = " %percentage%% "
 label-discharging-foreground =  ${colors.foreground}
-format-discharging-background =  #FF9661
+format-discharging-background =  #90FF9661
 
 ;format-full-prefix = ""
 ;format-full-prefix-foreground = ${colors.foreground-alt}

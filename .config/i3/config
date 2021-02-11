@@ -43,7 +43,8 @@ floating_modifier $mod
 
 #start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec --no-startup-id xfce4-terminal
+#bindsym $mod+Return exec --no-startup-id xfce4-terminal
+bindsym $mod+Return exec --no-startup-id kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -186,28 +187,31 @@ bindsym $mod+r mode "resize"
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 #my config
-bindsym $mod+Print exec --no-startup-id ~/.config/MySetting/scrot_clipboard.sh
+bindsym $mod+Print exec --no-startup-id ~/.config/MySetting/scrot.sh
+bindsym $mod+Shift+Print exec --no-startup-id ~/.config/MySetting/scrot_clipboard.sh
 bindsym Mod1+Tab exec --no-startup-id ~/.config/MySetting/rofi_windows_switcher.sh
 #gaps outer 5
 gaps inner 5
 client.focused #E7E4E2 #E7E4E2 #E7E4E2 #ffffff #E7E4E2
 
 exec_always --no-startup-id feh --bg-fill -Z ~/Pictures/Wallpaper/wallpaper.jpg
+
 exec --no-startup-id xinput set-prop 12 282 1
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 #exec --no-startup-id xfce4-power-manager
 
-bindsym $mod+p exec--no-startup-id picom -cCGfF -o 0.38 -O 200 -I 200 -t 0 -l 0 -r 3 -D2 -m 0.88
+exec_always --no-startup-id picom -cCGfF -o 0.38 -O 200 -I 200 -t 0 -l 0 -r 3 -D2 -m 0.88 -i 1.0 -e 1.0 --active-opacity 1.0
+bindsym $mod+p exec --no-startup-id picom -cCGfF -o 0.38 -O 200 -I 200 -t 0 -l 0 -r 3 -D2 -m 0.88 -i 1.0 -e 1.0 --active-opacity 1.0
 bindsym $mod+Shift+p exec --no-startup-id pkill picom
 
-bindsym $mod+Control+w exec --no-startup-id google-chrome-stable
+bindsym $mod+Control+w exec --no-startup-id google-chrome-stables
 bindsym $mod+Control+e exec --no-startup-id thunar
 
 title_align center
 #borderless
 #for_window [class=".*"] title_format "%title"
 #https://gist.github.com/lirenlin/9892945
-for_window [class=".*"] border pixel 1
+for_window [class=".*"] border pixel 0
 
 # Screen Brightness controls bandithijo, and package reference dotfiles_indonesia
 #https://t.me/dotfiles_id/71317
