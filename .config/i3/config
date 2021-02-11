@@ -194,6 +194,10 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 #my config
 bindsym $mod+Print exec --no-startup-id ~/.config/MySetting/scrot.sh
 bindsym $mod+Shift+Print exec --no-startup-id ~/.config/MySetting/scrot_clipboard.sh
+bindsym $mod+Control+Print exec --no-startup-id xfce4-terminal -x scrot -s
+
+for_window [class="terminal"] floating enable move right 553px,move down 327px
+
 bindsym Mod1+Tab exec --no-startup-id ~/.config/MySetting/rofi_windows_switcher.sh
 #gaps outer 5
 gaps inner 5
@@ -230,3 +234,10 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 10-
 #https://faq.i3wm.org/question/118/mouse-cursor-remains-waiting-after-closing-last-tile.1.html
 #https://faq.i3wm.org/question/5420/wait-cursor-remains-after-dismissing-menu.1.html
 #https://bbs.archlinux.org/viewtopic.php?id=193354
+
+#move windows
+#https://faq.i3wm.org/question/936/floating-windows-initial-position/index.html
+
+#floating windows
+#https://major.io/2019/02/08/automatic-floating-windows-in-i3/#:~:text=If%20you%20have%20an%20existing,move%20it%20with%20your%20mouse.
+#https://i3wm.org/docs/userguide.html#for_window
