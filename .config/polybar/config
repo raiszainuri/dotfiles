@@ -17,39 +17,38 @@
 ;==========================================================
 
 [colors]
+color10 = #2D3142
+color9  = #964D4C
+color8  = #3F3745
+color7  = #443846
+color6  = #503B48
+color5  = #5B3E49
+color4  = #72454C
+color3  = #884B4F
+color2  = #9F5252
+color1  = #B65855
+color0  = #964D4C
+
 background = #2D3142
-background-tr = #902D3142
-background-alt = #393e46
 foreground = #FFFFFF
 foreground-tr = #50FFFFFF
 foreground-alt = #555555
+
 alert = #4ecca3
 transparent = #00000000
-color11 = #2D3142
-color10 = #484B5A
-color9  = #626572
-color8  = #4F5D75
-color7  = #636271
-color6  = #77676D
-color5  = #8B6C69
-color4  = #9F7065
-color3  = #B37561
-color2  = #C77A5D
-color1  = #EF8354
 
 [bar/topbar]
 width = 100%
-height = 20
+height = 21
 radius = 0
 fixed-center = true
-
 override-redirect = false
+
 ;monitor = ${env:MONITOR:HDMI-1}
 ;offset-x = 1%
 ;offset-y = 1%
 
 background = ${colors.background}
-;background = ${colors.transparent}
 foreground = ${colors.foreground}
 
 line-size = 0
@@ -61,7 +60,7 @@ border-right-size = 0
 border-left-size = 0
 border-bottom-size = 0
 
-border-color = ${colors.transparent}
+border-color = ${colors.color0}
 
 padding-left = 0
 padding-right = 0
@@ -73,8 +72,8 @@ font-0 = consolas:pixelsize=9;2
 font-1 = consolas:pixelsize=9;2
 font-2 = FontAwesome:pixelsize=10;2
 
-modules-left = xwindow
-modules-center = i3
+modules-left = i3 xwindow 
+modules-center = 
 modules-right = pulseaudio cpu memory battery stat_net date powermenu
 
 cursor-click = pointer
@@ -101,14 +100,15 @@ label-foreground = ${colors.foreground}
 type = internal/xwindow
 format-prefix = ""
 label = " %title:0:120:...% "
-label-background = ${colors.color10}
+label-background = ${colors.color0}    
 label-foreground = ${colors.foreground}    
 
 [module/i3]
 type = internal/i3
 format = "<label-mode> <label-state>"
-format-background = ${colors.color10}
+format-background = ${colors.color0}
 format-foreground = ${colors.foreground}
+
 index-sort = true
 wrapping-scroll = false
 
@@ -134,15 +134,15 @@ label-mode-foreground = ${colors.foreground}
 
 ; focused = Active workspace on focused monitor
 label-focused = "%icon%"
-label-focused-background= ${colors.color11}
+label-focused-background= ${colors.color0}
 label-focused-foreground= ${colors.foreground}
 label-focused-underline= ${colors.foreground}
-label-focused-padding = 0
+label-focused-padding = 1
 label-focused-margin = 0
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = "%icon%"
-label-unfocused-padding = 0
+label-unfocused-padding = 1
 label-unfocused-background= ${colors.background}
 label-unfocused-foreground= ${colors.foreground-tr}
 
@@ -197,38 +197,15 @@ label-foreground = ${colors.foreground}
 type = internal/pulseaudio
 
 format-volume ="<label-volume>"
-;format-volume ="<ramp-volume> <bar-volume> <label-volume>"
-;label-volume =" "
 format-volume-background = ${colors.color1}
+
 label-volume =" %percentage%% "
 label-volume-foreground = ${colors.foreground}
 label-volume-background = ${colors.color1}
 
-use-ui-max = true
-
 label-muted = "  MUTED  "
 label-muted-background = ${colors.foreground-alt}
 label-muted-foreground = ${colors.foreground}
-
-bar-volume-width = 8
-bar-volume-foreground-0 = ${colors.foreground}
-bar-volume-gradient = false
-
-bar-volume-indicator = -
-bar-volume-indicator-font = 10
-bar-volume-indicator-foreground = ${colors.background}
-bar-volume-fill = ─
-bar-volume-fill-font = 5
-bar-volume-empty = ─
-bar-volume-empty-font = 5
-bar-volume-empty-foreground = ${colors.foreground-alt}
-
-ramp-volume-0 = " "
-;ramp-volume-0-foreground = #55aa55
-ramp-volume-1 = " "
-;ramp-volume-1-foreground = #f5a70a
-ramp-volume-2 = " "
-;ramp-volume-2-foreground = #ff5555
 
 [module/battery]
 type = internal/battery
@@ -236,36 +213,36 @@ battery = BAT1
 adapter = ACAD
 full-at = 100
 
-label-full = "100%"
-label-full-foreground = ${colors.color4}
-label-full-background =  ${colors.foreground}
+label-full = " 100% "
+label-full-foreground = ${colors.foreground}
+label-full-background =  ${colors.color4}
 
-;format-charging ="<animation-charging> <label-charging> <animation-charging>"
-format-charging-background = #90578FCA
-label-charging-foreground = ${colors.foreground}
+;format-charging ="<label-charging><animation-charging>"
 label-charging = " %percentage%% "
+format-charging-background = ${colors.color4} 
+label-charging-foreground = ${colors.foreground}
 
 
-;format-discharging ="<animation-discharging> <label-discharging> <animation-discharging>"
+;format-discharging ="<animation-discharging><label-discharging>"
 label-discharging = " %percentage%% "
+format-discharging-background = ${colors.background}
 label-discharging-foreground =  ${colors.foreground}
-format-discharging-background =  #90FF9661
 
 ;format-full-prefix = ""
 ;format-full-prefix-foreground = ${colors.foreground-alt}
 ;format-full-prefix-background = ${colors.foreground-alt}
 
-animation-charging-0 = "."
-animation-charging-1 = "-"
-animation-charging-2 = "'"
-animation-charging-foreground =  ${colors.background}
+animation-charging-0 = ". "
+animation-charging-1 = "- "
+animation-charging-2 = "' "
+animation-charging-foreground =  ${colors.foreground}
 animation-charging-framerate = 1000
 ;animation-charging-framerate = 750
 
-animation-discharging-0 = "'"
-animation-discharging-1 = "-"
-animation-discharging-2 = "."
-animation-discharging-foreground =  ${colors.background}
+animation-discharging-0 = " '"
+animation-discharging-1 = " -"
+animation-discharging-2 = " ."
+animation-discharging-foreground =  ${colors.foreground}
 animation-discharging-framerate = 1000
 ;animation-discharging-framerate = 750
 
