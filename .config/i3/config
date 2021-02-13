@@ -209,13 +209,15 @@ bindsym Mod1+Tab exec --no-startup-id ~/.config/MySetting/rofi_windows_switcher.
 gaps inner 5
 client.focused #E7E4E2 #E7E4E2 #E7E4E2 #ffffff #E7E4E2
 
-exec_always --no-startup-id feh --bg-fill -Z ~/Pictures/Wallpaper/wallpaper.jpg
+exec_always --no-startup-id feh --bg-fill -Z ~/Pictures/Wallpaper/wallpaper2.jpg
 
 exec --no-startup-id xinput set-prop 12 282 1
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 #exec --no-startup-id xfce4-power-manager
 
 exec_always --no-startup-id picom -cCGfF -o 0.38 -O 200 -I 200 -t 0 -l 0 -r 3 -D2 -m 0.88 -i 1.0 -e 1.0 --active-opacity 1.0
+#exec_always --no-startup-id i3wsr --no-names
+
 bindsym $mod+p exec --no-startup-id picom -cCGfF -o 0.38 -O 200 -I 200 -t 0 -l 0 -r 3 -D2 -m 0.88 -i 1.0 -e 1.0 --active-opacity 1.0
 bindsym $mod+Shift+p exec --no-startup-id pkill picom
 
