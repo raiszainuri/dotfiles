@@ -17,60 +17,75 @@
 ;==========================================================
 
 [colors]
-background = #212121
-;background = #992f343f
+background = #2D3142
+background-tr = #902D3142
 background-alt = #393e46
-;foreground = #eeeeee
-foreground = #90ffffff
-foreground-alt = #60555555
+foreground = #FFFFFF
+foreground-tr = #50FFFFFF
+foreground-alt = #555555
 alert = #4ecca3
 transparent = #00000000
+color11 = #2D3142
+color10 = #484B5A
+color9  = #626572
+color8  = #4F5D75
+color7  = #636271
+color6  = #77676D
+color5  = #8B6C69
+color4  = #9F7065
+color3  = #B37561
+color2  = #C77A5D
+color1  = #EF8354
 
 [bar/topbar]
 width = 100%
-height = 24
+height = 20
 radius = 0
-fixed-center = false
+fixed-center = true
+
+override-redirect = false
 ;monitor = ${env:MONITOR:HDMI-1}
 ;offset-x = 1%
 ;offset-y = 1%
 
-background = ${colors.transparent}
+background = ${colors.background}
+;background = ${colors.transparent}
 foreground = ${colors.foreground}
 
 line-size = 0
-line-color = #055e68
+line-color = ${colors.foreground}
 
-;border-size = 3
-border-top-size = 5
-border-right-size = 5
-border-left-size = 5
+;border-size = 4
+border-top-size = 0
+border-right-size = 0
+border-left-size = 0
 border-bottom-size = 0
 
 border-color = ${colors.transparent}
 
 padding-left = 0
-padding-right = 1
+padding-right = 0
 
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = iosevka:pixelsize=9;3
-font-1 = iosevka:fontformat=truetype:size=9:antialias=false;0
-font-2 = iosevka:pixelsize=9;1
+font-0 = consolas:pixelsize=9;2
+font-1 = consolas:pixelsize=9;2
+font-2 = FontAwesome:pixelsize=10;2
 
-modules-left = i3 xwindow
+modules-left = xwindow
+modules-center = i3
 modules-right = pulseaudio cpu memory battery stat_net date powermenu
 
 cursor-click = pointer
 cursor-scroll = ns-resize
 
 tray-position = right
-tray-maxsize = 12
+tray-maxsize = 10
 tray-offset-y = 0
-tray-padding = 5
+tray-padding = 2
 tray-margin = 2
-tray-background = ${colors.foreground-alt}
+tray-background = ${colors.color8}
 
 [module/stat_net]
 type = custom/script
@@ -78,46 +93,35 @@ exec = ~/.config/MySetting/stat_network.sh
 tail = true
 interval = 300.0
 format = <label>
-label = " %output%"
-label-background = ${colors.foreground}
-label-foreground = ${colors.background}
+label = " %output% "
+label-background = ${colors.color5}
+label-foreground = ${colors.foreground}
 
 [module/xwindow]
 type = internal/xwindow
-format-prefix = " "
-label = "  %title:0:120:...%  "
-label-background = ${colors.foreground}
-label-foreground = ${colors.background}    
-
-
-[module/bspwm]
-type = internal/bspwm
-
-label-focused = %index%
-label-focused-background = ${colors.background-alt}
-label-focused-padding = 2
-
-label-occupied = %index%
-label-occupied-padding = 2
-
-label-urgent = %index%!
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
-
-label-empty = %index%
-label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
-
-; Separator in between workspaces
-; label-separator = |
+format-prefix = ""
+label = " %title:0:120:...% "
+label-background = ${colors.color10}
+label-foreground = ${colors.foreground}    
 
 [module/i3]
 type = internal/i3
 format = "<label-mode> <label-state>"
-format-background = ${colors.foreground}
-format-foreground = ${colors.background}
+format-background = ${colors.color10}
+format-foreground = ${colors.foreground}
 index-sort = true
 wrapping-scroll = false
+
+ws-icon-0 = "1;#"
+ws-icon-1 = "2;#"
+ws-icon-2 = "3;#"
+ws-icon-3 = "4;#"
+ws-icon-4 = "5;#"
+ws-icon-5 = "6;#"
+ws-icon-6 = "7;#"
+ws-icon-7 = "8;#"
+ws-icon-8 = "9;#"
+ws-icon-9 = "10;#"
 
 ; Only show workspaces on the same output as the bar
 ; pin-workspaces = true
@@ -129,17 +133,18 @@ label-mode-background = ${colors.alert}
 label-mode-foreground = ${colors.foreground}
 
 ; focused = Active workspace on focused monitor
-label-focused = "%name%"
-label-focused-background= ${colors.foreground}
-label-focused-foreground= ${colors.background}
-label-focused-padding = 2
+label-focused = "%icon%"
+label-focused-background= ${colors.color11}
+label-focused-foreground= ${colors.foreground}
+label-focused-underline= ${colors.foreground}
+label-focused-padding = 0
 label-focused-margin = 0
 
 ; unfocused = Inactive workspace on any monitor
-label-unfocused = "%name%"
-label-unfocused-padding = 2
-label-unfocused-background= ${colors.foreground-alt}
-label-unfocused-foreground= ${colors.foreground}
+label-unfocused = "%icon%"
+label-unfocused-padding = 0
+label-unfocused-background= ${colors.background}
+label-unfocused-foreground= ${colors.foreground-tr}
 
 ; visible = Active workspace on unfocused monitor
 ;label-visible = %name%
@@ -150,7 +155,7 @@ label-unfocused-foreground= ${colors.foreground}
 label-urgent = %name%
 label-urgent-background = ${colors.alert}
 label-urgent-foreground = ${colors.foreground}
-label-urgent-padding = 2
+label-urgent-padding = 1
 
 ; Separator in between workspaces
  label-separator = ""
@@ -160,19 +165,19 @@ type = internal/cpu
 interval = 2
 format-prefix = ""
 format-prefix-foreground = ${colors.foreground-alt}
-label = " %percentage:1%%"
-label-foreground = ${colors.background}
-label-background = ${colors.foreground}
+label = " %percentage:1%% "
+label-foreground = ${colors.foreground}
+label-background = ${colors.color2}
 
 [module/memory]
 type = internal/memory
 interval = 2
 format = <label>
 format-prefix = ""
-format-prefix-foreground = ${colors.background}
+format-prefix-foreground = ${colors.foreground}
 label = " %percentage_used%% "
-label-background = ${colors.foreground}
-label-foreground = ${colors.background}
+label-background = ${colors.color3}
+label-foreground = ${colors.foreground}
 
 [module/date]
 type = internal/date
@@ -185,19 +190,19 @@ time = "%H:%M "
 time-alt = "%H:%M:%S "
 
 label = %date%.%time%
-label-background = ${colors.foreground}
-label-foreground = ${colors.background}
+label-background = ${colors.color6}
+label-foreground = ${colors.foreground}
 
 [module/pulseaudio]
 type = internal/pulseaudio
 
-;format-volume ="<bar-volume><label-volume>"
-format-volume ="<ramp-volume> <bar-volume> <label-volume>"
+format-volume ="<label-volume>"
+;format-volume ="<ramp-volume> <bar-volume> <label-volume>"
 ;label-volume =" "
-format-volume-background = ${colors.foreground}
-label-volume =" %percentage%%"
-label-volume-foreground = ${colors.background}
-label-volume-background = ${colors.foreground}
+format-volume-background = ${colors.color1}
+label-volume =" %percentage%% "
+label-volume-foreground = ${colors.foreground}
+label-volume-background = ${colors.color1}
 
 use-ui-max = true
 
@@ -206,7 +211,7 @@ label-muted-background = ${colors.foreground-alt}
 label-muted-foreground = ${colors.foreground}
 
 bar-volume-width = 8
-bar-volume-foreground-0 = ${colors.background}
+bar-volume-foreground-0 = ${colors.foreground}
 bar-volume-gradient = false
 
 bar-volume-indicator = -
@@ -218,11 +223,11 @@ bar-volume-empty = ─
 bar-volume-empty-font = 5
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
-ramp-volume-0 = "  "
+ramp-volume-0 = " "
 ;ramp-volume-0-foreground = #55aa55
-ramp-volume-1 = "  "
+ramp-volume-1 = " "
 ;ramp-volume-1-foreground = #f5a70a
-ramp-volume-2 = "  "
+ramp-volume-2 = " "
 ;ramp-volume-2-foreground = #ff5555
 
 [module/battery]
@@ -232,7 +237,7 @@ adapter = ACAD
 full-at = 100
 
 label-full = "100%"
-label-full-foreground = ${colors.background}
+label-full-foreground = ${colors.color4}
 label-full-background =  ${colors.foreground}
 
 ;format-charging ="<animation-charging> <label-charging> <animation-charging>"
@@ -270,43 +275,43 @@ type = custom/menu
 expand-right = false
 format-spacing = 0
 
-label-open = "FOXTRAP  "
-label-open-foreground = ${colors.background}
-label-open-background = ${colors.foreground}
+label-open = " FOXTRAP "
+label-open-foreground = ${colors.foreground}
+label-open-background = ${colors.color7}
 label-close = "  BATAL  "
-label-close-foreground = ${colors.background}
-label-close-background = ${colors.foreground}
-label-separator = " "
-label-separator-foreground = ${colors.foreground}
+label-close-foreground = ${colors.foreground}
+label-close-background = ${colors.color7}
+label-separator = "|"
+label-separator-foreground = ${colors.color7}
 
 menu-0-0 = " RESTART "
-menu-0-0-foreground = ${colors.background}
-menu-0-0-background = ${colors.foreground}
+menu-0-0-foreground = ${colors.foreground}
+menu-0-0-background = ${colors.color7}
 menu-0-0-exec = menu-open-1
-menu-0-0-margin-left = 4
+menu-0-0-margin-left = 2
 menu-0-1 = " MATIKAN "
-menu-0-1-foreground = ${colors.background}
-menu-0-1-background = ${colors.foreground}
+menu-0-1-foreground = ${colors.foreground}
+menu-0-1-background = ${colors.color7}
 menu-0-1-exec = menu-open-2
 
 menu-1-0 = "  BATAL  "
-menu-1-0-foreground = ${colors.background}
-menu-1-0-background = ${colors.foreground}
+menu-1-0-foreground = ${colors.foreground}
+menu-1-0-background = ${colors.color7}
 menu-1-0-exec = menu-open-0
-menu-1-0-margin-left = 4
+menu-1-0-margin-left = 2
 menu-1-1 = " RESTART "
-menu-1-1-foreground = ${colors.background}
-menu-1-1-background = ${colors.foreground}
+menu-1-1-foreground = ${colors.foreground}
+menu-1-1-background = ${colors.color7}
 menu-1-1-exec = reboot
 
 menu-2-0 = " MATIKAN "
 menu-2-0-exec = shutdown now
-menu-2-0-foreground = ${colors.background}
-menu-2-0-background = ${colors.foreground}
-menu-2-0-margin-left = 4
+menu-2-0-foreground = ${colors.foreground}
+menu-2-0-background = ${colors.color7}
+menu-2-0-margin-left = 2
 menu-2-1 = "  BATAL  "
-menu-2-1-foreground = ${colors.background}
-menu-2-1-background = ${colors.foreground}
+menu-2-1-foreground = ${colors.foreground}
+menu-2-1-background = ${colors.color7}
 menu-2-1-exec = menu-open-0
 
 [settings]
