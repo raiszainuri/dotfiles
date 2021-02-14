@@ -105,7 +105,7 @@ label-foreground = ${colors.foreground}
 
 [module/i3]
 type = internal/i3
-format = "<label-mode> <label-state>"
+format = "<label-mode><label-state>"
 format-background = ${colors.color0}
 format-foreground = ${colors.foreground}
 
