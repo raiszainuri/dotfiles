@@ -2,7 +2,7 @@
 
 configuration {
 	modi: "run";
-	width: 700;
+	width: 400;
 	lines: 4;
 	columns: 1;
   	font: "iosevka 9";
@@ -305,3 +305,4 @@ configuration {
 /*	me-accept-entry: "MouseDPrimary";*/
 /*	me-accept-custom: "Control+MouseDPrimary";*/
 //}
+@import "/usr/share/rofi/themes/Pop-Dark.rasi"
