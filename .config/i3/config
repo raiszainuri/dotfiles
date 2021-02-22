@@ -203,6 +203,7 @@ bindsym $mod+Shift+Print exec --no-startup-id ~/.config/MySetting/scrot_clipboar
 bindsym $mod+Control+Print exec --no-startup-id xfce4-terminal -x scrot -s
 
 for_window [class="terminal"] floating enable move right 553px,move down 327px
+for_window [class="xdman"] floating enable
 
 bindsym Mod1+Tab exec --no-startup-id ~/.config/MySetting/rofi_windows_switcher.sh
 #gaps outer 5
