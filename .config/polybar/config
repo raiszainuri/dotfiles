@@ -17,21 +17,34 @@
 ;==========================================================
 
 [colors]
-color10 = #2D3142
-color9  = #964D4C
-color8  = #3F3745
-color7  = #443846
-color6  = #503B48
-color5  = #5B3E49
-color4  = #72454C
-color3  = #884B4F
-color2  = #9F5252
-color1  = #B65855
-color0  = #964D4C
+#color10 = #2D3142
+#color9  = #964D4C
+#color8  = #3F3745
+#color7  = #443846
+#color6  = #503B48
+#color5  = #5B3E49
+#color4  = #72454C
+#color3  = #884B4F
+#color2  = #9F5252
+#color1  = #B65855
+#color0  = #964D4C
+
+color10 = #75FFFFFF
+color9  = #75FFFFFF
+color8  = #75FFFFFF
+color7  = #75FFFFFF
+color6  = #75FFFFFF
+color5  = #75FFFFFF
+color4  = #75FFFFFF
+color3  = #75FFFFFF
+color2  = #75FFFFFF
+color1  = #75FFFFFF
+color0  = #75FFFFFF
+
 
 background = #2D3142
-foreground = #FFFFFF
-foreground-tr = #50FFFFFF
+foreground = #2D3142
+foreground-tr = #75FFFFFF
 foreground-alt = #555555
 
 alert = #4ecca3
@@ -39,7 +52,7 @@ transparent = #00000000
 
 [bar/topbar]
 width = 100%
-height = 21
+height = 20
 radius = 0
 fixed-center = true
 override-redirect = false
@@ -62,7 +75,7 @@ border-bottom-size = 0
 
 border-color = ${colors.color0}
 
-padding-left = 0
+padding-left = 1
 padding-right = 0
 
 module-margin-left = 0
@@ -73,7 +86,7 @@ font-1 = consolas:pixelsize=9;2
 font-2 = FontAwesome:pixelsize=10;2
 
 modules-left = i3 xwindow 
-modules-center = 
+modules-center =
 modules-right = pulseaudio cpu memory battery stat_net date powermenu
 
 cursor-click = pointer
@@ -84,7 +97,7 @@ tray-maxsize = 10
 tray-offset-y = 0
 tray-padding = 2
 tray-margin = 2
-tray-background = ${colors.color8}
+#tray-background = ${colors.color8}
 
 [module/stat_net]
 type = custom/script
@@ -92,16 +105,16 @@ exec = ~/.config/MySetting/stat_network.sh
 tail = true
 interval = 300.0
 format = <label>
-label = " %output% "
+label = "%output%"
 label-background = ${colors.color5}
 label-foreground = ${colors.foreground}
 
 [module/xwindow]
 type = internal/xwindow
-format-prefix = ""
+format-prefix = " "
 label = " %title:0:120:...% "
-label-background = ${colors.color0}    
-label-foreground = ${colors.foreground}    
+label-background = #75FFFFFF
+label-foreground = ${colors.background}    
 
 [module/i3]
 type = internal/i3
@@ -134,15 +147,15 @@ label-mode-foreground = ${colors.foreground}
 
 ; focused = Active workspace on focused monitor
 label-focused = "%icon%"
-label-focused-background= ${colors.color0}
-label-focused-foreground= ${colors.foreground}
+label-focused-background= ${colors.background}
+label-focused-foreground= #FFFFFF
 label-focused-underline= ${colors.foreground}
-label-focused-padding = 1
+label-focused-padding = 0
 label-focused-margin = 0
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = "%icon%"
-label-unfocused-padding = 1
+label-unfocused-padding = 0
 label-unfocused-background= ${colors.background}
 label-unfocused-foreground= ${colors.foreground-tr}
 
@@ -165,7 +178,7 @@ type = internal/cpu
 interval = 2
 format-prefix = ""
 format-prefix-foreground = ${colors.foreground-alt}
-label = " %percentage:1%% "
+label = " %percentage:1%%"
 label-foreground = ${colors.foreground}
 label-background = ${colors.color2}
 
@@ -175,7 +188,7 @@ interval = 2
 format = <label>
 format-prefix = ""
 format-prefix-foreground = ${colors.foreground}
-label = " %percentage_used%% "
+label = " %percentage_used%%"
 label-background = ${colors.color3}
 label-foreground = ${colors.foreground}
 
@@ -199,7 +212,7 @@ type = internal/pulseaudio
 format-volume ="<label-volume>"
 format-volume-background = ${colors.color1}
 
-label-volume =" %percentage%% "
+label-volume =" %percentage%%"
 label-volume-foreground = ${colors.foreground}
 label-volume-background = ${colors.color1}
 
@@ -218,7 +231,7 @@ label-full-foreground = ${colors.foreground}
 label-full-background =  ${colors.color4}
 
 ;format-charging ="<label-charging><animation-charging>"
-label-charging = " %percentage%% "
+label-charging = " IN(%percentage%%) "
 format-charging-background = ${colors.color4} 
 label-charging-foreground = ${colors.foreground}
 
@@ -252,9 +265,9 @@ type = custom/menu
 expand-right = false
 format-spacing = 0
 
-label-open = " FOXTRAP "
-label-open-foreground = ${colors.foreground}
-label-open-background = ${colors.color7}
+label-open = "FOXTRAP "
+label-open-foreground = ${colors.background}
+label-open-background = #75FFFFFF
 label-close = "  BATAL  "
 label-close-foreground = ${colors.foreground}
 label-close-background = ${colors.color7}
