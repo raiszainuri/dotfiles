@@ -231,15 +231,15 @@ label-full-foreground = ${colors.foreground}
 label-full-background =  ${colors.color4}
 
 ;format-charging ="<label-charging><animation-charging>"
-label-charging = " IN(%percentage%%) "
+label-charging = " {%percentage%%} "
 format-charging-background = ${colors.color4} 
 label-charging-foreground = ${colors.foreground}
 
 
 ;format-discharging ="<animation-discharging><label-discharging>"
-label-discharging = " %percentage%% "
-format-discharging-background = ${colors.background}
-label-discharging-foreground =  ${colors.foreground}
+label-discharging = " [%percentage%%] "
+format-discharging-background = ${colors.color1}
+label-discharging-foreground =  ${colors.background}
 
 ;format-full-prefix = ""
 ;format-full-prefix-foreground = ${colors.foreground-alt}
