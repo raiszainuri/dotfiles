@@ -87,7 +87,7 @@ font-2 = FontAwesome:pixelsize=10;2
 
 modules-left = i3 xwindow 
 modules-center =
-modules-right = pulseaudio cpu memory battery stat_net date powermenu
+modules-right = pulseaudio cpu memory battery get_temp stat_net date powermenu
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -99,22 +99,8 @@ tray-padding = 2
 tray-margin = 2
 #tray-background = ${colors.color8}
 
-[module/stat_net]
-type = custom/script
-exec = ~/.config/MySetting/stat_network.sh
-tail = true
-interval = 300.0
-format = <label>
-label = "%output%"
-label-background = ${colors.color5}
-label-foreground = ${colors.foreground}
 
-[module/xwindow]
-type = internal/xwindow
-format-prefix = " "
-label = " %title:0:120:...% "
-label-background = #75FFFFFF
-label-foreground = ${colors.background}    
+# LEFT ====================================================================
 
 [module/i3]
 type = internal/i3
@@ -173,38 +159,17 @@ label-urgent-padding = 1
 ; Separator in between workspaces
  label-separator = ""
 
-[module/cpu]
-type = internal/cpu
-interval = 2
-format-prefix = ""
-format-prefix-foreground = ${colors.foreground-alt}
-label = " %percentage:1%%"
-label-foreground = ${colors.foreground}
-label-background = ${colors.color2}
+#---------------------------------------------------------------------------
 
-[module/memory]
-type = internal/memory
-interval = 2
-format = <label>
-format-prefix = ""
-format-prefix-foreground = ${colors.foreground}
-label = " %percentage_used%%"
-label-background = ${colors.color3}
-label-foreground = ${colors.foreground}
+[module/xwindow]
+type = internal/xwindow
+format-prefix = " "
+label = " %title:0:120:...% "
+label-background = #75FFFFFF
+label-foreground = ${colors.background}    
 
-[module/date]
-type = internal/date
-interval = 5
 
-date =" %d-%m"
-date-alt = " %A %d/%m/%Y"
-
-time = "%H:%M "
-time-alt = "%H:%M:%S "
-
-label = %date%.%time%
-label-background = ${colors.color6}
-label-foreground = ${colors.foreground}
+# RIGHT ====================================================================
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -220,6 +185,31 @@ label-muted = "  MUTED  "
 label-muted-background = ${colors.foreground-alt}
 label-muted-foreground = ${colors.foreground}
 
+#---------------------------------------------------------------------------
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = ""
+format-prefix-foreground = ${colors.foreground-alt}
+label = " %percentage:1%%"
+label-foreground = ${colors.foreground}
+label-background = ${colors.color2}
+
+#---------------------------------------------------------------------------
+
+[module/memory]
+type = internal/memory
+interval = 2
+format = <label>
+format-prefix = ""
+format-prefix-foreground = ${colors.foreground}
+label = " %percentage_used%%"
+label-background = ${colors.color3}
+label-foreground = ${colors.foreground}
+
+#---------------------------------------------------------------------------
+
 [module/battery]
 type = internal/battery
 battery = BAT1
@@ -234,7 +224,6 @@ label-full-background =  ${colors.color4}
 label-charging = " {%percentage%%} "
 format-charging-background = ${colors.color4} 
 label-charging-foreground = ${colors.foreground}
-
 
 ;format-discharging ="<animation-discharging><label-discharging>"
 label-discharging = " [%percentage%%] "
@@ -259,13 +248,55 @@ animation-discharging-foreground =  ${colors.foreground}
 animation-discharging-framerate = 1000
 ;animation-discharging-framerate = 750
 
+#---------------------------------------------------------------------------
+
+[module/get_temp]
+type = custom/script
+exec = ~/.config/MySetting/get_temp.sh
+tail = true
+interval = 3.0
+format = <label>
+label = "| %output% "
+label-background = ${colors.color5}
+label-foreground = ${colors.foreground}
+
+#---------------------------------------------------------------------------
+
+[module/stat_net]
+type = custom/script
+exec = ~/.config/MySetting/stat_network.sh
+tail = true
+interval = 300.0
+format = <label>
+label = "%output% "
+label-background = ${colors.color5}
+label-foreground = ${colors.foreground}
+
+#---------------------------------------------------------------------------
+
+[module/date]
+type = internal/date
+interval = 5
+
+date =" %d-%m"
+date-alt = " %A %d/%m/%Y"
+
+time = "%H:%M "
+time-alt = "%H:%M:%S "
+
+label ="|%date%.%time%"
+label-background = ${colors.color6}
+label-foreground = ${colors.foreground}
+
+#---------------------------------------------------------------------------
+
 [module/powermenu]
 type = custom/menu
 
 expand-right = false
 format-spacing = 0
 
-label-open = "FOXTRAP "
+label-open = "| FOXTRAP "
 label-open-foreground = ${colors.background}
 label-open-background = #75FFFFFF
 label-close = "  BATAL  "
