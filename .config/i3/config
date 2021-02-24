@@ -208,7 +208,11 @@ for_window [class="xdman"] floating enable
 bindsym Mod1+Tab exec --no-startup-id ~/.config/MySetting/rofi_windows_switcher.sh
 #gaps outer 5
 gaps inner 5
-client.focused #E7E4E2 #E7E4E2 #E7E4E2 #ffffff #E7E4E2
+
+client.focused          #2D3142 #2D3142 #FFFBF7 #FF0000   #770000
+client.unfocused        #222222 #222222 #888888 #222222   #222222
+client.focused_inactive #222222 #222222 #FFFFFF #222222   ##222222
+client.urgent           #4ECCA3 #4ECCA3 #FFFFFF #4ECCA3   #4ecca3
 
 #exec_always --no-startup-id feh --bg-fill -Z ~/Pictures/Wallpaper/wallpaper2.jpg
 exec_always --no-startup-id feh --bg-fill -Z ~/Pictures/Wallpaper/wallpaper.png
