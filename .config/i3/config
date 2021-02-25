@@ -63,8 +63,10 @@ bindsym $mod+Shift+q kill
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
+bindsym $mod+Tab exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -f -i -h 20 -nf '#848484' -nb '#2D3142' -sb '#046C77' -sf '#EEEEEE' -fn 'iosevka-9'"
+
 #show rofi
-bindsym $mod+Tab exec --no-startup-id rofi -show drun
+bindsym $mod+d exec --no-startup-id rofi -show drun
 
 # change focus
 bindsym $mod+j focus left
@@ -207,7 +209,7 @@ for_window [class="xdman"] floating enable
 
 bindsym Mod1+Tab exec --no-startup-id ~/.config/MySetting/rofi_windows_switcher.sh
 #gaps outer 5
-gaps inner 5
+gaps inner 10
 
 client.focused          #2D3142 #2D3142 #FFFBF7 #FF0000   #770000
 client.unfocused        #222222 #222222 #888888 #222222   #222222
@@ -217,7 +219,8 @@ client.urgent           #4ECCA3 #4ECCA3 #FFFFFF #4ECCA3   #4ecca3
 #exec_always --no-startup-id feh --bg-fill -Z ~/Pictures/Wallpaper/wallpaper2.jpg
 exec_always --no-startup-id feh --bg-fill -Z ~/Pictures/Wallpaper/wallpaper.png
 
-exec --no-startup-id xinput set-prop 12 282 1
+#exec --no-startup-id xinput set-prop 12 282 1
+exec --no-startup-id xinput set-prop 13 302 1
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 #exec --no-startup-id xfce4-power-manager
 
