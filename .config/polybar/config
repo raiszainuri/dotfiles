@@ -219,7 +219,7 @@ battery = BAT1
 adapter = ACAD
 full-at = 100
 
-label-full = " 100% "
+label-full = " | 100% "
 label-full-foreground = ${colors.foreground}
 label-full-background =  ${colors.color4}
 
@@ -229,7 +229,7 @@ format-charging-background = ${colors.color4}
 label-charging-foreground = ${colors.foreground}
 
 ;format-discharging ="<animation-discharging><label-discharging>"
-label-discharging = " [%percentage%%] "
+label-discharging = " | DISCHARGING %percentage%% "
 format-discharging-background = ${colors.color1}
 label-discharging-foreground =  ${colors.background}
 
