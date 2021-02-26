@@ -17,33 +17,35 @@
 ;==========================================================
 
 [colors]
-#color10 = #2D3142
-#color9  = #964D4C
-#color8  = #3F3745
-#color7  = #443846
-#color6  = #503B48
-#color5  = #5B3E49
-#color4  = #72454C
-#color3  = #884B4F
-#color2  = #9F5252
-#color1  = #B65855
-#color0  = #964D4C
 
-color10 = #902D3142
-color9  = #902B3546
-color8  = #90283949
-color7  = #90263D4D
-color6  = #90234050
-color5  = #901E4857
-color4  = #90194F5D
-color3  = #90145764
-color2  = #900F5E6A
-color1  = #90046C77
-color0  = #902C3344
+color10 = #000F5E6A
+color9  = #000F5E6A
+color8  = #000F5E6A
+color7  = #000F5E6A
+color6  = #000F5E6A
+color5  = #000F5E6A
+color4  = #000F5E6A
+color3  = #000F5E6A
+color2  = #000F5E6A
+color1  = #000F5E6A
+color0  = #000F5E6A
 white   = #FFFFFF
 
+#color10 = #902D3142
+#color9  = #902B3546
+#color8  = #90283949
+#color7  = #90263D4D
+#color6  = #90234050
+#color5  = #901E4857
+#color4  = #90194F5D
+#color3  = #90145764
+#color2  = #900F5E6A
+#color1  = #90046C77
+#color0  = #902C3344
+#white   = #FFFFFF
 
-background = #2D3142
+
+background = #90145764
 foreground = #FFFFFF
 foreground-tr = #75FFFFFF
 foreground-alt = #555555
@@ -62,7 +64,7 @@ override-redirect = false
 ;offset-x = 1%
 ;offset-y = 1%
 
-background = ${colors.background}
+background = ${colors.transparent}
 foreground = ${colors.foreground}
 
 line-size = 0
@@ -74,7 +76,7 @@ border-right-size = 0
 border-left-size = 0
 border-bottom-size = 0
 
-border-color = ${colors.color0}
+border-color = 
 
 padding-left = 0
 padding-right = 0
@@ -98,43 +100,55 @@ tray-maxsize = 10
 tray-offset-y = 0
 tray-padding = 2
 tray-margin = 2
-#tray-background = ${colors.color8}
+#tray-background = ${colors.background}
 
 
 # LEFT ====================================================================
 
+[module/i3w]
+type = custom/script
+exec = ~/.config/MySetting/current_workspace2.sh
+tail = true
+interval = 0
+format = <label>
+label = "%output%"
+label-background = ${colors2.background}
+label-foreground = ${colors2.foreground}
+
+#---------------------------------------------------------------------------
+
 [module/i3]
 type = internal/i3
-format = "<label-mode><label-state>"
-format-background = ${colors.color0}
+format = "<label-mode> <label-state>"
+format-background = ${colors.color10}
 format-foreground = ${colors.foreground}
-
+format-prefix = " "
 index-sort = true
 wrapping-scroll = false
 
-ws-icon-0 = "1; #"
-ws-icon-1 = "2; #"
-ws-icon-2 = "3; #"
-ws-icon-3 = "4; #"
-ws-icon-4 = "5; #"
-ws-icon-5 = "6; #"
-ws-icon-6 = "7; #"
-ws-icon-7 = "8; #"
-ws-icon-8 = "9; #"
-ws-icon-9 = "10; #"
+ws-icon-0 = "1;#"
+ws-icon-1 = "2;#"
+ws-icon-2 = "3;#"
+ws-icon-3 = "4;#"
+ws-icon-4 = "5;#"
+ws-icon-5 = "6;#"
+ws-icon-6 = "7;#"
+ws-icon-7 = "8;#"
+ws-icon-8 = "9;#"
+ws-icon-9 = "10;#"
 
 ; Only show workspaces on the same output as the bar
 ; pin-workspaces = true
 
 ;label-mode = [%mode%]
-label-mode = " [RESIZE] "
+label-mode = " RESIZE "
 label-mode-padding = 0
-label-mode-background = ${colors.alert}
-label-mode-foreground = ${colors.white}
+label-mode-background = ${colors.background}
+label-mode-foreground = ${colors.foreground}
 
 ; focused = Active workspace on focused monitor
 label-focused = "%icon%"
-label-focused-background= ${colors.background}
+label-focused-background= ${colors.color0}
 label-focused-foreground= ${colors.white}
 label-focused-underline= ${colors.foreground}
 label-focused-padding = 0
@@ -143,7 +157,7 @@ label-focused-margin = 0
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = "%icon%"
 label-unfocused-padding = 0
-label-unfocused-background= ${colors.background}
+label-unfocused-background= ${colors.color0}
 label-unfocused-foreground= ${colors.foreground-tr}
 
 ; visible = Active workspace on unfocused monitor
@@ -167,9 +181,9 @@ label-urgent-margin-right = 0
 [module/xwindow]
 type = internal/xwindow
 format-prefix = " "
-label = " %title:0:100:...% "
-label-background = ${colors.color1}
-label-foreground = ${colors.foreground}    
+label = " %title:0:120:...% "
+label-background = #80FFFFFF
+label-foreground = #80000000
 
 
 # RIGHT ====================================================================
@@ -180,7 +194,7 @@ type = internal/pulseaudio
 format-volume ="<label-volume>"
 format-volume-background = ${colors.color2}
 
-label-volume =" %percentage%% "
+label-volume =" %percentage%% |"
 label-volume-foreground = ${colors.foreground}
 label-volume-background = ${colors.color2}
 
@@ -195,7 +209,7 @@ type = internal/cpu
 interval = 2
 format-prefix = ""
 format-prefix-foreground = ${colors.foreground-alt}
-label = " %percentage:1%% "
+label = " %percentage:1%% |"
 label-foreground = ${colors.foreground}
 label-background = ${colors.color3}
 
@@ -207,7 +221,7 @@ interval = 2
 format = <label>
 format-prefix = ""
 format-prefix-foreground = ${colors.foreground}
-label = " %percentage_used%% "
+label = " %percentage_used%% |"
 label-background = ${colors.color4}
 label-foreground = ${colors.foreground}
 
@@ -219,17 +233,17 @@ battery = BAT1
 adapter = ACAD
 full-at = 100
 
-label-full = " 100% "
+label-full = " 100% |"
 label-full-foreground = ${colors.foreground}
 label-full-background =  ${colors.color5}
 
 ;format-charging ="<label-charging><animation-charging>"
-label-charging = " %percentage%% "
+label-charging = " %percentage%% |"
 format-charging-background = ${colors.color5} 
 label-charging-foreground = ${colors.foreground}
 
 ;format-discharging ="<animation-discharging><label-discharging>"
-label-discharging = " DISCHARGING %percentage%% "
+label-discharging = " DISCHARGING %percentage%% |"
 format-discharging-background = ${colors.color5}
 label-discharging-foreground =  ${colors.foreground}
 
@@ -259,7 +273,7 @@ exec = ~/.config/MySetting/get_temp.sh
 tail = true
 interval = 3.0
 format = <label>
-label = " %output% "
+label = " %output% |"
 label-background = ${colors.color6}
 label-foreground = ${colors.foreground}
 
@@ -271,7 +285,7 @@ exec = ~/.config/MySetting/stat_network.sh
 tail = true
 interval = 300.0
 format = <label>
-label = " %output% "
+label = " %output% |"
 label-background = ${colors.color7}
 label-foreground = ${colors.foreground}
 
@@ -287,7 +301,7 @@ date-alt = " %A %d/%m/%Y"
 time = "%H:%M "
 time-alt = "%H:%M:%S "
 
-label ="%date%.%time%"
+label ="%date%.%time%|"
 label-background = ${colors.color8}
 label-foreground = ${colors.foreground}
 
@@ -299,14 +313,14 @@ type = custom/menu
 expand-right = false
 format-spacing = 0
 
-label-open = " FOXTRAP "
+label-open = " FOXTRAP |"
 label-open-foreground = ${colors.foreground}
 label-open-background = ${colors.color9}
 label-close = "  BATAL  "
 label-close-foreground = ${colors.foreground}
 label-close-background = ${colors.color9}
 label-separator = "|"
-label-separator-foreground = ${colors.color9}
+label-separator-foreground = ${colors.foreground}
 
 menu-0-0 = " RESTART "
 menu-0-0-foreground = ${colors.foreground}
