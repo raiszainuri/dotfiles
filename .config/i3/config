@@ -219,8 +219,8 @@ client.urgent           #4ECCA3 #4ECCA3 #FFFFFF #4ECCA3   #4ecca3
 #exec_always --no-startup-id feh --bg-fill -Z ~/Pictures/Wallpaper/wallpaper2.jpg
 exec_always --no-startup-id feh --bg-fill -Z ~/Pictures/Wallpaper/wallpaper.png
 
-#exec --no-startup-id xinput set-prop 12 282 1
-exec --no-startup-id xinput set-prop 13 302 1
+exec --no-startup-id xinput set-prop 12 282 1
+#exec --no-startup-id xinput set-prop 13 302 1
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 #exec --no-startup-id xfce4-power-manager
 
