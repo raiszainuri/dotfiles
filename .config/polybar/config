@@ -167,7 +167,7 @@ label-urgent-margin-right = 0
 [module/xwindow]
 type = internal/xwindow
 format-prefix = "="
-label = " | %title:0:100:...% | "
+label = "| %title:0:100:...% |"
 label-background = #75FFFFFF
 label-foreground = ${colors.background}    
 
@@ -180,7 +180,7 @@ type = internal/pulseaudio
 format-volume ="<label-volume>"
 format-volume-background = ${colors.color1}
 
-label-volume =" | %percentage%%"
+label-volume ="| %percentage%%"
 label-volume-foreground = ${colors.foreground}
 label-volume-background = ${colors.color1}
 
@@ -299,7 +299,7 @@ type = custom/menu
 expand-right = false
 format-spacing = 0
 
-label-open = "| FOXTRAP | "
+label-open = "| FOXTRAP |"
 label-open-foreground = ${colors.background}
 label-open-background = #75FFFFFF
 label-close = "  BATAL  "
@@ -408,7 +408,7 @@ font-0 = consolas:pixelsize=9;2
 font-1 = consolas:pixelsize=9;2
 font-2 = FontAwesome:pixelsize=10;2
 
-modules-left = xwindow2 
+modules-left = xfwm_workspace xwindow2 
 modules-center =
 modules-right = pulseaudio2 cpu2 memory2 battery2 get_temp2 stat_net2 date2 powermenu2
 
@@ -425,71 +425,23 @@ tray-background = ${colors2.color8}
 
 # LEFT ====================================================================
 
-[module/i32]
-type = internal/i3
-format = "<label-mode><label-state>"
-format-background = ${colors2.color0}
-format-foreground = ${colors2.foreground}
-
-index-sort = true
-wrapping-scroll = false
-
-ws-icon-0 = "1; #"
-ws-icon-1 = "2; #"
-ws-icon-2 = "3; #"
-ws-icon-3 = "4; #"
-ws-icon-4 = "5; #"
-ws-icon-5 = "6; #"
-ws-icon-6 = "7; #"
-ws-icon-7 = "8; #"
-ws-icon-8 = "9; #"
-ws-icon-9 = "10; #"
-
-; Only show workspaces on the same output as the bar
-; pin-workspaces = true
-
-;label-mode = [%mode%]
-label-mode = " [RESIZE] "
-label-mode-padding = 0
-label-mode-background = ${colors2.alert}
-label-mode-foreground = ${colors2.white}
-
-; focused = Active workspace on focused monitor
-label-focused = "%icon%"
-label-focused-background= ${colors2.background}
-label-focused-foreground= ${colors2.white}
-label-focused-underline= ${colors2.foreground}
-label-focused-padding = 0
-label-focused-margin = 0
-
-; unfocused = Inactive workspace on any monitor
-label-unfocused = "%icon%"
-label-unfocused-padding = 0
-label-unfocused-background= ${colors2.background}
-label-unfocused-foreground= ${colors2.foreground-tr}
-
-; visible = Active workspace on unfocused monitor
-;label-visible = %name%
-;label-visible-background = ${self.label-focused-background}
-;label-visible-padding = ${self.label-focused-padding}
-
-; urgent = Workspace with urgency hint set
-label-urgent = "%name%"
-label-urgent-background = ${colors2.alert}
-label-urgent-foreground = ${colors2.white}
-label-urgent-padding = 1
-label-urgent-margin-left = 1
-label-urgent-margin-right = 0
-
-; Separator in between workspaces
- label-separator = ""
+[module/xfwm_workspace]
+type = custom/script
+exec = ~/.config/MySetting/current_workspace.sh
+tail = true
+interval = 0
+format = <label>
+label = " %output%"
+label-background = ${colors2.background}
+label-foreground = ${colors2.foreground}
 
 #---------------------------------------------------------------------------
 
 [module/xwindow2]
 type = internal/xwindow
-format-prefix = ""
-label = " %title:0:120:...% "
+format-prefix = "| "
+label = " %title:0:80:...% "
+label-position = left
 label-background = ${colors2.color0} 
 label-foreground = ${colors2.foreground}    
 
