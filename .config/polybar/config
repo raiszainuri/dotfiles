@@ -29,22 +29,22 @@
 #color1  = #B65855
 #color0  = #964D4C
 
-color10 = #75FFFFFF
-color9  = #75FFFFFF
-color8  = #75FFFFFF
-color7  = #75FFFFFF
-color6  = #75FFFFFF
-color5  = #75FFFFFF
-color4  = #75FFFFFF
-color3  = #75FFFFFF
-color2  = #75FFFFFF
-color1  = #75FFFFFF
-color0  = #75FFFFFF
+color10 = #902D3142
+color9  = #902B3546
+color8  = #90283949
+color7  = #90263D4D
+color6  = #90234050
+color5  = #901E4857
+color4  = #90194F5D
+color3  = #90145764
+color2  = #900F5E6A
+color1  = #90046C77
+color0  = #902C3344
 white   = #FFFFFF
 
 
 background = #2D3142
-foreground = #2D3142
+foreground = #FFFFFF
 foreground-tr = #75FFFFFF
 foreground-alt = #555555
 
@@ -166,10 +166,10 @@ label-urgent-margin-right = 0
 
 [module/xwindow]
 type = internal/xwindow
-format-prefix = "="
-label = "| %title:0:100:...% |"
-label-background = #75FFFFFF
-label-foreground = ${colors.background}    
+format-prefix = " "
+label = " %title:0:100:...% "
+label-background = ${colors.color1}
+label-foreground = ${colors.foreground}    
 
 
 # RIGHT ====================================================================
@@ -178,11 +178,11 @@ label-foreground = ${colors.background}
 type = internal/pulseaudio
 
 format-volume ="<label-volume>"
-format-volume-background = ${colors.color1}
+format-volume-background = ${colors.color2}
 
-label-volume ="| %percentage%%"
+label-volume =" %percentage%% "
 label-volume-foreground = ${colors.foreground}
-label-volume-background = ${colors.color1}
+label-volume-background = ${colors.color2}
 
 label-muted = "  MUTED  "
 label-muted-background = ${colors.foreground-alt}
@@ -195,9 +195,9 @@ type = internal/cpu
 interval = 2
 format-prefix = ""
 format-prefix-foreground = ${colors.foreground-alt}
-label = " | %percentage:1%%"
+label = " %percentage:1%% "
 label-foreground = ${colors.foreground}
-label-background = ${colors.color2}
+label-background = ${colors.color3}
 
 #---------------------------------------------------------------------------
 
@@ -207,8 +207,8 @@ interval = 2
 format = <label>
 format-prefix = ""
 format-prefix-foreground = ${colors.foreground}
-label = " | %percentage_used%%"
-label-background = ${colors.color3}
+label = " %percentage_used%% "
+label-background = ${colors.color4}
 label-foreground = ${colors.foreground}
 
 #---------------------------------------------------------------------------
@@ -219,19 +219,19 @@ battery = BAT1
 adapter = ACAD
 full-at = 100
 
-label-full = " | 100% "
+label-full = " 100% "
 label-full-foreground = ${colors.foreground}
-label-full-background =  ${colors.color4}
+label-full-background =  ${colors.color5}
 
 ;format-charging ="<label-charging><animation-charging>"
-label-charging = " | %percentage%% "
-format-charging-background = ${colors.color4} 
+label-charging = " %percentage%% "
+format-charging-background = ${colors.color5} 
 label-charging-foreground = ${colors.foreground}
 
 ;format-discharging ="<animation-discharging><label-discharging>"
-label-discharging = " | DISCHARGING %percentage%% "
-format-discharging-background = ${colors.color1}
-label-discharging-foreground =  ${colors.background}
+label-discharging = " DISCHARGING %percentage%% "
+format-discharging-background = ${colors.color5}
+label-discharging-foreground =  ${colors.foreground}
 
 ;format-full-prefix = ""
 ;format-full-prefix-foreground = ${colors.foreground-alt}
@@ -259,8 +259,8 @@ exec = ~/.config/MySetting/get_temp.sh
 tail = true
 interval = 3.0
 format = <label>
-label = "| %output% "
-label-background = ${colors.color5}
+label = " %output% "
+label-background = ${colors.color6}
 label-foreground = ${colors.foreground}
 
 #---------------------------------------------------------------------------
@@ -271,8 +271,8 @@ exec = ~/.config/MySetting/stat_network.sh
 tail = true
 interval = 300.0
 format = <label>
-label = "| %output% "
-label-background = ${colors.color5}
+label = " %output% "
+label-background = ${colors.color7}
 label-foreground = ${colors.foreground}
 
 #---------------------------------------------------------------------------
@@ -287,8 +287,8 @@ date-alt = " %A %d/%m/%Y"
 time = "%H:%M "
 time-alt = "%H:%M:%S "
 
-label ="|%date%.%time%"
-label-background = ${colors.color6}
+label ="%date%.%time%"
+label-background = ${colors.color8}
 label-foreground = ${colors.foreground}
 
 #---------------------------------------------------------------------------
@@ -299,43 +299,43 @@ type = custom/menu
 expand-right = false
 format-spacing = 0
 
-label-open = "| FOXTRAP |"
-label-open-foreground = ${colors.background}
-label-open-background = #75FFFFFF
+label-open = " FOXTRAP "
+label-open-foreground = ${colors.foreground}
+label-open-background = ${colors.color9}
 label-close = "  BATAL  "
 label-close-foreground = ${colors.foreground}
-label-close-background = ${colors.color7}
+label-close-background = ${colors.color9}
 label-separator = "|"
-label-separator-foreground = ${colors.color7}
+label-separator-foreground = ${colors.color9}
 
 menu-0-0 = " RESTART "
 menu-0-0-foreground = ${colors.foreground}
-menu-0-0-background = ${colors.color7}
+menu-0-0-background = ${colors.color9}
 menu-0-0-exec = menu-open-1
 menu-0-0-margin-left = 2
 menu-0-1 = " MATIKAN "
 menu-0-1-foreground = ${colors.foreground}
-menu-0-1-background = ${colors.color7}
+menu-0-1-background = ${colors.color9}
 menu-0-1-exec = menu-open-2
 
 menu-1-0 = "  BATAL  "
 menu-1-0-foreground = ${colors.foreground}
-menu-1-0-background = ${colors.color7}
+menu-1-0-background = ${colors.color9}
 menu-1-0-exec = menu-open-0
 menu-1-0-margin-left = 2
 menu-1-1 = " RESTART "
 menu-1-1-foreground = ${colors.foreground}
-menu-1-1-background = ${colors.color7}
+menu-1-1-background = ${colors.color9}
 menu-1-1-exec = reboot
 
 menu-2-0 = " MATIKAN "
 menu-2-0-exec = shutdown now
 menu-2-0-foreground = ${colors.foreground}
-menu-2-0-background = ${colors.color7}
+menu-2-0-background = ${colors.color9}
 menu-2-0-margin-left = 2
 menu-2-1 = "  BATAL  "
 menu-2-1-foreground = ${colors.foreground}
-menu-2-1-background = ${colors.color7}
+menu-2-1-background = ${colors.color9}
 menu-2-1-exec = menu-open-0
 
 [settings]
