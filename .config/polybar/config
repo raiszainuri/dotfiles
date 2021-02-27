@@ -18,17 +18,17 @@
 
 [colors]
 
-color10 = #000F5E6A
-color9  = #000F5E6A
-color8  = #000F5E6A
-color7  = #000F5E6A
-color6  = #000F5E6A
-color5  = #000F5E6A
-color4  = #000F5E6A
-color3  = #000F5E6A
-color2  = #000F5E6A
-color1  = #000F5E6A
-color0  = #000F5E6A
+color10 = #2D3142
+color9  = #2D3142
+color8  = #2D3142
+color7  = #2D3142
+color6  = #2D3142
+color5  = #2D3142
+color4  = #2D3142
+color3  = #2D3142
+color2  = #2D3142
+color1  = #2D3142
+color0  = #2D3142
 white   = #FFFFFF
 
 #color10 = #902D3142
@@ -45,7 +45,7 @@ white   = #FFFFFF
 #white   = #FFFFFF
 
 
-background = #90145764
+background = #2D3142
 foreground = #FFFFFF
 foreground-tr = #75FFFFFF
 foreground-alt = #555555
@@ -64,7 +64,7 @@ override-redirect = false
 ;offset-x = 1%
 ;offset-y = 1%
 
-background = ${colors.transparent}
+background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 0
@@ -182,7 +182,7 @@ label-urgent-margin-right = 0
 type = internal/xwindow
 format-prefix = " "
 label = " %title:0:120:...% "
-label-background = #80FFFFFF
+label-background = #90FFFFFF
 label-foreground = #80000000
 
 
@@ -313,7 +313,7 @@ type = custom/menu
 expand-right = false
 format-spacing = 0
 
-label-open = " FOXTRAP |"
+label-open = " SWEETLEARN |"
 label-open-foreground = ${colors.foreground}
 label-open-background = ${colors.color9}
 label-close = "  BATAL  "
@@ -587,7 +587,7 @@ type = custom/menu
 expand-right = false
 format-spacing = 0
 
-label-open = " FOXTRAP "
+label-open = " SWEETLEARN "
 label-open-foreground = ${colors2.foreground}
 label-open-background = ${colors2.color7}
 label-close = "  BATAL  "
