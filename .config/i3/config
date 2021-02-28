@@ -63,7 +63,7 @@ bindsym $mod+Shift+q kill
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
-bindsym $mod+Tab exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -f -i -h 20 -nf '#848484' -nb '#2D3142' -sb '#046C77' -sf '#EEEEEE' -fn 'iosevka-9'"
+bindsym $mod+Tab exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -f -i -h 20 -nf '#848484' -nb '#222222' -sb '#046C77' -sf '#EEEEEE' -fn 'iosevka-9'"
 
 #show rofi
 bindsym $mod+d exec --no-startup-id rofi -show drun
@@ -211,20 +211,21 @@ bindsym Mod1+Tab exec --no-startup-id ~/.config/MySetting/rofi_windows_switcher.
 #gaps outer 5
 gaps inner 10
 
-client.focused          #2D3142 #2D3142 #FFFBF7 #FF0000   #770000
+client.focused          #2D3142 #2D3142 #FFFBF7 #FF0000   #FFFFFF
 client.unfocused        #222222 #222222 #888888 #222222   #222222
-client.focused_inactive #222222 #222222 #FFFFFF #222222   ##222222
+client.focused_inactive #222222 #222222 #FFFFFF #222222   #222222
 client.urgent           #4ECCA3 #4ECCA3 #FFFFFF #4ECCA3   #4ecca3
 
 #exec_always --no-startup-id feh --bg-fill -Z ~/Pictures/Wallpaper/wallpaper2.jpg
-exec_always --no-startup-id feh --bg-fill -Z ~/Pictures/Wallpaper/wallpaper.png
+exec_always --no-startup-id feh --no-fehbg --bg-fill '/home/raiszainuri/Pictures/Wallpaper/john-silliman-JojJkCsjh6s-unsplash-remake.jpg' 
 
 exec --no-startup-id xinput set-prop 12 282 1
 #exec --no-startup-id xinput set-prop 13 302 1
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 #exec --no-startup-id xfce4-power-manager
 
-exec_always --no-startup-id picom -cCGfF -o 0.38 -O 200 -I 200 -t 0 -l 0 -r 3 -D2 -m 0.88 -i 1.0 -e 1.0 --active-opacity 1.0
+exec_always --no-startup-id xcompmgr
+#exec_always --no-startup-id picom -cCGfF -o 0.38 -O 200 -I 200 -t 0 -l 0 -r 3 -D2 -m 0.88 -i 1.0 -e 1.0 --active-opacity 1.0
 #exec_always --no-startup-id i3wsr --no-names
 
 bindsym $mod+p exec --no-startup-id picom -cCGfF -o 0.38 -O 200 -I 200 -t 0 -l 0 -r 3 -D2 -m 0.88 -i 1.0 -e 1.0 --active-opacity 1.0
