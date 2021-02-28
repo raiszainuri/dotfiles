@@ -18,17 +18,17 @@
 
 [colors]
 
-color10 = #2D3142
-color9  = #2D3142
-color8  = #2D3142
-color7  = #2D3142
-color6  = #2D3142
-color5  = #2D3142
-color4  = #2D3142
-color3  = #2D3142
-color2  = #2D3142
-color1  = #2D3142
-color0  = #2D3142
+color10 = #222222
+color9  = #222222
+color8  = #222222
+color7  = #222222
+color6  = #222222
+color5  = #222222
+color4  = #222222
+color3  = #222222
+color2  = #222222
+color1  = #222222
+color0  = #222222
 white   = #FFFFFF
 
 #color10 = #902D3142
@@ -45,7 +45,7 @@ white   = #FFFFFF
 #white   = #FFFFFF
 
 
-background = #2D3142
+background = #222222
 foreground = #FFFFFF
 foreground-tr = #75FFFFFF
 foreground-alt = #555555
@@ -182,8 +182,9 @@ label-urgent-margin-right = 0
 type = internal/xwindow
 format-prefix = " "
 label = " %title:0:120:...% "
-label-background = #90FFFFFF
-label-foreground = #80000000
+#label-background = #90FFFFFF
+label-background = #A4A5AD
+label-foreground = #222222
 
 
 # RIGHT ====================================================================
