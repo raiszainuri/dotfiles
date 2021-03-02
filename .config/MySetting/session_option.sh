@@ -1,10 +1,10 @@
 #!/bin/sh
 while true; do
-    read -p "Shutdown atanapi Reboot? [s/r]
+    read -p "shutdown? [y/g]
 " yn
     case $yn in
-        [Ss]* ) shutdown now; break;;
-        [Rr]* ) reboot;;
+        [y]* ) shutdown now; break;;
+        [r]* ) reboot;;
         * ) exit;;
     esac
 done
