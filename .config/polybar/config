@@ -102,6 +102,55 @@ tray-padding = 2
 tray-margin = 2
 #tray-background = ${colors.background}
 
+[bar/topbar2]
+width = 100%
+height = 20
+radius = 0
+fixed-center = true
+override-redirect = false
+
+;monitor = ${env:MONITOR:HDMI-1}
+;offset-x = 1%
+;offset-y = 1%
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 0
+line-color = ${colors.foreground}
+
+;border-size = 4
+border-top-size = 0
+border-right-size = 0
+border-left-size = 0
+border-bottom-size = 0
+
+border-color = 
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 0
+module-margin-right = 0
+
+font-0 = consolas:pixelsize=9;2
+font-1 = consolas:pixelsize=9;2
+font-2 = FontAwesome:pixelsize=10;2
+
+modules-left = i3w xwindow 
+modules-center =
+modules-right = pulseaudio cpu memory battery get_temp stat_net date powermenu
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+tray-position = right
+tray-maxsize = 10
+tray-offset-y = 0
+tray-padding = 2
+tray-margin = 2
+#tray-background = ${colors.background}
+
 
 # LEFT ====================================================================
 
@@ -111,9 +160,9 @@ exec = ~/.config/MySetting/current_workspace2.sh
 tail = true
 interval = 0
 format = <label>
-label = "%output%"
-label-background = ${colors2.background}
-label-foreground = ${colors2.foreground}
+label = "%output% "
+label-background = ${colors.background}
+label-foreground = ${colors.foreground}
 
 #---------------------------------------------------------------------------
 
@@ -388,7 +437,7 @@ foreground-alt = #555555
 alert = #046C77
 transparent = #00000000
 
-[bar/topbar2]
+[bar/topbar3]
 width = 100%
 height = 20
 radius = 0
