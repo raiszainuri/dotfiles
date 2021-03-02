@@ -63,7 +63,7 @@ bindsym $mod+Shift+q kill
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
-bindsym $mod+Tab exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -f -i -h 20 -nf '#848484' -nb '#222222' -sb '#046C77' -sf '#EEEEEE' -fn 'iosevka-9'"
+bindsym $mod+Tab exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -f -i -h 20 -nf '#848484' -nb '#222222' -sb '#A4A5AD' -sf '#222222' -fn 'fira code-9'"
 
 #show rofi
 bindsym $mod+d exec --no-startup-id rofi -show drun
