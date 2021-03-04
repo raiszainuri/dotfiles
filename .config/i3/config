@@ -237,6 +237,11 @@ exec_always --no-startup-id picom -cCGfF -o 0.38 -O 200 -I 200 -t 0 -l 0 -r 3 -D
 bindsym $mod+p exec --no-startup-id picom -cCGfF -o 0.38 -O 200 -I 200 -t 0 -l 0 -r 3 -D2 -m 0.88 -i 1.0 -e 1.0 --active-opacity 1.0
 bindsym $mod+Shift+p exec --no-startup-id pkill picom
 
+bindsym $mod+Shift+s exec --no-startup-id screenkey
+bindsym $mod+Shift+Control+s exec --no-startup-id pkill screenkey
+
+# https://github.com/savoca/dotfiles/blob/gray/home/.bin/scripts/lock.sh
+bindsym $mod+Shift+Control+l exec --no-startup-id .config/MySetting/lock_script.sh
 bindsym $mod+Control+w exec --no-startup-id google-chrome-stable
 bindsym $mod+Control+e exec --no-startup-id thunar
 bindsym mod1+Control+Delete exec --no-startup-id kitty -e .config/MySetting/session_option.sh
