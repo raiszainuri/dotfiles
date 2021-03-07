@@ -263,7 +263,7 @@ bindsym XF86MonBrightnessDown   exec --no-startup-id brightnessctl s 10-
 # https://gist.github.com/lirenlin/9892945
 
 title_align center
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 0
 for_window [class="terminal"] floating enable move right 553px,move down 327px
 
 # gaps outer 5
