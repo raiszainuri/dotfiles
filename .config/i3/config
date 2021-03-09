@@ -244,9 +244,11 @@ bindsym $mod+Shift+Control+l    exec --no-startup-id .config/MySetting/lock_scri
 # ---- dsb
 bindsym $mod+t                  exec --no-startup-id thunar
 bindsym Mod1+Tab                exec --no-startup-id ~/.config/MySetting/rofi_windows_switcher.sh
-
 bindsym $mod+Print              exec --no-startup-id ~/.config/MySetting/scrot.sh
+
 bindsym $mod+Shift+Print        exec --no-startup-id ~/.config/MySetting/scrot_clipboard.sh
+bindsym $mod+Shift+f            exec --no-startup-id firefox
+bindsym $mod+Shift+t            exec --no-startup-id TDESKTOP_USE_GTK_FILE_DIALOG=1 telegram-desktop -- %u
 
 bindsym $mod+Control+Print      exec --no-startup-id xfce4-terminal -x scrot -s
 bindsym Mod1+Control+Delete     exec --no-startup-id kitty -e .config/MySetting/session_option.sh
