@@ -10,6 +10,7 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'dense-analysis/ale'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'SirVer/ultisnips'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
 call plug#end()
 
@@ -29,11 +30,11 @@ set t_Co=256
 syntax on
 colorscheme minimalist
 
-inoremap <C-BS> <C-w>
-inoremap <C-Del> <C-c>dei
-inoremap <C-z> <C-c>ui
-tnoremap <Esc> <C-\><C-n>:q!<CR>
-nmap <F8> :TagbarToggle<CR>
+inoremap <C-BS>     <C-w>
+inoremap <C-Del>    <C-c>dei
+inoremap <C-z>      <C-c>ui
+tnoremap <Esc>      <C-\><C-n>:q!<CR>
+nmap     <F8>       :TagbarToggle<CR>
 
 set tabstop=4
 set shiftwidth=4
