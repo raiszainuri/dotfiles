@@ -8,9 +8,12 @@ Plug 'Yggdroot/indentLine'
 Plug 'majutsushi/tagbar'
 Plug 'Shougo/deoplete.nvim'
 Plug 'dense-analysis/ale'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'SirVer/ultisnips'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
@@ -21,8 +24,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:user_emmet_mode='a'
 let g:user_emmet_install_global = 0
-
-let g:gruvbox_bold=1
+let $FZF_DEFAULT_COMMAND = 'rg --files --ignore --hidden --follow --glob "!.git/*"'
 
 autocmd FileType html,css EmmetInstall
 
@@ -30,17 +32,22 @@ set t_Co=256
 syntax on
 colorscheme minimalist
 
-inoremap <C-BS>     <C-w>
-inoremap <C-Del>    <C-c>dei
-inoremap <C-z>      <C-c>ui
-tnoremap <Esc>      <C-\><C-n>:q!<CR>
-nmap     <F8>       :TagbarToggle<CR>
+inoremap            <C-BS>      <C-w>
+inoremap            <C-Del>     <C-c>dei
+inoremap            <C-z>       <C-c>ui
+tnoremap            <Esc>       <C-\><C-n>:q!<CR>
+nmap                <F8>        :TagbarToggle<CR>
+nnoremap   <silent> <C-H>       :Files<cr>
+nnoremap   <silent> <C-F>       :Files ~/MyProject/Programming<cr>
+
+
 
 set tabstop=4
 set shiftwidth=4
 set expandtab
 set number
 set noswapfile
+set encoding=UTF-8
 
 " ==================
 
@@ -74,3 +81,10 @@ let g:ale_linters = {
 let g:deoplete#enable_smart_case = 1
 " Setup completion sources
 let g:deoplete#sources = {}
+
+" ==================
+" This is the default extra key bindings
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
