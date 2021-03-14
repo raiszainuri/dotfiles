@@ -869,7 +869,7 @@ label-charging-foreground = ${colors3.foreground}
 ;format-discharging ="<animation-discharging><label-discharging>"
 label-discharging = " [%percentage%%] "
 format-discharging-background = ${colors3.color1}
-label-discharging-foreground =  ${colors3.background}
+label-discharging-foreground =  ${colors3.foreground}
 
 ;format-full-prefix = ""
 ;format-full-prefix-foreground = ${colors3.foreground-alt}

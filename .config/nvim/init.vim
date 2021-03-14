@@ -76,7 +76,7 @@ set noswapfile
 set encoding=UTF-8
 set breakindent
 set showbreak=>> "set breakindentopt=shift:2,min:40,sbr
-
+set mouse=a
 
 " ---------------------------------------------------------------------------------------------
 

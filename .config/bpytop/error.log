@@ -96,3 +96,13 @@ Traceback (most recent call last):
   File "/usr/bin/bpytop", line 768, in __exit__
     termios.tcsetattr(self.stream, termios.TCSANOW, self.original_stty)
 termios.error: (5, 'Input/output error')
+14/03/21 (03:58:37) | ERROR: Input thread failed with exception: [Errno 5] Input/output error
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 927, in _get_key
+    input_key += sys.stdin.read(1)						#* Read 1 key safely with blocking on
+OSError: [Errno 5] Input/output error
+14/03/21 (17:33:54) | ERROR: Input thread failed with exception: [Errno 5] Input/output error
+Traceback (most recent call last):
+  File "/usr/bin/bpytop", line 927, in _get_key
+    input_key += sys.stdin.read(1)						#* Read 1 key safely with blocking on
+OSError: [Errno 5] Input/output error
