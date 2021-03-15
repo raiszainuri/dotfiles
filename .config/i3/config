@@ -242,8 +242,10 @@ bindsym $mod+Shift+s            exec --no-startup-id       screenkey
 bindsym $mod+Shift+Control+l    exec --no-startup-id .config/MySetting/lock_script.sh
 
 # ---- dsb
+bindsym Mod1+Tab                focus right
+
 bindsym $mod+t                  exec --no-startup-id thunar
-bindsym Mod1+Tab                exec --no-startup-id ~/.config/MySetting/rofi_windows_switcher.sh
+#bindsym Mod1+Tab                exec --no-startup-id ~/.config/MySetting/rofi_windows_switcher.sh
 bindsym $mod+Print              exec --no-startup-id ~/.config/MySetting/scrot.sh
 
 bindsym $mod+Shift+Print        exec --no-startup-id ~/.config/MySetting/scrot_clipboard.sh
