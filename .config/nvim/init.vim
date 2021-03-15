@@ -29,7 +29,7 @@ call plug#end()
 "let g:python_host_prog = '/usr/bin/python'
 let g:airline_theme='minimalist'
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
 
 " EMMET
 let g:user_emmet_mode='a'
