@@ -59,6 +59,8 @@ tnoremap            <Esc>       <C-\><C-n>:q!<CR>
 
 nnoremap   <silent> <C-H>       :Files<cr>
 nnoremap   <silent> <C-F>       :Files ~/MyProject/Programming<cr>
+nnoremap   <silent> <M-Right>   :tabn<CR>
+nnoremap   <silent> <m-Left>    :tabp<CR>
 
 
 " ---------------------------------------------------------------------------------------------
