@@ -36,7 +36,7 @@ let g:user_emmet_mode='a'
 let g:user_emmet_install_global = 0
 
 " FZF
-let $FZF_DEFAULT_COMMAND = 'rg --files --ignore --hidden --follow --glob "!.git/*"'
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --no-require-git'
 
 " UltiSnips
 let g:UltiSnipsExpandTrigger="<tab>"
