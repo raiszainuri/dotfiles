@@ -11,7 +11,9 @@ Plug 'junegunn/fzf.vim' "fzf
 Plug 'vim-airline/vim-airline' "theme
 Plug 'ryanoasis/vim-devicons' "icon
 Plug 'tweekmonster/startuptime.vim'
+Plug 'kyazdani42/nvim-tree.lua'
 
+"Plug 'kyazdani42/nvim-web-devicons' " for file icons
 "Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  "theme ~ contrast color
 "Plug 'dense-analysis/ale' "showing error
 "Plug 'majutsushi/tagbar' "knowing properties
@@ -25,11 +27,35 @@ call plug#end()
 " ---------------------------------------------------------------------------------------------
 
 
+syntax on
+colorscheme minimalist
+
+set t_Co=256
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set number
+set noswapfile
+set encoding=UTF-8
+set breakindent
+set showbreak=>> "set breakindentopt=shift:2,min:40,sbr
+set mouse=a
+set cursorline
+
+hi CursorLine term=bold cterm=bold guibg=Grey40
+
+
+" ---------------------------------------------------------------------------------------------
+
+
 "let g:python3_host_prog = '/usr/bin/python3'
 "let g:python_host_prog = '/usr/bin/python'
 let g:airline_theme='minimalist'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 0
+
+let g:nvim_tree_indent_markers = 1
+let g:nvim_tree_follow = 1
 
 " EMMET
 let g:user_emmet_mode='a'
@@ -60,25 +86,8 @@ tnoremap            <Esc>       <C-\><C-n>:q!<CR>
 nnoremap   <silent> <C-H>       :Files<cr>
 nnoremap   <silent> <C-F>       :Files ~/MyProject/Programming<cr>
 nnoremap   <silent> <M-Right>   :tabn<CR>
-nnoremap   <silent> <m-Left>    :tabp<CR>
-
-
-" ---------------------------------------------------------------------------------------------
-
-
-syntax on
-colorscheme minimalist
-
-set t_Co=256
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set number
-set noswapfile
-set encoding=UTF-8
-set breakindent
-set showbreak=>> "set breakindentopt=shift:2,min:40,sbr
-set mouse=a
+nnoremap   <silent> <M-Left>    :tabp<CR>
+nnoremap            <C-n>       :NvimTreeToggle<CR>
 
 " ---------------------------------------------------------------------------------------------
 
@@ -127,3 +136,22 @@ let g:fzf_action = {
 
 
 " ------------------------------------------------------------------
+"
+let g:nvim_tree_icons = {
+    \ 'default': '',
+    \ 'symlink': '',
+    \ 'git': {
+    \   'unstaged': "✗",
+    \   'staged': "✓",
+    \   'unmerged': "",
+    \   'renamed': "➜",
+    \   'untracked': "★"
+    \   },
+    \ 'folder': {
+    \   'default': "",
+    \   'open': "",
+    \   'empty': "",
+    \   'empty_open': "",
+    \   'symlink': "",
+    \   }
+    \ }
