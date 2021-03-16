@@ -1,4 +1,4 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 Plug 'dikiaap/minimalist' "theme
 Plug 'mattn/emmet-vim' "html generator
