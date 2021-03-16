@@ -10,8 +10,8 @@ Plug 'junegunn/fzf' "fzf
 Plug 'junegunn/fzf.vim' "fzf
 Plug 'vim-airline/vim-airline' "theme
 Plug 'ryanoasis/vim-devicons' "icon
+Plug 'kyazdani42/nvim-tree.lua' "tree
 Plug 'tweekmonster/startuptime.vim'
-Plug 'kyazdani42/nvim-tree.lua'
 
 "Plug 'kyazdani42/nvim-web-devicons' " for file icons
 "Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  "theme ~ contrast color
@@ -35,6 +35,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set number
+set relativenumber
 set noswapfile
 set encoding=UTF-8
 set breakindent
@@ -42,7 +43,7 @@ set showbreak=>> "set breakindentopt=shift:2,min:40,sbr
 set mouse=a
 set cursorline
 
-hi CursorLine term=bold cterm=bold guibg=Grey40
+hi CursorLine term=bold cterm=bold guibg=#121212
 
 
 " ---------------------------------------------------------------------------------------------
@@ -52,7 +53,8 @@ hi CursorLine term=bold cterm=bold guibg=Grey40
 "let g:python_host_prog = '/usr/bin/python'
 let g:airline_theme='minimalist'
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 0
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#left_sep = '||'
 
 let g:nvim_tree_indent_markers = 1
 let g:nvim_tree_follow = 1
@@ -138,20 +140,26 @@ let g:fzf_action = {
 " ------------------------------------------------------------------
 "
 let g:nvim_tree_icons = {
-    \ 'default': '',
-    \ 'symlink': '',
+    \ 'default': ' ',
+    \ 'symlink': ' ',
     \ 'git': {
-    \   'unstaged': "✗",
-    \   'staged': "✓",
-    \   'unmerged': "",
-    \   'renamed': "➜",
-    \   'untracked': "★"
+    \   'unstaged': "-> ✗",
+    \   'staged': "-> ✓",
+    \   'unmerged': "-> ",
+    \   'renamed': "-> r",
+    \   'untracked': "-> ★"
     \   },
     \ 'folder': {
     \   'default': "",
     \   'open': "",
-    \   'empty': "",
-    \   'empty_open': "",
+    \   'empty': "e",
+    \   'empty_open': "e",
     \   'symlink': "",
     \   }
     \ }
+
+set termguicolors
+hi NvimTreeIndentMarker     guifg=#E4E4E4
+hi NvimTreeFolderIcon       guifg=#E4E4E4
+hi NvimTreeFolderName       guifg=#E4E4E4
+hi NvimTreeEmptyFolderName  guifg=#4E4E4E
