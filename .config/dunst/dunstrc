@@ -1,0 +1,58 @@
+#https://addy-dclxvi.github.io/post/dunst/
+
+[global]
+monitor = 0
+follow = mouse
+geometry = "300x60-20+48"
+indicate_hidden = yes
+shrink = no	
+separator_height = 0
+padding = 20
+horizontal_padding = 20
+frame_width = 2
+sort = no
+idle_threshold = 120
+font = iosevka 8
+line_height = 4
+markup = full
+format = "<b>%s<\b>\n%b"
+alignment = left
+show_age_threshold = 60
+word_wrap = yes
+ignore_newline = no
+stack_duplicates = no
+hide_duplicate_count = yes
+show_indicators = no
+icon_position = left
+max_icon_size = 30
+text_icon_padding = 0
+sticky_history = yes
+history_length = 20
+browser = /usr/bin/firefox -new-tab
+always_run_script = true
+title = Dunst
+class = Dunst
+
+[shortcuts]
+close = ctrl+space
+close_all = ctrl+shift+space
+history = ctrl+grave
+context = ctrl+shift+period
+
+[urgency_low]
+timeout = 10
+background = "#222222"
+foreground = "#ffffff"
+frame_color = "#A4A5AD"
+
+[urgency_normal]
+timeout = 20
+background = "#222222"
+foreground = "#ffffff"
+frame_color = "#A4A5AD"
+
+[urgency_critical]
+timeout = 0
+background = "#222222"
+foreground = "#ffffff"
+frame_color = "#A4A5AD"
