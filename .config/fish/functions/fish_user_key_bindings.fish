@@ -14,7 +14,7 @@ function ...
     cat ~/.config/MySetting/nf.txt
 end
 
-function htop
+function pp
     bpytop
 end
 
