@@ -252,7 +252,8 @@ bindsym $mod+Shift+Print        exec --no-startup-id ~/.config/MySetting/scrot_c
 bindsym $mod+Shift+f            exec --no-startup-id firefox
 bindsym $mod+Shift+t            exec --no-startup-id TDESKTOP_USE_GTK_FILE_DIALOG=1 telegram-desktop -- %u
 
-bindsym $mod+Control+Print      exec --no-startup-id xfce4-terminal -x scrot -s
+# bindsym $mod+Control+Print      exec --no-startup-id xfce4-terminal -x scrot -s
+bindsym $mod+Control+Print      exec --no-startup-id "sleep 0.2;scrot -s"
 bindsym Mod1+Control+Delete     exec --no-startup-id kitty -e .config/MySetting/session_option.sh
 
 # ---- Screen Brightness controls bandithijo, and package reference dotfiles_indonesia

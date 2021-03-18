@@ -384,7 +384,7 @@ type = custom/menu
 expand-right = false
 format-spacing = 0
 
-label-open = " SWEETLEARN |"
+label-open = " BERSYUKUR |"
 label-open-foreground = ${colors.foreground}
 label-open-background = ${colors.color9}
 label-close = "  BATAL  "

@@ -26,7 +26,7 @@ function vim
     nvim
 end
 
-function ssyn!
+function syn!
     shutdown now
 end
 
