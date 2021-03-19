@@ -40,7 +40,7 @@ set noswapfile
 set encoding=UTF-8
 set breakindent
 set showbreak=>> "set breakindentopt=shift:2,min:40,sbr
-set mouse=a
+"set mouse=a
 set cursorline
 
 hi CursorLine term=bold cterm=bold guibg=#121212
