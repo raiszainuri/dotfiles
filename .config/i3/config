@@ -211,12 +211,19 @@ exec_always     --no-startup-id picom -cCGfF -o 0.38 -O 200 -I 200 -t 0 -l 0 -r 
 
 # ====================================
 
+# ---- polkit
+exec            --no-startup-id /usr/lib/mate-polkit/polkit-mate-authentication-agent-1
+
+
 # ---- touchpad
- exec           --no-startup-id xinput set-prop 12 282 1
+exec           --no-startup-id xinput set-prop 12 282 1
 #exec           --no-startup-id xinput set-prop 13 302 1
 
 # ---- dunst
 exec            --no-startup-id dunst -config ~/.config/dunst/dunstrc
+
+# ---- flameshot
+exec            --no-startup-id flameshot
 
 # ====================================
 
@@ -269,7 +276,8 @@ bindsym XF86MonBrightnessDown   exec --no-startup-id brightnessctl s 10-
 
 title_align center
 for_window [class=".*"] border pixel 0
-for_window [class="terminal"] floating enable move right 553px,move down 327px
+#for_window [class="terminal"] floating enable move right 553px,move down 327px
+for_window [class="terminal"] floating enable
 
 # gaps outer 5
   gaps inner 14

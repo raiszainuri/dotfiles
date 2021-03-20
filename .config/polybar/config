@@ -230,7 +230,7 @@ label-urgent-margin-right = 1
 [module/xwindow]
 type = internal/xwindow
 format-prefix = " "
-label = " %{T2}%title:0:120:...% "
+label = " %{T2}%title:0:80:...% "
 #label-background = #90FFFFFF
 label-background = #A4A5AD
 label-foreground = #222222
