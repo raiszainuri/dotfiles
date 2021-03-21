@@ -54,7 +54,7 @@ hi CursorLine term=bold cterm=bold guibg=#121212
 let g:airline_theme='minimalist'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#left_sep = '||'
+"let g:airline#extensions#tabline#left_sep = '||'
 
 let g:nvim_tree_indent_markers = 1
 let g:nvim_tree_follow = 1
