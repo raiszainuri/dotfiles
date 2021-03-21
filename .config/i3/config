@@ -48,6 +48,7 @@ floating_modifier $mod
 
 #start a terminal
 bindsym $mod+Return                     exec --no-startup-id kitty
+bindsym $mod+Shift+Return               exec --no-startup-id xfce4-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -277,7 +278,7 @@ bindsym XF86MonBrightnessDown   exec --no-startup-id brightnessctl s 10-
 title_align center
 for_window [class=".*"] border pixel 0
 #for_window [class="terminal"] floating enable move right 553px,move down 327px
-for_window [class="terminal"] floating enable
+#for_window [class="terminal"] floating disable
 
 # gaps outer 5
   gaps inner 14
