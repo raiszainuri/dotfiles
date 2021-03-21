@@ -91,7 +91,7 @@ font-0 = consolas:pixelsize=10;2
 font-1 = "Iosevka Nerd Font:pixelsize=9;2"
 font-2 = "Iosevka Nerd Font:pixelsize=12;3"
 
-modules-left = kanan1 i3 fill kanan2 xwindow kanan3 separator
+modules-left = i3urgent kanan1 i3 fill kanan2 xwindow kanan3 separator
 modules-center =
 modules-right = kiri pulseaudio cpu memory battery get_temp stat_net date powermenu kiri2
 
@@ -291,12 +291,44 @@ label-unfocused-foreground= ${colors.background-alt}
 ;label-visible-padding = ${self.label-focused-padding}
 
 ; urgent = Workspace with urgency hint set
-label-urgent = "%{T3}%icon%"
-label-urgent-background = ${colors.alert}
-label-urgent-foreground = ${colors.white}
+label-urgent = "%{T1}%icon%"
+label-urgent-background = ${colors.accent}
+label-urgent-foreground = ${colors.accent2}
 label-urgent-padding = 0
-label-urgent-margin-left = 1
-label-urgent-margin-right = 1
+label-urgent-margin-left = 0
+label-urgent-margin-right = 0
+
+; Separator in between workspaces
+label-separator = ""
+
+[module/i3urgent]
+type = internal/i3
+format = "<label-mode> <label-state>"
+
+ws-icon-0 = "1;1"
+ws-icon-1 = "2;2"
+ws-icon-2 = "3;3"
+ws-icon-3 = "4;4"
+ws-icon-4 = "5;5"
+ws-icon-5 = "6;6"
+ws-icon-6 = "7;7"
+ws-icon-7 = "8;8"
+ws-icon-8 = "9;9"
+ws-icon-9 = "10;0"
+
+; focused = Active workspace on focused monitor
+label-focused = ""
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = ""
+
+; urgent = Workspace with urgency hint set
+label-urgent = "%{T1}%icon%"
+label-urgent-background = ${colors.accent2}
+label-urgent-foreground = ${colors.white}
+label-urgent-padding = 1
+label-urgent-margin-left = 0
+label-urgent-margin-right = 0
 
 ; Separator in between workspaces
 label-separator = ""
