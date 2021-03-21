@@ -31,26 +31,29 @@
 #color0  = #222222
 #white   = #FFFFFF
 
-color10 = #A4A5AD
-color9  = #A4A5AD
-color8  = #A4A5AD
-color7  = #A4A5AD
-color6  = #A4A5AD
-color5  = #A4A5AD
-color4  = #A4A5AD
-color3  = #A4A5AD
-color2  = #A4A5AD
-color1  = #A4A5AD
-color0  = #A4A5AD
+color10 = #3A3A3A
+color9  = #3A3A3A
+color8  = #3A3A3A
+color7  = #3A3A3A
+color6  = #3A3A3A
+color5  = #3A3A3A
+color4  = #3A3A3A
+color3  = #3A3A3A
+color2  = #3A3A3A
+color1  = #3A3A3A
+color0  = #3A3A3A
 white   = #FFFFFF
+accent  = #FFAF5F
+accent2 = #D75F5F
 
-background = #222222
-#foreground = #FFFFFF
-foreground = #222222
-foreground-tr = #75FFFFFF
-foreground-alt = #555555
+background      = #262626
+background2     = #2C2C2C
+background-alt  = #75222222
+foreground      = #FFFFFF
+foreground-tr   = #50FFFFFF
+foreground-alt  = #555555
 
-alert = #046C77
+alert = #2D5753
 transparent = #00000000
 
 [bar/topbar]
@@ -84,23 +87,24 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = consolas:pixelsize=9;2
-font-1 = "Iosevka Nerd Font:pixelsize=9;3"
+font-0 = consolas:pixelsize=10;2
+font-1 = "Iosevka Nerd Font:pixelsize=9;2"
 font-2 = "Iosevka Nerd Font:pixelsize=12;3"
 
-modules-left = i3 xwindow kanan
+modules-left = kanan1 i3 fill kanan2 xwindow kanan3 separator
 modules-center =
-modules-right = kiri pulseaudio cpu memory battery get_temp stat_net date powermenu
+modules-right = kiri pulseaudio cpu memory battery get_temp stat_net date powermenu kiri2
 
 cursor-click = pointer
 cursor-scroll = ns-resize
 
 tray-position = right
 tray-maxsize = 9
-tray-offset-y = 0
+tray-offset-x = 0
 tray-padding = 4
 tray-margin = 2
-#tray-background = ${colors.background}
+tray-background = ${colors.accent2}
+#tray-foreground = #222222
 
 [bar/topbar2]
 width = 100%
@@ -134,11 +138,12 @@ module-margin-left = 0
 module-margin-right = 0
 
 font-0 = consolas:pixelsize=9;2
-font-1 = consolas:pixelsize=9;2
+font-1 = "Iosevka Nerd Font:pixelsize=9;2"
+font-2 = "Iosevka Nerd Font:pixelsize=12;3"
 
-modules-left = i3w xwindow 
+modules-left = i3w xwindow separator
 modules-center =
-modules-right = pulseaudio cpu memory battery get_temp stat_net date powermenu
+modules-right = kiri pulseaudio cpu memory battery get_temp stat_net date powermenu kiri2
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -148,19 +153,59 @@ tray-maxsize = 10
 tray-offset-y = 0
 tray-padding = 2
 tray-margin = 2
-tray-background = ${colors.color10}
+tray-background = ${colors.accent2}
 
 # ACC ====================================================================
 
-[module/kanan]
+[module/kanan1]
 type = custom/script
 exec = echo ' '
 tail = true
 interval = 600
 format = <label>
 label = "%{T3}"
-label-background = ${colors.foreground}
+label-background = ${colors.accent}
+label-foreground = ${colors.accent2}
+
+[module/kanan2]
+type = custom/script
+exec = echo ' '
+tail = true
+interval = 600
+format = <label>
+label = "%{T3}"
+label-background = ${colors.color10}
+label-foreground = ${colors.accent}
+
+[module/kanan3]
+type = custom/script
+exec = echo ' '
+tail = true
+interval = 600
+format = <label>
+label = "%{T3}"
+label-background = ${colors.background}
 label-foreground = ${colors.color0}
+
+[module/fill]
+type = custom/script
+exec = echo ' '
+tail = true
+interval = 600
+format = <label>
+label = " "
+label-background = ${colors.accent}
+label-foreground = ${colors.color0}
+
+[module/separator]
+type = custom/script
+exec = echo ' '
+tail = true
+interval = 600
+format = <label>
+label = " %{T1}||"
+label-background = ${colors.background}
+label-foreground = ${colors.foreground-alt}
 
 [module/kiri]
 type = custom/script
@@ -169,8 +214,18 @@ tail = true
 interval = 600
 format = <label>
 label = "%{T3}"
-label-background = ${colors.foreground}
+label-background = ${colors.background}
 label-foreground = ${colors.color0}
+
+[module/kiri2]
+type = custom/script
+exec = echo ' '
+tail = true
+interval = 600
+format = <label>
+label = "%{T3}"
+label-background = ${colors.accent}
+label-foreground = ${colors.accent2}
 
 # LEFT ====================================================================
 
@@ -180,8 +235,8 @@ exec = ~/.config/MySetting/current_workspace2.sh
 tail = true
 interval = 0
 format = <label>
-label = "%output% "
-label-background = ${colors.background}
+label = "%output% ||"
+label-background = ${colors.color0}
 label-foreground = ${colors.foreground}
 
 #---------------------------------------------------------------------------
@@ -192,6 +247,7 @@ format = "<label-mode> <label-state>"
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
 format-prefix = " "
+format-prefix-background = ${colors.accent}
 
 index-sort = true
 wrapping-scroll = false
@@ -218,17 +274,16 @@ label-mode-foreground = ${colors.foreground}
 
 ; focused = Active workspace on focused monitor
 label-focused = "%icon%"
-label-focused-background= ${colors.background}
-label-focused-foreground= ${colors.white}
-label-focused-underline= ${colors.foreground}
+label-focused-background= ${colors.accent}
+label-focused-foreground= ${colors.background}
 label-focused-padding = 0
 label-focused-margin = 0
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = "%icon%"
 label-unfocused-padding = 0
-label-unfocused-background= ${colors.background}
-label-unfocused-foreground= ${colors.foreground-tr}
+label-unfocused-background= ${colors.accent}
+label-unfocused-foreground= ${colors.background-alt}
 
 ; visible = Active workspace on unfocused monitor
 ;label-visible = %name%
@@ -239,7 +294,7 @@ label-unfocused-foreground= ${colors.foreground-tr}
 label-urgent = "%{T3}%icon%"
 label-urgent-background = ${colors.alert}
 label-urgent-foreground = ${colors.white}
-label-urgent-padding = 1
+label-urgent-padding = 0
 label-urgent-margin-left = 1
 label-urgent-margin-right = 1
 
@@ -250,12 +305,14 @@ label-separator = ""
 
 [module/xwindow]
 type = internal/xwindow
-format-prefix = " "
+format-prefix = ""
+format-prefix-background = ${colors.color0}
+format-prefix-foreground = ${colors.foreground}
 
-label = "%{T3}%{T1} 1. %title:0:80:...% %{T2} "
+label = " 1.  %{T1}%title:0:80:...% %{T2} "
 #label-background = #90FFFFFF
-label-background = #A4A5AD
-label-foreground = #222222
+label-background = ${colors.color10}
+label-foreground = ${color.foreground}
 
 
 # RIGHT ====================================================================
@@ -407,7 +464,7 @@ date-alt = " %A %d/%m/%Y"
 time = "%H:%M "
 time-alt = "%H:%M:%S "
 
-label =" %{T2}%{T1}%date%.%time%"
+label =" %{T2}%{T1}%date%.%time%"
 label-background = ${colors.color8}
 label-foreground = ${colors.foreground}
 
@@ -418,10 +475,13 @@ type = custom/menu
 
 expand-right = false
 format-spacing = 0
+format-prefix = "%{T3}"
+format-prefix-background = ${colors.color10}
+format-prefix-foreground = ${colors.accent}
 
-label-open = " %{T2} %{T1}BERSYUKUR %{T3}"
-label-open-foreground = ${colors.foreground}
-label-open-background = ${colors.color9}
+label-open = " %{T2} %{T1}BERSYUKUR "
+label-open-foreground = ${colors.color0}
+label-open-background = ${colors.accent}
 label-close = "  BATAL  "
 label-close-foreground = ${colors.foreground}
 label-close-background = ${colors.color9}
