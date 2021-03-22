@@ -341,7 +341,7 @@ format-prefix = ""
 format-prefix-background = ${colors.color0}
 format-prefix-foreground = ${colors.foreground}
 
-label = " 1.  %{T1}%title:0:80:...% %{T2} "
+label = " 1.  %{T1}%title:0:60:...% %{T2} "
 #label-background = #90FFFFFF
 label-background = ${colors.color10}
 label-foreground = ${color.foreground}
@@ -355,7 +355,7 @@ type = internal/pulseaudio
 format-volume ="<ramp-volume> <label-volume>"
 format-volume-background = ${colors.color2}
 
-label-volume ="%{T1}%percentage%% "
+label-volume ="%{T1}%percentage%% "
 label-volume-foreground = ${colors.foreground}
 label-volume-background = ${colors.color2}
 
@@ -364,8 +364,8 @@ ramp-volume-1 = " "
 ramp-volume-2 = " "
 
 label-muted = "  MUTED  "
-label-muted-background = ${colors.foreground-alt}
-label-muted-foreground = ${colors.foreground}
+label-muted-background = ${colors.color0}
+label-muted-foreground = ${colors.accent2}
 
 #---------------------------------------------------------------------------
 
@@ -374,7 +374,7 @@ type = internal/cpu
 interval = 2
 format-prefix = ""
 
-label = " %{T2} %{T1}%percentage:1%% "
+label = " %{T2} %{T1}%percentage:1%% "
 label-foreground = ${colors.foreground}
 label-background = ${colors.color3}
 
@@ -402,8 +402,9 @@ label-full = " %{T2} %{T1}100% "
 label-full-foreground = ${colors.foreground}
 label-full-background =  ${colors.color5}
 
-format-charging ="<animation-charging><label-charging>"
-label-charging = " %percentage%% "
+;format-charging ="<animation-charging><label-charging>"
+format-charging ="<label-charging>"
+label-charging = "  %percentage%% "
 format-charging-background = ${colors.color5} 
 label-charging-foreground = ${colors.foreground}
 
