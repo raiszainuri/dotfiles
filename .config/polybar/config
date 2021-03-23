@@ -243,7 +243,7 @@ label-foreground = ${colors.foreground}
 
 [module/i3]
 type = internal/i3
-format = "<label-mode> <label-state>"
+format = "<label-mode><label-state>"
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
 format-prefix = " "
@@ -266,11 +266,7 @@ ws-icon-9 = "10;#"
 ; Only show workspaces on the same output as the bar
 ; pin-workspaces = true
 
-;label-mode = [%mode%]
-label-mode = " RESIZE "
-label-mode-padding = 0
-label-mode-background = ${colors.color10}
-label-mode-foreground = ${colors.foreground}
+label-mode = ""
 
 ; focused = Active workspace on focused monitor
 label-focused = "%icon%"
@@ -303,7 +299,7 @@ label-separator = ""
 
 [module/i3urgent]
 type = internal/i3
-format = "<label-mode> <label-state>"
+format = "<label-mode><label-state>"
 
 ws-icon-0 = "1;1"
 ws-icon-1 = "2;2"
@@ -329,6 +325,12 @@ label-urgent-foreground = ${colors.white}
 label-urgent-padding = 1
 label-urgent-margin-left = 0
 label-urgent-margin-right = 0
+
+;label-mode = [%mode%]
+label-mode = " RESIZE "
+label-mode-padding = 0
+label-mode-background = ${colors.accent2}
+label-mode-foreground = ${colors.foreground}
 
 ; Separator in between workspaces
 label-separator = ""
