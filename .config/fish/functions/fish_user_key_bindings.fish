@@ -26,6 +26,10 @@ function vim
     nvim
 end
 
+function v
+    nvim
+end
+
 function syn!
     shutdown now
 end
@@ -35,3 +39,12 @@ function notif
     notify-send "Percobaan notifikasi dunst"
     notify-send "Percobaan kedua notifikasi dunst"
 end
+
+function gis
+    git status
+end
+
+function gip
+    git push
+end
+
