@@ -12,6 +12,8 @@ Plug 'vim-airline/vim-airline' "theme
 Plug 'ryanoasis/vim-devicons' "icon
 Plug 'kyazdani42/nvim-tree.lua' "tree
 Plug 'tweekmonster/startuptime.vim'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 
 "Plug 'kyazdani42/nvim-web-devicons' " for file icons
 "Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  "theme ~ contrast color
