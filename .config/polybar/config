@@ -7,7 +7,13 @@
 ;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
 ;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
 ;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
-;
+;   
+;                            _   _                       
+;      _____      _____  ___| |_| | ___  __ _ _ __ _ __  
+;     / __\ \ /\ / / _ \/ _ \ __| |/ _ \/ _` | '__| '_ \ 
+;     \__ \\ V  V /  __/  __/ |_| |  __/ (_| | |  | | | |
+;     |___/ \_/\_/ \___|\___|\__|_|\___|\__,_|_|  |_| |_|
+;                                                    
 ;
 ;   To learn more about how to configure Polybar
 ;   go to https://github.com/polybar/polybar
@@ -17,19 +23,6 @@
 ;==========================================================
 
 [colors]
-
-#color10 = #222222
-#color9  = #222222
-#color8  = #222222
-#color7  = #222222
-#color6  = #222222
-#color5  = #222222
-#color4  = #222222
-#color3  = #222222
-#color2  = #222222
-#color1  = #222222
-#color0  = #222222
-#white   = #FFFFFF
 
 color10 = #3A3A3A
 color9  = #3A3A3A
@@ -42,17 +35,16 @@ color3  = #3A3A3A
 color2  = #3A3A3A
 color1  = #3A3A3A
 color0  = #3A3A3A
+
+background      = #262626
+background-alt  = #75222222
+
+foreground      = #FFFFFF
+foreground-alt  = #555555
+
 white   = #FFFFFF
 accent  = #FFAF5F
 accent2 = #D75F5F
-
-background      = #262626
-background2     = #2C2C2C
-background-alt  = #75222222
-foreground      = #FFFFFF
-foreground-tr   = #50FFFFFF
-foreground-alt  = #555555
-
 alert = #2D5753
 transparent = #00000000
 
@@ -104,7 +96,8 @@ tray-offset-x = 0
 tray-padding = 4
 tray-margin = 2
 tray-background = ${colors.accent2}
-#tray-foreground = #222222
+
+# BAR ====================================================================
 
 [bar/topbar2]
 width = 100%
@@ -137,11 +130,11 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 
-font-0 = consolas:pixelsize=9;2
+font-0 = consolas:pixelsize=10;2
 font-1 = "Iosevka Nerd Font:pixelsize=9;2"
 font-2 = "Iosevka Nerd Font:pixelsize=12;3"
 
-modules-left = i3w xwindow separator
+modules-left = kanan1 xfwm_workspace kanan2 xwindow kanan3 separator
 modules-center =
 modules-right = kiri pulseaudio cpu memory battery get_temp stat_net date powermenu kiri2
 
@@ -149,9 +142,9 @@ cursor-click = pointer
 cursor-scroll = ns-resize
 
 tray-position = right
-tray-maxsize = 10
-tray-offset-y = 0
-tray-padding = 2
+tray-maxsize = 9
+tray-offset-x = 0
+tray-padding = 4
 tray-margin = 2
 tray-background = ${colors.accent2}
 
@@ -229,17 +222,15 @@ label-foreground = ${colors.accent2}
 
 # LEFT ====================================================================
 
-[module/i3w]
+[module/xfwm_workspace]
 type = custom/script
-exec = ~/.config/MySetting/current_workspace2.sh
+exec = ~/.config/MySetting/current_workspace.sh
 tail = true
 interval = 0
 format = <label>
-label = "%output% ||"
-label-background = ${colors.color0}
-label-foreground = ${colors.foreground}
-
-#---------------------------------------------------------------------------
+label = " %output%"
+label-background = ${colors.accent}
+label-foreground = ${colors.color0}
 
 [module/i3]
 type = internal/i3
@@ -344,10 +335,8 @@ format-prefix-background = ${colors.color0}
 format-prefix-foreground = ${colors.foreground}
 
 label = " 1.  %{T1}%title:0:60:...% %{T2} "
-#label-background = #90FFFFFF
 label-background = ${colors.color10}
 label-foreground = ${color.foreground}
-
 
 # RIGHT ====================================================================
 
@@ -569,556 +558,3 @@ margin-bottom = 5
 ; vim:ft=dosini
 
 ; ========================================================================
-
-[colors2]
-color10 = #2D3142
-color9  = #964D4C
-color8  = #3F3745
-color7  = #443846
-color6  = #503B48
-color5  = #5B3E49
-color4  = #72454C
-color3  = #884B4F
-color2  = #9F5252
-color1  = #B65855
-color0  = #964D4C
-
-background = #2D3142
-foreground = #FFFFFF
-foreground-tr = #75FFFFFF
-foreground-alt = #555555
-
-alert = #046C77
-transparent = #00000000
-
-[bar/topbar3]
-width = 100%
-height = 20
-radius = 0
-fixed-center = true
-override-redirect = false
-
-;monitor = ${env:MONITOR:HDMI-1}
-;offset-x = 1%
-;offset-y = 1%
-
-background = ${colors2.background}
-foreground = ${colors2.foreground}
-
-line-size = 0
-line-color = ${colors2.foreground}
-
-;border-size = 4
-border-top-size = 0
-border-right-size = 0
-border-left-size = 0
-border-bottom-size = 0
-
-border-color = ${colors2.color0}
-
-padding-left = 0
-padding-right = 0
-
-module-margin-left = 0
-module-margin-right = 0
-
-font-0 = consolas:pixelsize=9;2
-font-1 = consolas:pixelsize=9;2
-font-2 = FontAwesome:pixelsize=10;2
-
-modules-left = xfwm_workspace xwindow2 
-modules-center =
-modules-right = pulseaudio2 cpu2 memory2 battery2 get_temp2 stat_net2 date2 powermenu2
-
-cursor-click = pointer
-cursor-scroll = ns-resize
-
-tray-position = right
-tray-maxsize = 10
-tray-offset-y = 0
-tray-padding = 2
-tray-margin = 2
-tray-background = ${colors2.color8}
-
-
-# LEFT ====================================================================
-
-[module/xfwm_workspace]
-type = custom/script
-exec = ~/.config/MySetting/current_workspace.sh
-tail = true
-interval = 0
-format = <label>
-label = " %output%"
-label-background = ${colors2.background}
-label-foreground = ${colors2.foreground}
-
-#---------------------------------------------------------------------------
-
-[module/xwindow2]
-type = internal/xwindow
-format-prefix = "| "
-
-label = " %title:0:80:...% "
-label-position = left
-label-background = ${colors2.color0} 
-label-foreground = ${colors2.foreground}    
-
-
-# RIGHT ====================================================================
-
-[module/pulseaudio2]
-type = internal/pulseaudio
-
-format-volume ="<label-volume>"
-format-volume-background = ${colors2.color1}
-
-label-volume =" %percentage%% "
-label-volume-foreground = ${colors2.foreground}
-label-volume-background = ${colors2.color1}
-
-label-muted = "  MUTED  "
-label-muted-background = ${colors2.foreground-alt}
-label-muted-foreground = ${colors2.foreground}
-
-#---------------------------------------------------------------------------
-
-[module/cpu2]
-type = internal/cpu
-interval = 2
-format-prefix = ""
-
-label = " %percentage:1%% "
-label-foreground = ${colors2.foreground}
-label-background = ${colors2.color2}
-
-#---------------------------------------------------------------------------
-
-[module/memory2]
-type = internal/memory
-interval = 2
-format = <label>
-format-prefix = ""
-
-label = " %percentage_used%% "
-label-background = ${colors2.color3}
-label-foreground = ${colors2.foreground}
-
-#---------------------------------------------------------------------------
-
-[module/battery2]
-type = internal/battery
-battery = BAT1
-adapter = ACAD
-full-at = 100
-
-label-full = " 100% "
-label-full-foreground = ${colors2.foreground}
-label-full-background =  ${colors2.color4}
-
-;format-charging ="<label-charging><animation-charging>"
-label-charging = " {%percentage%%} "
-format-charging-background = ${colors2.color4} 
-label-charging-foreground = ${colors2.foreground}
-
-;format-discharging ="<animation-discharging><label-discharging>"
-label-discharging = " [%percentage%%] "
-format-discharging-background = ${colors2.color1}
-label-discharging-foreground =  ${colors2.background}
-
-;format-full-prefix = ""
-;format-full-prefix-foreground = ${colors2.foreground-alt}
-;format-full-prefix-background = ${colors2.foreground-alt}
-
-animation-charging-0 = ". "
-animation-charging-1 = "- "
-animation-charging-2 = "' "
-animation-charging-foreground =  ${colors2.foreground}
-animation-charging-framerate = 1000
-;animation-charging-framerate = 750
-
-animation-discharging-0 = " '"
-animation-discharging-1 = " -"
-animation-discharging-2 = " ."
-animation-discharging-foreground =  ${colors2.foreground}
-animation-discharging-framerate = 1000
-;animation-discharging-framerate = 750
-
-#---------------------------------------------------------------------------
-
-[module/get_temp2]
-type = custom/script
-exec = ~/.config/MySetting/get_temp.sh
-tail = true
-interval = 3.0
-format = <label>
-label = " %output% "
-label-background = ${colors2.color5}
-label-foreground = ${colors2.foreground}
-
-#---------------------------------------------------------------------------
-
-[module/stat_net2]
-type = custom/script
-exec = ~/.config/MySetting/stat_network.sh
-tail = true
-interval = 300.0
-format = <label>
-label = "%output% "
-label-background = ${colors2.color5}
-label-foreground = ${colors2.foreground}
-
-#---------------------------------------------------------------------------
-
-[module/date2]
-type = internal/date
-interval = 5
-
-date =" %d-%m"
-date-alt = " %A %d/%m/%Y"
-
-time = "%H:%M "
-time-alt = "%H:%M:%S "
-
-label ="%date%.%time%"
-label-background = ${colors2.color6}
-label-foreground = ${colors2.foreground}
-
-#---------------------------------------------------------------------------
-
-[module/powermenu2]
-type = custom/menu
-
-expand-right = false
-format-spacing = 0
-
-label-open = " SWEETLEARN "
-label-open-foreground = ${colors2.foreground}
-label-open-background = ${colors2.color7}
-label-close = "  BATAL  "
-label-close-foreground = ${colors2.foreground}
-label-close-background = ${colors2.color7}
-label-separator = "|"
-label-separator-foreground = ${colors2.color7}
-
-menu-0-0 = " RESTART "
-menu-0-0-foreground = ${colors2.foreground}
-menu-0-0-background = ${colors2.color7}
-menu-0-0-exec = menu-open-1
-menu-0-0-margin-left = 2
-menu-0-1 = " MATIKAN "
-menu-0-1-foreground = ${colors2.foreground}
-menu-0-1-background = ${colors2.color7}
-menu-0-1-exec = menu-open-2
-
-menu-1-0 = "  BATAL  "
-menu-1-0-foreground = ${colors2.foreground}
-menu-1-0-background = ${colors2.color7}
-menu-1-0-exec = menu-open-0
-menu-1-0-margin-left = 2
-menu-1-1 = " RESTART "
-menu-1-1-foreground = ${colors2.foreground}
-menu-1-1-background = ${colors2.color7}
-menu-1-1-exec = reboot
-
-menu-2-0 = " MATIKAN "
-menu-2-0-exec = shutdown now
-menu-2-0-foreground = ${colors2.foreground}
-menu-2-0-background = ${colors2.color7}
-menu-2-0-margin-left = 2
-menu-2-1 = "  BATAL  "
-menu-2-1-foreground = ${colors2.foreground}
-menu-2-1-background = ${colors2.color7}
-menu-2-1-exec = menu-open-0
-
-[settings2]
-screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
-;pseudo-transparency = false
-
-[global/wm2]
-margin-top = 5
-margin-bottom = 5
-
-; vim:ft=dosini
-
-# ========================================================================
-
-[colors3]
-color10 = #333333
-color9  = #333333
-color8  = #333333
-color7  = #333333
-color6  = #333333
-color5  = #333333
-color4  = #333333
-color3  = #333333
-color2  = #333333
-color1  = #333333
-color0  = #333333
-
-background = #333333
-foreground = #FFFFFF
-foreground-tr = #75FFFFFF
-foreground-alt = #555555
-
-alert = #046C77
-transparent = #00000000
-
-
-[bar/topbar4]
-width = 100%
-height = 20
-radius = 0
-fixed-center = true
-override-redirect = false
-
-;monitor = ${env:MONITOR:HDMI-1}
-;offset-x = 1%
-;offset-y = 1%
-
-background = ${colors3.background}
-foreground = ${colors3.foreground}
-
-line-size = 0
-line-color = ${colors3.foreground}
-
-;border-size = 4
-border-top-size = 0
-border-right-size = 0
-border-left-size = 0
-border-bottom-size = 0
-
-border-color = ${colors3.color0}
-
-padding-left = 0
-padding-right = 0
-
-module-margin-left = 0
-module-margin-right = 0
-
-font-0 = consolas:pixelsize=9;2
-font-1 = consolas:pixelsize=9;2
-font-2 = FontAwesome:pixelsize=10;2
-
-modules-left = xfwm_workspace3 xwindow3
-modules-center =
-modules-right = pulseaudio3 cpu3 memory3 battery3 get_temp3 stat_net3 date3 powermenu3
-
-cursor-click = pointer
-cursor-scroll = ns-resize
-
-tray-position = right
-tray-maxsize = 10
-tray-offset-y = 0
-tray-padding = 2
-tray-margin = 2
-tray-background = ${colors3.color8}
-
-
-# LEFT ====================================================================
-
-[module/xfwm_workspace3]
-type = custom/script
-exec = ~/.config/MySetting/current_workspace.sh
-tail = true
-interval = 0
-format = <label>
-label = " %output%"
-label-background = ${colors3.background}
-label-foreground = ${colors3.foreground}
-
-#---------------------------------------------------------------------------
-
-[module/xwindow3]
-type = internal/xwindow
-format-prefix = " "
-
-label = " %title:0:80:...% "
-label-position = left
-label-background = #F0544C 
-#label-background = ${colors3.color0} 
-label-foreground = ${colors3.foreground}    
-
-# RIGHT ====================================================================
-
-[module/pulseaudio3]
-type = internal/pulseaudio
-
-format-volume ="<label-volume>"
-format-volume-background = ${colors3.color1}
-
-label-volume =" %percentage%% "
-label-volume-foreground = ${colors3.foreground}
-label-volume-background = ${colors3.color1}
-
-label-muted = "  MUTED  "
-label-muted-background = ${colors3.foreground-alt}
-label-muted-foreground = ${colors3.foreground}
-
-#---------------------------------------------------------------------------
-
-[module/cpu3]
-type = internal/cpu
-interval = 2
-format-prefix = ""
-
-label = " %percentage:1%% "
-label-foreground = ${colors3.foreground}
-label-background = ${colors3.color2}
-
-#---------------------------------------------------------------------------
-
-[module/memory3]
-type = internal/memory
-interval = 2
-format = <label>
-format-prefix = ""
-
-label = " %percentage_used%% "
-label-background = ${colors3.color3}
-label-foreground = ${colors3.foreground}
-
-#---------------------------------------------------------------------------
-
-[module/battery3]
-type = internal/battery
-battery = BAT1
-adapter = ACAD
-full-at = 100
-
-label-full = " 100% "
-label-full-foreground = ${colors3.foreground}
-label-full-background =  ${colors3.color4}
-
-;format-charging ="<label-charging><animation-charging>"
-label-charging = " {%percentage%%} "
-format-charging-background = ${colors3.color4} 
-label-charging-foreground = ${colors3.foreground}
-
-;format-discharging ="<animation-discharging><label-discharging>"
-label-discharging = " [%percentage%%] "
-format-discharging-background = ${colors3.color1}
-label-discharging-foreground =  ${colors3.foreground}
-
-;format-full-prefix = ""
-;format-full-prefix-foreground = ${colors3.foreground-alt}
-;format-full-prefix-background = ${colors3.foreground-alt}
-
-animation-charging-0 = ". "
-animation-charging-1 = "- "
-animation-charging-2 = "' "
-animation-charging-foreground =  ${colors3.foreground}
-animation-charging-framerate = 1000
-;animation-charging-framerate = 750
-
-animation-discharging-0 = " '"
-animation-discharging-1 = " -"
-animation-discharging-2 = " ."
-animation-discharging-foreground =  ${colors3.foreground}
-animation-discharging-framerate = 1000
-;animation-discharging-framerate = 750
-
-#---------------------------------------------------------------------------
-
-[module/get_temp3]
-type = custom/script
-exec = ~/.config/MySetting/get_temp.sh
-tail = true
-interval = 3.0
-format = <label>
-label = " %output% "
-label-background = ${colors3.color5}
-label-foreground = ${colors3.foreground}
-
-#---------------------------------------------------------------------------
-
-[module/stat_net3]
-type = custom/script
-exec = ~/.config/MySetting/stat_network.sh
-tail = true
-interval = 300.0
-format = <label>
-label = " %output% "
-label-background = ${colors3.color5}
-label-foreground = ${colors3.foreground}
-
-#---------------------------------------------------------------------------
-
-[module/date3]
-type = internal/date
-interval = 5
-
-date =" %d-%m"
-date-alt = " %A %d/%m/%Y"
-
-time = "%H:%M "
-time-alt = "%H:%M:%S "
-
-label ="%date%.%time%"
-label-background = ${colors3.color6}
-label-foreground = ${colors3.foreground}
-
-#---------------------------------------------------------------------------
-
-[module/powermenu3]
-type = custom/menu
-
-expand-right = false
-format-spacing = 0
-
-label-open = " SWEETLEARN "
-label-open-foreground = ${colors3.foreground}
-label-open-background = ${colors3.color7}
-label-close = "  BATAL  "
-label-close-foreground = ${colors3.foreground}
-label-close-background = ${colors3.color7}
-label-separator = "|"
-label-separator-foreground = ${colors3.color7}
-
-menu-0-0 = " RESTART "
-menu-0-0-foreground = ${colors3.foreground}
-menu-0-0-background = ${colors3.color7}
-menu-0-0-exec = menu-open-1
-menu-0-0-margin-left = 2
-menu-0-1 = " MATIKAN "
-menu-0-1-foreground = ${colors3.foreground}
-menu-0-1-background = ${colors3.color7}
-menu-0-1-exec = menu-open-2
-
-menu-1-0 = "  BATAL  "
-menu-1-0-foreground = ${colors3.foreground}
-menu-1-0-background = ${colors3.color7}
-menu-1-0-exec = menu-open-0
-menu-1-0-margin-left = 2
-menu-1-1 = " RESTART "
-menu-1-1-foreground = ${colors3.foreground}
-menu-1-1-background = ${colors3.color7}
-menu-1-1-exec = reboot
-
-menu-2-0 = " MATIKAN "
-menu-2-0-exec = shutdown now
-menu-2-0-foreground = ${colors3.foreground}
-menu-2-0-background = ${colors3.color7}
-menu-2-0-margin-left = 2
-menu-2-1 = "  BATAL  "
-menu-2-1-foreground = ${colors3.foreground}
-menu-2-1-background = ${colors3.color7}
-menu-2-1-exec = menu-open-0
-
-[settings3]
-screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
-;pseudo-transparency = false
-
-[global/wm3]
-margin-top = 5
-margin-bottom = 5
-
-; vim:ft=dosini
