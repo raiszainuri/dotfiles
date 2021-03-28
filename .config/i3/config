@@ -247,7 +247,8 @@ title_align center
 for_window [class=".*"] border pixel 0
 #for_window [class="terminal"] floating enable move right 553px,move down 327px
 #for_window [class="terminal"] floating disable
-for_window [class="SimpleScreenRecorder"] floating enable
+for_window [class="SimpleScreenRecorder"]   floating enable
+for_window [class="Xdialog"]                floating enable
 
 # gaps outer 5
   gaps inner 14
