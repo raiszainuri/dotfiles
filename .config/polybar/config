@@ -24,22 +24,23 @@
 
 [colors]
 
-color10 = #3A3A3A
-color9  = #3A3A3A
-color8  = #3A3A3A
-color7  = #3A3A3A
-color6  = #3A3A3A
-color5  = #3A3A3A
-color4  = #3A3A3A
-color3  = #3A3A3A
-color2  = #3A3A3A
-color1  = #3A3A3A
-color0  = #3A3A3A
+color10 = #303A3A3A
+color9  = #303A3A3A
+color8  = #303A3A3A
+color7  = #303A3A3A
+color6  = #303A3A3A
+color5  = #303A3A3A
+color4  = #303A3A3A
+color3  = #303A3A3A
+color2  = #303A3A3A
+color1  = #303A3A3A
+color0  = #303A3A3A
 
-background      = #262626
+background      = #00262626
 background-alt  = #75222222
 
 foreground      = #FFFFFF
+foreground_dark = #3A3A3A
 foreground-alt  = #555555
 
 white   = #FFFFFF
@@ -198,7 +199,7 @@ interval = 600
 format = <label>
 label = " %{T1}||"
 label-background = ${colors.background}
-label-foreground = ${colors.foreground-alt}
+label-foreground = ${colors.foreground}
 
 [module/kiri]
 type = custom/script
@@ -230,7 +231,7 @@ interval = 0
 format = <label>
 label = " %output%"
 label-background = ${colors.accent}
-label-foreground = ${colors.color0}
+label-foreground = ${colors.foreground_dark}
 
 [module/i3]
 type = internal/i3
@@ -262,7 +263,7 @@ label-mode = ""
 ; focused = Active workspace on focused monitor
 label-focused = "%icon%"
 label-focused-background= ${colors.accent}
-label-focused-foreground= ${colors.background}
+label-focused-foreground= ${colors.foreground_dark}
 label-focused-padding = 0
 label-focused-margin = 0
 
@@ -331,7 +332,7 @@ label-separator = ""
 [module/xwindow]
 type = internal/xwindow
 format-prefix = ""
-format-prefix-background = ${colors.color0}
+format-prefix-background = ${colors.foreground_dark}
 format-prefix-foreground = ${colors.foreground}
 
 label = " 1.  %{T1}%title:0:60:...% %{T2} "
@@ -355,7 +356,7 @@ ramp-volume-1 = " "
 ramp-volume-2 = " "
 
 label-muted = "  MUTED  "
-label-muted-background = ${colors.color0}
+label-muted-background = ${colors.foreground_dark}
 label-muted-foreground = ${colors.accent2}
 
 #---------------------------------------------------------------------------
@@ -504,42 +505,42 @@ format-prefix-background = ${colors.color10}
 format-prefix-foreground = ${colors.accent}
 
 label-open = " %{T2} %{T1}BERSYUKUR "
-label-open-foreground = ${colors.color0}
+label-open-foreground = ${colors.foreground_dark}
 label-open-background = ${colors.accent}
 label-close = " BATAL "
 label-close-margin-right = 0
-label-close-foreground = ${colors.color0}
+label-close-foreground = ${colors.foreground_dark}
 label-close-background = ${colors.accent}
 label-separator = ""
 label-separator-foreground = ${colors.foreground}
 
 menu-0-0 = " %{T1}RESTART "
-menu-0-0-foreground = ${colors.color0}
+menu-0-0-foreground = ${colors.foreground_dark}
 menu-0-0-background = ${colors.accent}
 menu-0-0-exec = menu-open-1
 menu-0-0-margin-left = 0
 menu-0-1 = " %{T1}MATIKAN "
-menu-0-1-foreground = ${colors.color0}
+menu-0-1-foreground = ${colors.foreground_dark}
 menu-0-1-background = ${colors.accent}
 menu-0-1-exec = menu-open-2
 
 menu-1-0 = " %{T1}BATAL "
-menu-1-0-foreground = ${colors.color0}
+menu-1-0-foreground = ${colors.foreground_dark}
 menu-1-0-background = ${colors.accent}
 menu-1-0-exec = menu-open-0
 menu-1-0-margin-left = 0
 menu-1-1 = " %{T1}RESTART "
-menu-1-1-foreground = ${colors.color0}
+menu-1-1-foreground = ${colors.foreground_dark}
 menu-1-1-background = ${colors.accent}
 menu-1-1-exec = reboot
 
 menu-2-0 = " %{T1}MATIKAN "
 menu-2-0-exec = shutdown now
-menu-2-0-foreground = ${colors.color0}
+menu-2-0-foreground = ${colors.foreground_dark}
 menu-2-0-background = ${colors.accent}
 menu-2-0-margin-left = 0
 menu-2-1 = " %{T1}BATAL "
-menu-2-1-foreground = ${colors.color0}
+menu-2-1-foreground = ${colors.foreground_dark}
 menu-2-1-background = ${colors.accent}
 menu-2-1-exec = menu-open-0
 
