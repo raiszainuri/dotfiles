@@ -85,9 +85,9 @@ font-0 = consolas:pixelsize=10;2
 font-1 = "Iosevka Nerd Font:pixelsize=9;2"
 font-2 = "Iosevka Nerd Font:pixelsize=12;3"
 
-modules-left = i3urgent kanan1 i3 fill kanan2 xwindow kanan3 separator
+modules-left = powermenu i3urgent kanan1 i3 fill kanan2 xwindow kanan3 separator
 modules-center =
-modules-right = kiri pulseaudio cpu memory battery get_temp stat_net date powermenu kiri2
+modules-right = kiri pulseaudio cpu memory battery get_temp stat_net date kiri2
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -159,7 +159,7 @@ tail = true
 interval = 600
 format = <label>
 label = "%{T3}"
-label-background = ${colors.color0}
+label-background = ${colors.accent}
 label-foreground = ${colors.accent2}
 
 [module/kanan2]
@@ -168,9 +168,9 @@ exec = echo ' '
 tail = true
 interval = 600
 format = <label>
-label = "%{T2}"
-label-background = ${colors.color10}
-label-foreground = ${colors.foreground}
+label = "%{T3}"
+label-background = ${colors.color0}
+label-foreground = ${colors.accent}
 
 [module/kanan3]
 type = custom/script
@@ -189,7 +189,7 @@ tail = true
 interval = 600
 format = <label>
 label = " "
-label-background = ${colors.color0}
+label-background = ${colors.accent}
 label-foreground = ${colors.color0}
 
 [module/separator]
@@ -240,7 +240,7 @@ format = "<label-mode><label-state>"
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
 format-prefix = " "
-format-prefix-background = ${colors.color0}
+format-prefix-background = ${colors.accent}
 
 index-sort = true
 wrapping-scroll = false
@@ -263,16 +263,16 @@ label-mode = ""
 
 ; focused = Active workspace on focused monitor
 label-focused = "%icon%"
-label-focused-background= ${colors.color0}
-label-focused-foreground= ${colors.foreground}
+label-focused-background= ${colors.accent}
+label-focused-foreground= ${colors.foreground-dark}
 label-focused-padding = 0
 label-focused-margin = 0
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = "%icon%"
 label-unfocused-padding = 0
-label-unfocused-background= ${colors.color0}
-label-unfocused-foreground= ${colors.foreground-tr}
+label-unfocused-background= ${colors.accent}
+label-unfocused-foreground= ${colors.background-alt}
 
 ; visible = Active workspace on unfocused monitor
 ;label-visible = %name%
@@ -320,7 +320,7 @@ label-urgent-margin-left = 0
 label-urgent-margin-right = 0
 
 ;label-mode = [%mode%]
-label-mode = " RESIZE "
+label-mode = "| RESIZE "
 label-mode-padding = 0
 label-mode-background = ${colors.accent2}
 label-mode-foreground = ${colors.foreground}
@@ -501,48 +501,48 @@ type = custom/menu
 
 expand-right = false
 format-spacing = 0
-format-prefix = "%{T2}"
+format-prefix = ""
 format-prefix-background = ${colors.color10}
-format-prefix-foreground = ${colors.foreground}
+format-prefix-foreground = ${colors.accent}
 
-label-open = " %{T2} %{T1}BERSYUKUR "
+label-open = " %{T2} "
 label-open-foreground = ${colors.foreground}
-label-open-background = ${colors.color0}
+label-open-background = ${colors.accent2}
 label-close = " BATAL "
 label-close-margin-right = 0
-label-close-foreground = ${colors.foreground-dark}
-label-close-background = ${colors.accent}
+label-close-foreground = ${colors.foreground}
+label-close-background = ${colors.accent2}
 label-separator = ""
 label-separator-foreground = ${colors.foreground}
 
-menu-0-0 = " %{T1}RESTART "
-menu-0-0-foreground = ${colors.foreground-dark}
-menu-0-0-background = ${colors.accent}
+menu-0-0 = " %{T1}RESTART "
+menu-0-0-foreground = ${colors.foreground}
+menu-0-0-background = ${colors.accent2}
 menu-0-0-exec = menu-open-1
 menu-0-0-margin-left = 0
-menu-0-1 = " %{T1}MATIKAN "
-menu-0-1-foreground = ${colors.foreground-dark}
-menu-0-1-background = ${colors.accent}
+menu-0-1 = " %{T1}MATIKAN "
+menu-0-1-foreground = ${colors.foreground}
+menu-0-1-background = ${colors.accent2}
 menu-0-1-exec = menu-open-2
 
-menu-1-0 = " %{T1}BATAL "
-menu-1-0-foreground = ${colors.foreground-dark}
-menu-1-0-background = ${colors.accent}
+menu-1-0 = " %{T1}BATAL "
+menu-1-0-foreground = ${colors.foreground}
+menu-1-0-background = ${colors.accent2}
 menu-1-0-exec = menu-open-0
 menu-1-0-margin-left = 0
-menu-1-1 = " %{T1}RESTART "
-menu-1-1-foreground = ${colors.foreground-dark}
-menu-1-1-background = ${colors.accent}
+menu-1-1 = " %{T1}RESTART "
+menu-1-1-foreground = ${colors.foreground}
+menu-1-1-background = ${colors.accent2}
 menu-1-1-exec = reboot
 
-menu-2-0 = " %{T1}MATIKAN "
+menu-2-0 = " %{T1}MATIKAN "
 menu-2-0-exec = shutdown now
-menu-2-0-foreground = ${colors.foreground-dark}
-menu-2-0-background = ${colors.accent}
+menu-2-0-foreground = ${colors.foreground}
+menu-2-0-background = ${colors.accent2}
 menu-2-0-margin-left = 0
-menu-2-1 = " %{T1}BATAL "
-menu-2-1-foreground = ${colors.foreground-dark}
-menu-2-1-background = ${colors.accent}
+menu-2-1 = " %{T1}BATAL "
+menu-2-1-foreground = ${colors.foreground}
+menu-2-1-background = ${colors.accent2}
 menu-2-1-exec = menu-open-0
 
 [settings]
