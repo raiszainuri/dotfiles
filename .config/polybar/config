@@ -24,17 +24,17 @@
 
 [colors]
 
-color10 = #20222222
-color9  = #20222222
-color8  = #20222222
-color7  = #20222222
-color6  = #20222222
-color5  = #20222222
-color4  = #20222222
-color3  = #20222222
-color2  = #20222222
-color1  = #20222222
-color0  = #20222222
+color10 = #37222222
+color9  = #37222222
+color8  = #37222222
+color7  = #37222222
+color6  = #37222222
+color5  = #37222222
+color4  = #37222222
+color3  = #37222222
+color2  = #37222222
+color1  = #37222222
+color0  = #37222222
 
 background      = #00262626
 background-alt  = #75222222
