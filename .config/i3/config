@@ -9,7 +9,7 @@
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
-font pango:iosevka 0
+font pango:consolas 9
 
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
@@ -167,7 +167,7 @@ bindsym $mod+r         mode "resize"
 # ==================================== MY CONFIG ====================================
 
 #client.focused                 #2D3142 #2D3142 #FFFBF7 #FF0000   #FFFFFF
-client.focused                  #A4A5AD #A4A5AD #222222 #A4A5AD   #A4A5AD
+client.focused                  #CE2949 #CE2949 #FFFBF7 #CE2949   #CE2949
 client.unfocused                #1C1C1C #1C1C1C #888888 #222222   #222222
 client.focused_inactive         #222222 #222222 #FFFFFF #222222   #222222
 client.urgent                   #4ECCA3 #4ECCA3 #FFFFFF #4ECCA3   #4ecca3
@@ -241,13 +241,11 @@ bindsym XF86MonBrightnessDown   exec --no-startup-id brightnessctl s 10-
 # ====================================
 
 # ---- borderless
-# for_window [class=".*"] title_format "%title"
+ for_window [class=".*"] title_format "%title"
 # https://gist.github.com/lirenlin/9892945
 
 title_align center
-for_window [class=".*"] border pixel 0
-#for_window [class="terminal"] floating enable move right 553px,move down 327px
-#for_window [class="terminal"] floating disable
+for_window [class=".*"] border pixel 3
 for_window [class="SimpleScreenRecorder"]   floating enable
 for_window [class="Xdialog"]                floating enable
 
