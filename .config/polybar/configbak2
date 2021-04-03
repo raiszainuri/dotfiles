@@ -24,29 +24,28 @@
 
 [colors]
 
-color10 = #37222222
-color9  = #37222222
-color8  = #37222222
-color7  = #37222222
-color6  = #37222222
-color5  = #37222222
-color4  = #37222222
-color3  = #37222222
-color2  = #37222222
-color1  = #37222222
-color0  = #37222222
+color10 = #CE2949
+color9  = #B32D47
+color8  = #9C3045
+color7  = #8C3243
+color6  = #7B3341
+color5  = #723440
+color4  = #69353F
+color3  = #52383D
+color2  = #3A3A3A
+color1  = #3A3A3A
+color0  = #3A3A3A
 
 background      = #00262626
 background-alt  = #75222222
 
 foreground      = #FFFFFF
-foreground-tr   = #60FFFFFF
-foreground-dark = #3A3A3A
-foreground-alt  = #555555
+foreground_dark = #3A3A3A
+foreground-alt  = #60FFFFFF
 
 white   = #FFFFFF
-accent  = #FFAF5F
-accent2 = #D75F5F
+accent  = #F89E4C
+accent2 = #CE2949
 alert = #2D5753
 transparent = #00000000
 
@@ -82,12 +81,12 @@ module-margin-left = 0
 module-margin-right = 0
 
 font-0 = consolas:pixelsize=10;2
-font-1 = "Iosevka Nerd Font:pixelsize=9;2"
-font-2 = "Iosevka Nerd Font:pixelsize=12;3"
+font-1 = consolas:pixelsize=9;2
+font-2 = consolas:pixelsize=12;3
 
-modules-left = powermenu i3urgent kanan1 i3 fill kanan2 xwindow kanan3 separator
+modules-left = i3urgent icon i3 fill kanan2 xwindow kanan3 separator
 modules-center =
-modules-right = kiri pulseaudio cpu memory battery get_temp stat_net date kiri2
+modules-right = kiri pulseaudio cpu memory battery get_temp stat_net date powermenu kiri2
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -133,12 +132,12 @@ module-margin-left = 0
 module-margin-right = 0
 
 font-0 = consolas:pixelsize=10;2
-font-1 = "Iosevka Nerd Font:pixelsize=9;2"
-font-2 = "Iosevka Nerd Font:pixelsize=12;3"
+font-1 = consolas:pixelsize=9;2
+font-2 = consolas:pixelsize=12;3
 
-modules-left = powermenu kanan1 xfwm_workspace kanan2 xwindow kanan3 separator
+modules-left = kanan1 xfwm_workspace kanan2 xwindow kanan3 separator
 modules-center =
-modules-right = kiri pulseaudio cpu memory battery get_temp stat_net date kiri2 
+modules-right = kiri pulseaudio cpu memory battery get_temp stat_net date powermenu kiri2
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -152,36 +151,6 @@ tray-background = ${colors.accent2}
 
 # ACC ====================================================================
 
-[module/kanan1]
-type = custom/script
-exec = echo ' '
-tail = true
-interval = 600
-format = <label>
-label = "%{T3}"
-label-background = ${colors.accent}
-label-foreground = ${colors.accent2}
-
-[module/kanan2]
-type = custom/script
-exec = echo ' '
-tail = true
-interval = 600
-format = <label>
-label = "%{T3}"
-label-background = ${colors.color0}
-label-foreground = ${colors.accent}
-
-[module/kanan3]
-type = custom/script
-exec = echo ' '
-tail = true
-interval = 600
-format = <label>
-label = "%{T3}"
-label-background = ${colors.background}
-label-foreground = ${colors.color0}
-
 [module/fill]
 type = custom/script
 exec = echo ' '
@@ -189,8 +158,8 @@ tail = true
 interval = 600
 format = <label>
 label = " "
-label-background = ${colors.accent}
-label-foreground = ${colors.color0}
+label-background = ${colors.color10}
+label-foreground = ${colors.color10}
 
 [module/separator]
 type = custom/script
@@ -202,26 +171,6 @@ label = " %{T1}||"
 label-background = ${colors.background}
 label-foreground = ${colors.foreground}
 
-[module/kiri]
-type = custom/script
-exec = echo ' '
-tail = true
-interval = 600
-format = <label>
-label = "%{T3}"
-label-background = ${colors.background}
-label-foreground = ${colors.color0}
-
-[module/kiri2]
-type = custom/script
-exec = echo ' '
-tail = true
-interval = 600
-format = <label>
-label = "%{T3}"
-label-background = ${colors.color0}
-label-foreground = ${colors.accent2}
-
 # LEFT ====================================================================
 
 [module/xfwm_workspace]
@@ -232,7 +181,7 @@ interval = 0
 format = <label>
 label = " %output%"
 label-background = ${colors.accent}
-label-foreground = ${colors.foreground-dark}
+label-foreground = ${colors.foreground_dark}
 
 [module/i3]
 type = internal/i3
@@ -240,7 +189,7 @@ format = "<label-mode><label-state>"
 format-background = ${colors.background}
 format-foreground = ${colors.foreground}
 format-prefix = " "
-format-prefix-background = ${colors.accent}
+format-prefix-background = ${colors.color10}
 
 index-sort = true
 wrapping-scroll = false
@@ -263,16 +212,16 @@ label-mode = ""
 
 ; focused = Active workspace on focused monitor
 label-focused = "%icon%"
-label-focused-background= ${colors.accent}
-label-focused-foreground= ${colors.foreground-dark}
+label-focused-background= ${colors.color10}
+label-focused-foreground= ${colors.foreground}
 label-focused-padding = 0
 label-focused-margin = 0
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = "%icon%"
 label-unfocused-padding = 0
-label-unfocused-background= ${colors.accent}
-label-unfocused-foreground= ${colors.background-alt}
+label-unfocused-background= ${colors.color10}
+label-unfocused-foreground= ${colors.foreground-alt}
 
 ; visible = Active workspace on unfocused monitor
 ;label-visible = %name%
@@ -320,7 +269,7 @@ label-urgent-margin-left = 0
 label-urgent-margin-right = 0
 
 ;label-mode = [%mode%]
-label-mode = "| RESIZE "
+label-mode = " RESIZE "
 label-mode-padding = 0
 label-mode-background = ${colors.accent2}
 label-mode-foreground = ${colors.foreground}
@@ -333,11 +282,11 @@ label-separator = ""
 [module/xwindow]
 type = internal/xwindow
 format-prefix = ""
-format-prefix-background = ${colors.foreground-dark}
+format-prefix-background = ${colors.foreground_dark}
 format-prefix-foreground = ${colors.foreground}
 
-label = " 1.  %{T1}%title:0:60:...% %{T2} "
-label-background = ${colors.color10}
+label = " %{T1}%title:0:60:...% "
+label-background = ${colors.color0}
 label-foreground = ${color.foreground}
 
 # RIGHT ====================================================================
@@ -345,19 +294,19 @@ label-foreground = ${color.foreground}
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume ="<ramp-volume> <label-volume>"
+format-volume ="<ramp-volume><label-volume>"
 format-volume-background = ${colors.color2}
 
-label-volume ="%{T1}%percentage%% "
+label-volume =" %{T1}%percentage%% "
 label-volume-foreground = ${colors.foreground}
 label-volume-background = ${colors.color2}
 
-ramp-volume-0 = " "
-ramp-volume-1 = " "
-ramp-volume-2 = " "
+ramp-volume-0 = ""
+ramp-volume-1 = ""
+ramp-volume-2 = ""
 
 label-muted = "  MUTED  "
-label-muted-background = ${colors.foreground-dark}
+label-muted-background = ${colors.foreground_dark}
 label-muted-foreground = ${colors.accent2}
 
 #---------------------------------------------------------------------------
@@ -367,7 +316,7 @@ type = internal/cpu
 interval = 2
 format-prefix = ""
 
-label = " %{T2} %{T1}%percentage:1%% "
+label = " %{T1}%percentage:1%% "
 label-foreground = ${colors.foreground}
 label-background = ${colors.color3}
 
@@ -379,7 +328,7 @@ interval = 2
 format = <label>
 format-prefix = ""
 
-label = "  %{T1}%percentage_used%% "
+label = " %{T1}%percentage_used%% "
 label-background = ${colors.color4}
 label-foreground = ${colors.foreground}
 
@@ -391,18 +340,18 @@ battery = BAT1
 adapter = ACAD
 full-at = 100
 
-label-full = " %{T2} %{T1}100% "
+label-full = " %{T1}100% "
 label-full-foreground = ${colors.foreground}
 label-full-background =  ${colors.color5}
 
 ;format-charging ="<animation-charging><label-charging>"
 format-charging ="<label-charging>"
-label-charging = "  %percentage%% "
+label-charging = "%percentage%% "
 format-charging-background = ${colors.color5} 
 label-charging-foreground = ${colors.foreground}
 
 format-discharging ="<ramp-capacity><label-discharging>"
-label-discharging = " %percentage%% "
+label-discharging = "%percentage%% "
 format-discharging-background = ${colors.color5}
 label-discharging-foreground =  ${colors.foreground}
 
@@ -410,25 +359,25 @@ label-discharging-foreground =  ${colors.foreground}
 ;format-full-prefix-foreground = ${colors.foreground-alt}
 ;format-full-prefix-background = ${colors.foreground-alt}
 
-ramp-capacity-0 = " "
-ramp-capacity-1 = " "
-ramp-capacity-2 = " "
-ramp-capacity-3 = " "
-ramp-capacity-4 = " "
+ramp-capacity-0 = ""
+ramp-capacity-1 = ""
+ramp-capacity-2 = ""
+ramp-capacity-3 = ""
+ramp-capacity-4 = ""
 
-animation-charging-0 = " "
-animation-charging-1 = " "
-animation-charging-2 = " "
-animation-charging-3 = " "
-animation-charging-4 = " "
+animation-charging-0 = ""
+animation-charging-1 = ""
+animation-charging-2 = ""
+animation-charging-3 = ""
+animation-charging-4 = ""
 
 animation-charging-foreground =  ${colors.foreground}
 animation-charging-framerate = 1000
 ;animation-charging-framerate = 750
 
-animation-discharging-0 = " '"
-animation-discharging-1 = " -"
-animation-discharging-2 = " ."
+animation-discharging-0 = ""
+animation-discharging-1 = ""
+animation-discharging-2 = ""
 animation-discharging-foreground =  ${colors.foreground}
 animation-discharging-framerate = 1000
 ;animation-discharging-framerate = 750
@@ -441,7 +390,7 @@ exec = ~/.config/MySetting/get_temp.sh
 tail = true
 interval = 3.0
 format = <label>
-label = " %{T2} %{T1}%output% "
+label = " %{T1}%output% "
 label-background = ${colors.color6}
 label-foreground = ${colors.foreground}
 
@@ -453,7 +402,7 @@ exec = ~/.config/MySetting/stat_network.sh
 tail = true
 interval = 300.0
 format = <label>
-label = " %{T2} %{T1}%output% "
+label = " %{T1}%output% "
 label-background = ${colors.color7}
 label-foreground = ${colors.foreground}
 
@@ -490,7 +439,7 @@ date-alt = " %A %d/%m/%Y"
 time = "%H:%M "
 time-alt = "%H:%M:%S "
 
-label =" %{T2}%{T1}%date%.%time%"
+label = "%{T1}%date%.%time%"
 label-background = ${colors.color8}
 label-foreground = ${colors.foreground}
 
@@ -505,44 +454,44 @@ format-prefix = ""
 format-prefix-background = ${colors.color10}
 format-prefix-foreground = ${colors.accent}
 
-label-open = " %{T2} "
+label-open = " %{T1}BERSYUKUR "
 label-open-foreground = ${colors.foreground}
-label-open-background = ${colors.accent2}
+label-open-background = ${colors.color9}
 label-close = " BATAL "
 label-close-margin-right = 0
-label-close-foreground = ${colors.foreground}
-label-close-background = ${colors.accent2}
+label-close-foreground = ${colors.foreground_dark}
+label-close-background = ${colors.accent}
 label-separator = ""
 label-separator-foreground = ${colors.foreground}
 
-menu-0-0 = " %{T1}RESTART "
-menu-0-0-foreground = ${colors.foreground}
-menu-0-0-background = ${colors.accent2}
+menu-0-0 = " %{T1}RESTART "
+menu-0-0-foreground = ${colors.foreground_dark}
+menu-0-0-background = ${colors.accent}
 menu-0-0-exec = menu-open-1
 menu-0-0-margin-left = 0
-menu-0-1 = " %{T1}MATIKAN "
-menu-0-1-foreground = ${colors.foreground}
-menu-0-1-background = ${colors.accent2}
+menu-0-1 = " %{T1}MATIKAN "
+menu-0-1-foreground = ${colors.foreground_dark}
+menu-0-1-background = ${colors.accent}
 menu-0-1-exec = menu-open-2
 
-menu-1-0 = " %{T1}BATAL "
-menu-1-0-foreground = ${colors.foreground}
-menu-1-0-background = ${colors.accent2}
+menu-1-0 = " %{T1}BATAL "
+menu-1-0-foreground = ${colors.foreground_dark}
+menu-1-0-background = ${colors.accent}
 menu-1-0-exec = menu-open-0
 menu-1-0-margin-left = 0
-menu-1-1 = " %{T1}RESTART "
-menu-1-1-foreground = ${colors.foreground}
-menu-1-1-background = ${colors.accent2}
+menu-1-1 = " %{T1}RESTART "
+menu-1-1-foreground = ${colors.foreground_dark}
+menu-1-1-background = ${colors.accent}
 menu-1-1-exec = reboot
 
-menu-2-0 = " %{T1}MATIKAN "
+menu-2-0 = " %{T1}MATIKAN "
 menu-2-0-exec = shutdown now
-menu-2-0-foreground = ${colors.foreground}
-menu-2-0-background = ${colors.accent2}
+menu-2-0-foreground = ${colors.foreground_dark}
+menu-2-0-background = ${colors.accent}
 menu-2-0-margin-left = 0
-menu-2-1 = " %{T1}BATAL "
-menu-2-1-foreground = ${colors.foreground}
-menu-2-1-background = ${colors.accent2}
+menu-2-1 = " %{T1}BATAL "
+menu-2-1-foreground = ${colors.foreground_dark}
+menu-2-1-background = ${colors.accent}
 menu-2-1-exec = menu-open-0
 
 [settings]
