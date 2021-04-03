@@ -82,7 +82,7 @@ module-margin-right = 0
 
 font-0 = consolas:pixelsize=10;2
 font-1 = consolas:pixelsize=9;2
-font-2 = consolas:pixelsize=12;3
+font-2 = iosevka:pixelsize=8;2
 
 modules-left = i3urgent icon i3 fill kanan2 xwindow kanan3 separator
 modules-center =
@@ -344,14 +344,14 @@ label-full = " %{T1}100% "
 label-full-foreground = ${colors.foreground}
 label-full-background =  ${colors.color5}
 
-;format-charging ="<animation-charging><label-charging>"
+#format-charging ="<animation-charging><label-charging>"
 format-charging ="<label-charging>"
-label-charging = "%percentage%% "
+label-charging = " %{T3}CHARGING%{T-} %percentage%% "
 format-charging-background = ${colors.color5} 
 label-charging-foreground = ${colors.foreground}
 
 format-discharging ="<ramp-capacity><label-discharging>"
-label-discharging = "%percentage%% "
+label-discharging = " %percentage%% "
 format-discharging-background = ${colors.color5}
 label-discharging-foreground =  ${colors.foreground}
 
@@ -359,20 +359,14 @@ label-discharging-foreground =  ${colors.foreground}
 ;format-full-prefix-foreground = ${colors.foreground-alt}
 ;format-full-prefix-background = ${colors.foreground-alt}
 
-ramp-capacity-0 = ""
-ramp-capacity-1 = ""
-ramp-capacity-2 = ""
-ramp-capacity-3 = ""
-ramp-capacity-4 = ""
+ramp-capacity-0 = " %{T3}|%{T-}"
+ramp-capacity-1 = " %{T3}||%{T-}"
+ramp-capacity-2 = " %{T3}|||%{T-}"
 
-animation-charging-0 = ""
-animation-charging-1 = ""
-animation-charging-2 = ""
-animation-charging-3 = ""
-animation-charging-4 = ""
+animation-charging-0 = " %{T3}c:%{T-}" 
 
 animation-charging-foreground =  ${colors.foreground}
-animation-charging-framerate = 1000
+animation-charging-framerate = 200
 ;animation-charging-framerate = 750
 
 animation-discharging-0 = ""
