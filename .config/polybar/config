@@ -46,7 +46,7 @@ foreground-alt  = #60FFFFFF
 white   = #FFFFFF
 accent  = #F89E4C
 accent2 = #CE2949
-alert = #2D5753
+alert   = #24608E
 transparent = #00000000
 
 [bar/topbar]
@@ -84,8 +84,8 @@ font-0 = consolas:pixelsize=10;2
 font-1 = consolas:pixelsize=9;2
 font-2 = iosevka:pixelsize=8;2
 
-modules-left = i3urgent icon i3 fill kanan2 xwindow kanan3 separator
-modules-center =
+modules-left = icon i3 fill kanan2 xwindow kanan3 separator
+modules-center = i3urgent
 modules-right = kiri pulseaudio cpu memory battery get_temp stat_net date powermenu kiri2
 
 cursor-click = pointer
@@ -230,8 +230,8 @@ label-unfocused-foreground= ${colors.foreground-alt}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = "%{T1}%icon%"
-label-urgent-background = ${colors.accent}
-label-urgent-foreground = ${colors.accent2}
+label-urgent-background = ${colors.accent2}
+label-urgent-foreground = ${colors.foreground}
 label-urgent-padding = 0
 label-urgent-margin-left = 0
 label-urgent-margin-right = 0
@@ -261,8 +261,8 @@ label-focused = ""
 label-unfocused = ""
 
 ; urgent = Workspace with urgency hint set
-label-urgent = "%{T1}%icon%"
-label-urgent-background = ${colors.accent2}
+label-urgent = "%{T1}URGENT %{T1}%icon%"
+label-urgent-background = ${colors.alert}
 label-urgent-foreground = ${colors.white}
 label-urgent-padding = 1
 label-urgent-margin-left = 0
