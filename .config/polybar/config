@@ -81,8 +81,8 @@ module-margin-left = 0
 module-margin-right = 0
 
 font-0 = consolas:pixelsize=10;2
-font-1 = consolas:pixelsize=9;2
-font-2 = iosevka:pixelsize=8;2
+font-1 = iosevka:pixelsize=8;2
+font-2 = "iosevka:pixelsize=6.6;2.5"
 
 modules-left = icon i3 fill kanan2 xwindow kanan3 separator
 modules-center = i3urgent
@@ -346,7 +346,7 @@ label-full-background =  ${colors.color5}
 
 #format-charging ="<animation-charging><label-charging>"
 format-charging ="<label-charging>"
-label-charging = " %{T3}CHARGING%{T-} %percentage%% "
+label-charging = " %{T2}CHARGING%{T-} %percentage%% "
 format-charging-background = ${colors.color5} 
 label-charging-foreground = ${colors.foreground}
 
@@ -363,7 +363,7 @@ ramp-capacity-0 = " %{T3}|%{T-}"
 ramp-capacity-1 = " %{T3}||%{T-}"
 ramp-capacity-2 = " %{T3}|||%{T-}"
 
-animation-charging-0 = " %{T3}c:%{T-}" 
+animation-charging-0 = " %{T2}c:%{T-}" 
 
 animation-charging-foreground =  ${colors.foreground}
 animation-charging-framerate = 200
