@@ -6,7 +6,7 @@ configuration {
 	lines: 5;
 	columns: 1;
   	font: "inconsolata 9";
-/*  bw: 4;*/
+/*	bw: 4;*/
 	location: 0;
 /*	padding: 5;*/
 /*	yoffset: 0;*/
@@ -305,4 +305,4 @@ configuration {
 /*	me-accept-entry: "MouseDPrimary";*/
 /*	me-accept-custom: "Control+MouseDPrimary";*/
 //}
-@import "/usr/share/rofi/themes/Pop-Dark.rasi"
+@import "/home/raiszainuri/.config/rofi/Pop-Dark.rasi"
