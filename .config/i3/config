@@ -203,6 +203,9 @@ bindsym Mod1+Shift+2            exec --no-startup-id feh --no-fehbg --bg-fill -Z
 # ---- exec rofi
 bindsym $mod+d                  exec --no-startup-id rofi -show drun
 
+# ---- exec flameshot
+bindsym Shift+Print             exec --no-startup-id flameshot gui
+
 # ---- exec picom
 bindsym $mod+p                  exec --no-startup-id picom -o 0.75 -D 2 -m 0.88 -i 1.0 -e 1.0 --active-opacity 1.0 --no-fading-openclose
 bindsym $mod+Shift+p            exec --no-startup-id pkill picom
