@@ -24,15 +24,15 @@
 
 [colors]
 
-color10 = #CE2949
-color9  = #B32D47
-color8  = #9C3045
-color7  = #8C3243
-color6  = #7B3341
-color5  = #723440
-color4  = #69353F
-color3  = #52383D
-color2  = #3A3A3A
+color10 = #24608E
+color9  = #275C84
+color8  = #2A5779
+color7  = #2D526F
+color6  = #2E506A
+color5  = #2F4D64
+color4  = #32495A
+color3  = #35444F
+color2  = #383F45
 color1  = #3A3A3A
 color0  = #3A3A3A
 
@@ -45,7 +45,7 @@ foreground-alt  = #60FFFFFF
 
 white   = #FFFFFF
 accent  = #F89E4C
-accent2 = #CE2949
+accent2 = #24608E
 alert   = #24608E
 transparent = #00000000
 
@@ -85,7 +85,7 @@ font-1 = iosevka:pixelsize=8;2
 font-2 = "iosevka:pixelsize=6.6;2.5"
 
 modules-left = icon i3 fill kanan2 xwindow kanan3 separator
-modules-center = i3urgent
+modules-center = i3urgent mpd
 modules-right = kiri pulseaudio cpu memory battery get_temp stat_net date powermenu kiri2
 
 cursor-click = pointer
@@ -288,6 +288,14 @@ format-prefix-foreground = ${colors.foreground}
 label = " %{T1}%title:0:60:...% "
 label-background = ${colors.color0}
 label-foreground = ${color.foreground}
+
+# CENTER ====================================================================
+
+[module/mpd]
+type = internal/mpd
+host = 127.0.0.1
+port = 6601
+interval = 5
 
 # RIGHT ====================================================================
 
