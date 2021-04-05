@@ -167,10 +167,10 @@ bindsym $mod+r         mode "resize"
 # ==================================== MY CONFIG ====================================
 
 #client.focused                 #2D3142 #2D3142 #FFFBF7 #FF0000   #FFFFFF
-client.urgent                  #CE2949 #CE2949 #FFFBF7 #CE2949   #CE2949
+client.focused                  #24608E #24608E #FFFFFF #24608E   #24608E
 client.unfocused                #1C1C1C #1C1C1C #888888 #222222   #222222
 client.focused_inactive         #222222 #222222 #FFFFFF #222222   #222222
-client.focused                   #24608E #24608E #FFFFFF #24608E   #24608E
+client.urgent                   #CE2949 #CE2949 #FFFBF7 #CE2949   #CE2949
 
 # ====================================
 

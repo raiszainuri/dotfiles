@@ -46,7 +46,7 @@ foreground-alt  = #60FFFFFF
 white   = #FFFFFF
 accent  = #F89E4C
 accent2 = #24608E
-alert   = #24608E
+alert   = #CE2949
 transparent = #00000000
 
 [bar/topbar]
@@ -85,8 +85,8 @@ font-1 = iosevka:pixelsize=8;2
 font-2 = "iosevka:pixelsize=6.6;2.5"
 
 modules-left = icon i3 fill kanan2 xwindow kanan3 separator
-modules-center = i3urgent mpd
-modules-right = kiri pulseaudio cpu memory battery get_temp stat_net date powermenu kiri2
+modules-center = mpd reminder
+modules-right = i3urgent kiri pulseaudio cpu memory battery get_temp stat_net date powermenu kiri2
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -271,7 +271,7 @@ label-urgent-margin-right = 0
 ;label-mode = [%mode%]
 label-mode = " RESIZE "
 label-mode-padding = 0
-label-mode-background = ${colors.accent2}
+label-mode-background = ${colors.alert}
 label-mode-foreground = ${colors.foreground}
 
 ; Separator in between workspaces
@@ -296,6 +296,16 @@ type = internal/mpd
 host = 127.0.0.1
 port = 6601
 interval = 5
+
+[module/reminder]
+type = custom/script
+exec = cat ~/.config/reminder.txt
+tail = true
+interval = 3.0
+format = <label>
+label = " %{T1}%output% "
+label-background = ${colors.transparent}
+label-foreground = ${colors.foreground}
 
 # RIGHT ====================================================================
 
