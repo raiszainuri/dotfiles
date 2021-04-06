@@ -208,7 +208,10 @@ bindsym Shift+Print             exec --no-startup-id flameshot gui
 
 # ---- exec picom
 bindsym $mod+p                  exec --no-startup-id picom -o 0.75 -D 2 -m 0.88 -i 1.0 -e 1.0 --active-opacity 1.0 --no-fading-openclose
-bindsym $mod+Shift+p            exec --no-startup-id pkill picom
+bindsym $mod+Shift+p            exec --no-startup-id ~/.config/MySetting/stop_compositor.sh
+
+# ---- exec xcompmgr
+bindsym $mod+x                  exec --no-startup-id xcompmgr
 
 # ---- exec nm-applet
 bindsym $mod+Shift+n            exec --no-startup-id pkill nm-applet
