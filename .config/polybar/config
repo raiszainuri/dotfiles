@@ -400,7 +400,7 @@ animation-discharging-framerate = 1000
 
 [module/get_temp]
 type = custom/script
-exec = ~/.config/MySetting/get_temp.sh
+exec = ~/.config/MySetting/get_temp_i3.sh
 tail = true
 interval = 3.0
 format = <label>
@@ -412,7 +412,7 @@ label-foreground = ${colors.foreground}
 
 [module/stat_net]
 type = custom/script
-exec = ~/.config/MySetting/stat_network.sh
+exec = ~/.config/MySetting/stat_network_i3.sh
 tail = true
 interval = 300.0
 format = <label>
