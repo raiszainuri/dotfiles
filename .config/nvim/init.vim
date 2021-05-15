@@ -45,7 +45,7 @@ set showbreak=>> "set breakindentopt=shift:2,min:40,sbr
 "set mouse=a
 set cursorline
 
-hi CursorLine term=bold cterm=bold guibg=#121212
+hi CursorLine term=bold cterm=bold guibg=#3D4A50
 
 
 " ---------------------------------------------------------------------------------------------
