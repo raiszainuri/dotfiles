@@ -34,7 +34,7 @@ bindsym $mod+Shift+q kill
 
 
 # ---- dmenu
-bindsym $mod+Tab                        exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -f -i -h 20 -nf '#848484' -nb '#222222' -sb '#A4A5AD' -sf '#222222' -fn 'fira code-9'"
+bindsym $mod+Tab                        exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -f -i -p 'APLIKASI:' -h 20 -nf '#848484' -nb '#222222' -sb '#A4A5AD' -sf '#222222' -fn 'fira code-9'"
 
 # change focus
 bindsym $mod+j          focus left
@@ -214,8 +214,8 @@ bindsym $mod+Shift+p            exec --no-startup-id ~/.config/MySetting/stop_co
 bindsym $mod+x                  exec --no-startup-id xcompmgr
 
 # ---- exec nm-applet
-bindsym $mod+Shift+n            exec --no-startup-id pkill nm-applet
-bindsym $mod+n                  exec --no-startup-id       nm-applet
+#bindsym $mod+Shift+n            exec --no-startup-id pkill nm-applet
+#bindsym $mod+n                  exec --no-startup-id       nm-applet
 
 # ---- exec screenkey
 bindsym $mod+Shift+Control+s    exec --no-startup-id pkill screenkey
@@ -230,6 +230,8 @@ bindsym Mod1+Tab                focus right
 
 bindsym $mod+t                  exec --no-startup-id thunar
 bindsym $mod+Print              exec --no-startup-id ~/.config/MySetting/scrot.sh
+
+bindsym $mod+N		              exec --no-startup-id ~/.config/MySetting/show_stat_net.sh
 
 bindsym $mod+Shift+Print        exec --no-startup-id ~/.config/MySetting/scrot_clipboard.sh
 bindsym $mod+Shift+f            exec --no-startup-id firefox
