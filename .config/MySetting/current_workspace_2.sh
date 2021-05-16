@@ -12,5 +12,5 @@ case $curr_workspace in
     [7] ) printf "7";;
     [8] ) printf "8";;
     [9] ) printf "9";;
-    *   ) printf "10";;
+    *   ) printf "0";;
 esac
