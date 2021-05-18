@@ -200,7 +200,6 @@ label-foreground = ${colors.foreground}
 [module/xfwm_workspace]
 type = custom/script
 exec = ~/.config/MySetting/current_workspace_2.sh
-#exec = "printf "%02d" $(top -bn1 | grep Cpu | awk '{print $2}' | cut -f1 -d".")"
 tail = true
 interval = 1
 format = <label>
