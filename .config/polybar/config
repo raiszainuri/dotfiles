@@ -99,7 +99,7 @@ font-2 = "iosevka:pixelsize=6.6;2.5"
 
 modules-left = icon i3 fill kanan2 xwindow kanan3 separator
 modules-center = mpd reminder
-modules-right = i3urgent kiri pulseaudio cpu memory battery get_temp stat_net date powermenu kiri2
+modules-right = i3urgent kiri pulseaudio spacing cpu spacing memory spacing battery spacing get_temp spacing stat_net spacing date spacing powermenu kiri2
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -200,9 +200,9 @@ label-foreground = ${colors.foreground}
 [module/xfwm_workspace]
 type = custom/script
 exec = ~/.config/MySetting/current_workspace_2.sh
-#exec = echo ""
+#exec = "printf "%02d" $(top -bn1 | grep Cpu | awk '{print $2}' | cut -f1 -d".")"
 tail = true
-interval = 0
+interval = 1
 format = <label>
 label = " %output% "
 label-background = ${colors.color10}
@@ -495,7 +495,7 @@ format-prefix = ""
 format-prefix-background = ${colors.color10}
 format-prefix-foreground = ${colors.accent}
 
-label-open = " %{T1}RAISZAINURI "
+label-open = " %{T1}SWEETLEARN "
 label-open-foreground = ${colors.foreground}
 label-open-background = ${colors.color9}
 label-close = " BATAL "
