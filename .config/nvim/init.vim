@@ -12,8 +12,7 @@ Plug 'vim-airline/vim-airline' "theme
 Plug 'ryanoasis/vim-devicons' "icon
 Plug 'kyazdani42/nvim-tree.lua' "tree
 Plug 'tweekmonster/startuptime.vim'
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
+Plug 'wfxr/minimap.vim'
 
 "Plug 'kyazdani42/nvim-web-devicons' " for file icons
 "Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  "theme ~ contrast color
@@ -46,6 +45,7 @@ set showbreak=>> "set breakindentopt=shift:2,min:40,sbr
 set cursorline
 
 hi CursorLine term=bold cterm=bold guibg=#3D4A50
+hi VertSplit ctermbg=NONE guibg=NONE
 
 
 " ---------------------------------------------------------------------------------------------
@@ -73,6 +73,10 @@ let g:UltiSnipsExpandTrigger="<tab>"
 " let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 " let g:UltiSnipsJumpForwardTrigger="<c-b>"
 
+" minimap
+let g:minimap_width = 20
+let g:minimap_auto_start = 1
+let g:minimap_auto_start_win_enter = 1
 
 " ---------------------------------------------------------------------------------------------
 
