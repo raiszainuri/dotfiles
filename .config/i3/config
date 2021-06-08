@@ -34,7 +34,7 @@ bindsym $mod+Shift+q kill
 
 
 # ---- dmenu
-bindsym $mod+Tab                        exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -f -i -p 'APLIKASI:' -h 20 -nf '#848484' -nb '#222222' -sb '#A4A5AD' -sf '#222222' -fn 'fira code-9'"
+bindsym $mod+Tab                        exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -f -i -p '' -h 20 -nf '#848484' -nb '#222222' -sb '#A4A5AD' -sf '#222222' -fn 'fira code-9'"
 
 # change focus
 bindsym $mod+j          focus left
@@ -68,6 +68,7 @@ bindsym $mod+v          split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f          fullscreen toggle
+bindsym $mod+Shift+f          fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s          layout stacking
@@ -167,7 +168,7 @@ bindsym $mod+r         mode "resize"
 # ==================================== MY CONFIG ====================================
 
 #client.focused                 #2D3142 #2D3142 #FFFBF7 #FF0000   #FFFFFF
-client.focused                  #24608E #24608E #FFFFFF #24608E   #24608E
+client.focused                  #24608E #24608E #FFFFFF #24608E   #4C4F5F
 client.unfocused                #1C1C1C #1C1C1C #888888 #222222   #222222
 client.focused_inactive         #222222 #222222 #FFFFFF #222222   #222222
 client.urgent                   #CE2949 #CE2949 #FFFBF7 #CE2949   #CE2949
@@ -234,8 +235,7 @@ bindsym $mod+Print              exec --no-startup-id ~/.config/MySetting/scrot.s
 bindsym $mod+N		              exec --no-startup-id ~/.config/MySetting/show_stat_net.sh
 
 bindsym $mod+Shift+Print        exec --no-startup-id ~/.config/MySetting/scrot_clipboard.sh
-bindsym $mod+Shift+f            exec --no-startup-id firefox
-bindsym $mod+Shift+t            exec --no-startup-id TDESKTOP_USE_GTK_FILE_DIALOG=1 telegram-desktop -- %u
+bindsym $mod+Shift+t            exec --no-startup-id kotatogram-desktop
 
 # bindsym $mod+Control+Print      exec --no-startup-id xfce4-terminal -x scrot -s
 bindsym $mod+Control+Print      exec --no-startup-id "sleep 0.2;scrot -s"
@@ -253,7 +253,7 @@ bindsym XF86MonBrightnessDown   exec --no-startup-id brightnessctl s 10-
 # https://gist.github.com/lirenlin/9892945
 
 title_align center
-for_window [class=".*"] border pixel 3
+for_window [class=".*"] border pixel 2
 for_window [class="SimpleScreenRecorder"]   floating enable
 for_window [class="Xdialog"]                floating enable
 
