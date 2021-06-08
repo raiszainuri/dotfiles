@@ -58,7 +58,7 @@ foreground-alt  = #60FFFFFF
 
 white   = #FFFFFF
 accent  = #F89E4C
-accent2 = #24608E
+accent2 = #D75F5F
 alert   = #CE2949
 transparent = #00000000
 
@@ -97,9 +97,10 @@ font-0 = consolas:pixelsize=10;2
 font-1 = iosevka:pixelsize=8;2
 font-2 = "iosevka:pixelsize=6.6;2.5"
 
-modules-left = icon i3 fill kanan2 xwindow kanan3 separator
-modules-center = mpd reminder
-modules-right = i3urgent kiri pulseaudio spacing cpu spacing memory spacing battery spacing get_temp spacing stat_net spacing date spacing powermenu kiri2
+#modules-left = icon i3 fill kanan2 xwindow kanan3 separator
+modules-left = icon i3 fill kanan2 xwindow
+modules-center = mpd 
+modules-right = reminder spacing i3urgent kiri pulseaudio spacing cpu spacing memory spacing battery spacing get_temp spacing stat_net spacing date spacing powermenu kiri2 spacing
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -109,7 +110,8 @@ tray-maxsize = 9
 tray-offset-x = 0
 tray-padding = 4
 tray-margin = 2
-tray-background = ${colors.accent2}
+#tray-background = ${colors.accent2}
+tray-background = ${colors.color0}
 
 # BAR ====================================================================
 
@@ -148,7 +150,7 @@ font-0 = "victor mono:pixelsize=9;1"
 font-1 = consolas:pixelsize=9;2
 font-2 = consolas:pixelsize=12;3
 
-modules-left = xfwm_workspace xwindow 
+modules-left = xfwm_workspace xwindow
 modules-center = 
 modules-right = mpd reminder spacing pulseaudio spacing cpu spacing memory spacing battery spacing get_temp spacing stat_net spacing date spacing powermenu spacing
 
@@ -309,11 +311,18 @@ format-prefix = ""
 format-prefix-background = ${colors.foreground_dark}
 format-prefix-foreground = ${colors.foreground}
 
-label = " %{T1}%title:0:60:...% "
+label = " %{T1}%title:0:40:...% "
 #label-background = ${colors.color0}
 label-background = #4C4F54
 label-foreground = ${color.foreground}
 
+[module/close_win]
+type = custom/text
+content = " x "
+content-background = ${colors.accent2}
+content-foreground = ${colors.foreground}
+
+click-left = .config/MySetting/close_win.sh
 # CENTER ====================================================================
 
 [module/mpd]
