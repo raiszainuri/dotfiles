@@ -62,3 +62,7 @@ end
 function sr
     mousepad ~/.config/reminder.txt
 end 
+
+function ppp
+    ping 8.8.8.8
+end
