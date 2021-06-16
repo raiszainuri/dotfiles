@@ -15,6 +15,7 @@ Plug 'junegunn/fzf.vim'
 " theme
 Plug 'lifepillar/vim-gruvbox8'
 Plug 'itchyny/lightline.vim'
+Plug 'mengelbrecht/lightline-bufferline'
 
 " icon
 " Plug 'kyazdani42/nvim-web-devicons'
