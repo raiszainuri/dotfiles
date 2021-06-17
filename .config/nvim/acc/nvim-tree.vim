@@ -1,4 +1,4 @@
-let g:nvim_tree_indent_markers = 1
+let g:nvim_tree_indent_markers = 0
 let g:nvim_tree_follow = 1
 
 let g:nvim_tree_icons = {
@@ -20,7 +20,7 @@ let g:nvim_tree_icons = {
     \   }
     \ }
 
-hi NvimTreeIndentMarker     guifg=#E4E4E4
-hi NvimTreeFolderIcon       guifg=#E4E4E4
-hi NvimTreeFolderName       guifg=#E4E4E4
-hi NvimTreeEmptyFolderName  guifg=#4E4E4E
+hi NvimTreeIndentMarker     guifg=#504945
+hi NvimTreeFolderIcon       guifg=#A89984
+hi NvimTreeFolderName       guifg=#A89984
+hi NvimTreeEmptyFolderName  guifg=#A89984

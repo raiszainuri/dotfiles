@@ -1,7 +1,7 @@
 call plug#begin('~/.config/nvim/plugged')
 
 " misc
-Plug 'lukas-reineke/indent-blankline.nvim'
+" Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'tweekmonster/startuptime.vim'
 Plug 'Shougo/deoplete.nvim'
 
