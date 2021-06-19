@@ -66,3 +66,7 @@ end
 function ppp
     ping 8.8.8.8
 end
+
+function nf
+    neofetch --source ~/.config/nf_ascii
+end
