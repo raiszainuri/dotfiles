@@ -68,5 +68,6 @@ function ppp
 end
 
 function nf
+    clear
     neofetch --source ~/.config/nf_ascii
 end
