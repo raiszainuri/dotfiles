@@ -505,7 +505,7 @@ format-prefix = ""
 format-prefix-background = ${colors.color10}
 format-prefix-foreground = ${colors.accent}
 
-label-open = " %{T1}SWEETLEARN "
+label-open = " %{T1}RAIS ZAINURI "
 label-open-foreground = ${colors.foreground}
 label-open-background = ${colors.color9}
 label-close = " BATAL "

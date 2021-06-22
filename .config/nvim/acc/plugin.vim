@@ -20,4 +20,7 @@ Plug 'mengelbrecht/lightline-bufferline'
 " icon
 " Plug 'kyazdani42/nvim-web-devicons'
 
+"treesitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 call plug#end()
