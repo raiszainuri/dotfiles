@@ -1,4 +1,3 @@
-set laststatus=2
 let g:lightline = {
       \ 'colorscheme': 'gruvbox8',
       \ 'active': {
@@ -15,3 +14,7 @@ let g:lightline = {
       \   'buffers': 'tabsel'
       \ }
       \ }
+
+let g:lightline.component_raw = {'buffers': 1}
+let g:lightline#bufferline#clickable = 1
+let g:lightline#bufferline#enable_devicons = 1

@@ -4,6 +4,7 @@ call plug#begin('~/.config/nvim/plugged')
 " Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'tweekmonster/startuptime.vim'
 Plug 'Shougo/deoplete.nvim'
+Plug 'voldikss/vim-floaterm'
 
 "file manager
 Plug 'kyazdani42/nvim-tree.lua'
@@ -18,7 +19,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
 
 " icon
-" Plug 'kyazdani42/nvim-web-devicons'
+Plug 'kyazdani42/nvim-web-devicons'
 
 "treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}

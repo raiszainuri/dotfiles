@@ -1,11 +1,17 @@
-inoremap            <C-Del>     <C-c>dei
+inoremap            <C-Del>     <C-c>dei a
 inoremap            <C-z>       <C-c>ui
-tnoremap            <Esc>       <C-\><C-n>:q!<CR>
 inoremap            <C-Space>   <C-x><C-o>
+tnoremap            <Esc>       <C-\><C-n>:q!<CR>
+
+noremap    <silent> <M-BS>      :bd<CR>
+"noremap    <silent> <C-P>       <Esc>:w<cr>:FloatermNew --title=java --autoclose=0 echo "compiling..." && javac % && java ./%<cr>
+"noremap    <silent> <C-P>       <Esc>:w<cr>:FloatermNew --title=node --autoclose=0 node %<cr>
+noremap    <silent> <C-P>       <Esc>:w<cr>:FloatermNew --title=php --autoclose=0 php %<cr>
 
 nnoremap   <silent> <C-H>       :Files<cr>
 nnoremap   <silent> <C-F>       :Files ~/MyProject/Programming<cr>
 nnoremap   <silent> <C-G>       :Files /usr/share/nginx/html/<cr>
+nnoremap   <silent> <C-[>       :FloatermKill<cr>
 nnoremap   <silent> <M-Right>   :tabn<CR>
 nnoremap   <silent> <M-Left>    :tabp<CR>
 nnoremap            <C-n>       :NvimTreeToggle<CR>
