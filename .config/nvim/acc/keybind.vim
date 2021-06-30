@@ -4,9 +4,10 @@ inoremap            <C-Space>   <C-x><C-o>
 tnoremap            <Esc>       <C-\><C-n>:q!<CR>
 
 noremap    <silent> <M-BS>      :bd<CR>
-"noremap    <silent> <C-P>       <Esc>:w<cr>:FloatermNew --title=java --autoclose=0 echo "compiling..." && javac % && java ./%<cr>
+noremap    <silent> <C-P>       <Esc>:w<cr>:FloatermNew --title=ㅤjavaㅤ --autoclose=0 echo "compiling..." && javac % && java ./%<cr>
 "noremap    <silent> <C-P>       <Esc>:w<cr>:FloatermNew --title=node --autoclose=0 node %<cr>
-noremap    <silent> <C-P>       <Esc>:w<cr>:FloatermNew --title=php --autoclose=0 php %<cr>
+"noremap    <silent> <C-P>       <Esc>:w<cr>:FloatermNew --title=php --autoclose=0 php %<cr>
+"noremap    <silent> <C-P>       <Esc>:w<cr>:FloatermNew --title=php --autoclose=0 neofetch --source ~/.config/nf_ascii<cr>
 
 nnoremap   <silent> <C-H>       :Files<cr>
 nnoremap   <silent> <C-F>       :Files ~/MyProject/Programming<cr>

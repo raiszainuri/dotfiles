@@ -151,8 +151,8 @@ font-1 = consolas:pixelsize=9;2
 font-2 = consolas:pixelsize=12;3
 
 modules-left = xfwm_workspace xwindow
-modules-center = 
-modules-right = mpd reminder spacing pulseaudio spacing cpu spacing memory spacing battery spacing get_temp spacing stat_net spacing date spacing powermenu spacing
+modules-center = mpd
+modules-right = reminder spacing pulseaudio spacing cpu spacing memory spacing battery spacing get_temp spacing stat_net spacing date spacing powermenu spacing
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -316,13 +316,6 @@ label = " %{T1}%title:0:40:...% "
 label-background = #4C4F54
 label-foreground = ${color.foreground}
 
-[module/close_win]
-type = custom/text
-content = " x "
-content-background = ${colors.accent2}
-content-foreground = ${colors.foreground}
-
-click-left = .config/MySetting/close_win.sh
 # CENTER ====================================================================
 
 [module/mpd]
@@ -331,7 +324,9 @@ host = 127.0.0.1
 port = 6601
 interval = 5
 
-label = "%output% |"
+format-online-background = ${colors.foreground_dark}
+format-online-foreground = ${colors.foreground}
+format-online-padding = 2
 
 [module/reminder]
 type = custom/script
