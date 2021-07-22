@@ -34,7 +34,7 @@ bindsym $mod+Shift+q kill
 
 
 # ---- dmenu
-bindsym $mod+Tab                        exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -b -f -i -p '' -h 20 -nf '#848484' -nb '#222222' -sb '#A4A5AD' -sf '#222222' -fn 'fira code-9'"
+bindsym $mod+Tab                        exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -b -f -i -p '' -h 20 -nf '#848484' -nb '#21252B' -sb '#A4A5AD' -sf '#222222' -fn 'victor mono-9'"
 
 # change focus
 bindsym $mod+j          focus left
@@ -169,7 +169,7 @@ bindsym $mod+r         mode "resize"
 
 #client.focused                 #2D3142 #2D3142 #FFFBF7 #FF0000   #FFFFFF
 client.focused                  #4C4F54 #4C4F54 #FFFFFF #4C4F54   #4C4F5F
-client.unfocused                #1C1C1C #1C1C1C #888888 #222222   #222222
+client.unfocused                #21252B #21252B #888888 #222222   #222222
 client.focused_inactive         #222222 #222222 #FFFFFF #222222   #222222
 client.urgent                   #CE2949 #CE2949 #FFFBF7 #CE2949   #CE2949
 
@@ -259,6 +259,12 @@ title_align center
 for_window [class=".*"] border pixel 1
 for_window [class="SimpleScreenRecorder"]   floating enable
 for_window [class="Xdialog"]                floating enable
+for_window [class="Xfce4-terminal"]         floating enable
+for_window [class="kitty"]                  floating enable
+for_window [class="Gpick"]                  floating enable
+for_window [class="Android Emulator*"]      floating enable
+for_window [class="qvidcap"]                floating enable
+#for_window [class="mpv"]                    floating enable
 
 # gaps outer 5
   gaps inner 8
