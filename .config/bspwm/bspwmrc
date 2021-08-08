@@ -1,7 +1,7 @@
 #! /bin/sh
 
 pgrep -x sxhkd > /dev/null || sxhkd &
-bspc monitor -d 1 2 3 4
+bspc monitor -d 1 2 3 4 
 
 bspc config border_width         2
 bspc config window_gap          10
@@ -18,12 +18,19 @@ bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 bspc rule -a kitty state=floating
+bspc rule -a qvidcap state=floating
+bspc rule -a SimpleScreenRecorder state=floating
+bspc rule -a Xfce4-terminal state=floating
+bspc rule -a flameshot state=floating
+bspc rule -a Gnome-pomodoro state=floating 
+bspc rule -a Xfce4-notes state=floating
 
 wmname LG3D &
 flameshot &
 nm-applet &
 /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
-feh --no-fehbg --bg-fill -Z ~/Pictures/Wallpaper/wallpaper.png &
+#feh --no-fehbg --bg-fill -Z ~/Pictures/Wallpaper/wallpaper.png &
+feh --no-fehbg --bg-fill -Z ~/Pictures/Wallpaper/bs2.jpg &
 picom -o 0.75 -D 2 -m 0.88 -i 1.0 -e 1.0 --active-opacity 1.0 --no-fading-openclose &
 $HOME/.config/polybar/launch3.sh &
 xinput set-prop 12 282 1 &
