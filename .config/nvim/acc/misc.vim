@@ -1,6 +1,6 @@
 syntax on
 set termguicolors
-colorscheme gruvbox8
+colorscheme minimalist
 
 set t_Co=256
 set tabstop=4

@@ -8,13 +8,13 @@ Plug 'voldikss/vim-floaterm'
 
 "file manager
 Plug 'kyazdani42/nvim-tree.lua'
+Plug 'dikiaap/minimalist'
 
 " fzf
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
 " theme
-Plug 'lifepillar/vim-gruvbox8'
 Plug 'itchyny/lightline.vim'
 Plug 'mengelbrecht/lightline-bufferline'
 
