@@ -34,7 +34,7 @@ bindsym $mod+Shift+q kill
 
 
 # ---- dmenu
-bindsym $mod+Tab                        exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -b -f -i -p '' -h 20 -nf '#848484' -nb '#21252B' -sb '#A4A5AD' -sf '#222222' -fn 'victor mono-9'"
+bindsym $mod+Tab                        exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -b -f -i -p '' -h 20 -nf '#848484' -nb '#21252B' -sb '#A4A5AD' -sf '#222222' -fn 'victor mono semibold-9'"
 
 # change focus
 bindsym $mod+j          focus left
