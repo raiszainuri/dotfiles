@@ -30,7 +30,7 @@ flameshot &
 nm-applet &
 /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
 #feh --no-fehbg --bg-fill -Z ~/Pictures/Wallpaper/wallpaper.png &
-feh --no-fehbg --bg-fill -Z ~/Pictures/Wallpaper/bs2.jpg &
+feh --no-fehbg --bg-fill -Z ~/Pictures/Wallpaper/wallpaper2.png &
 picom -o 0.75 -D 2 -m 0.88 -i 1.0 -e 1.0 --active-opacity 1.0 --no-fading-openclose &
 $HOME/.config/polybar/launch3.sh &
 xinput set-prop 12 282 1 &

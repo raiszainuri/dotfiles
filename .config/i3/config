@@ -177,7 +177,7 @@ client.urgent                   #CE2949 #CE2949 #FFFBF7 #CE2949   #CE2949
 
 exec_always     --no-startup-id $HOME/.config/polybar/launch.sh
 
-exec_always     --no-startup-id feh --no-fehbg --bg-fill -Z ~/Pictures/Wallpaper/wallpaper.png
+exec_always     --no-startup-id feh --no-fehbg --bg-fill -Z ~/Pictures/Wallpaper/wallpaper2.png
 exec_always     --no-startup-id picom -o 0.75 -D 2 -m 0.88 -i 1.0 -e 1.0 --active-opacity 1.0 --no-fading-openclose
 
 # ====================================
