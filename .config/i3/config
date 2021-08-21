@@ -34,11 +34,11 @@ bindsym $mod+Shift+q kill
 
 
 # ---- dmenu
-bindsym $mod+Tab                        exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -b -f -i -p '' -h 20 -nf '#848484' -nb '#21252B' -sb '#A4A5AD' -sf '#222222' -fn 'victor mono semibold-9'"
+bindsym $mod+Tab                        exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -f -i -p '' -h 20 -nf '#848484' -nb '#222222' -sb '#A4A5AD' -sf '#222222' -fn 'victor mono semibold-9'"
 
 # change focus
 bindsym $mod+j          focus left
-bindsym $mod+k          focus down
+#bindsym $mod+k          focus down
 bindsym $mod+l          focus up
 bindsym $mod+semicolon  focus right
 
@@ -177,7 +177,7 @@ client.urgent                   #CE2949 #CE2949 #FFFBF7 #CE2949   #CE2949
 
 exec_always     --no-startup-id $HOME/.config/polybar/launch.sh
 
-exec_always     --no-startup-id feh --no-fehbg --bg-fill -Z ~/Pictures/Wallpaper/wallpaper2.png
+exec_always     --no-startup-id feh --no-fehbg --bg-fill -Z ~/Pictures/Wallpaper/wallpaper.png
 exec_always     --no-startup-id picom -o 0.75 -D 2 -m 0.88 -i 1.0 -e 1.0 --active-opacity 1.0 --no-fading-openclose
 
 # ====================================
@@ -219,6 +219,9 @@ bindsym $mod+x                  exec --no-startup-id xcompmgr
 # ---- exec nm-applet
 #bindsym $mod+Shift+n            exec --no-startup-id pkill nm-applet
 #bindsym $mod+n                  exec --no-startup-id       nm-applet
+
+# ---- exec touchpad
+bindsym $mod+k                  exec xinput set-prop 13 302 1
 
 # ---- exec screenkey
 bindsym $mod+Shift+Control+s    exec --no-startup-id pkill screenkey
