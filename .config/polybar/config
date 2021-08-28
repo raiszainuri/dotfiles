@@ -207,7 +207,7 @@ font-2 = consolas:pixelsize=12;3
 
 modules-left = xfwm_workspace xwindow
 modules-center = reminder spacing pulseaudio spacing cpu spacing memory spacing battery spacing get_temp spacing stat_net spacing date spacing powermenu 
-modules-right = mpd xkill
+modules-right = mpd nasihat
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -305,6 +305,7 @@ tail = true
 interval = 1
 format = <label>
 label = " %output% "
+click-left = "xfce4-popup-applicationsmenu"
 label-background = #4C4F54
 label-foreground = ${colors.foreground}
 
@@ -439,6 +440,17 @@ label-background = ${colors.foreground_dark}
 label-foreground = ${colors.foreground}
 
 click-left = xfce4-terminal -x xkill & sleep 5
+
+[module/nasihat]
+type = custom/script
+exec = "echo Allah Maha Melihat"
+tail = true
+radius = 5.0
+interval = 600
+format = <label>
+label = " %output% "
+label-background = ${colors.foreground_dark}
+label-foreground = ${colors.foreground}
 
 # RIGHT ====================================================================
 

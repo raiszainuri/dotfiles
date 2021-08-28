@@ -3,11 +3,11 @@
  */
 * {
     text-color:                  #f2f2f2;
-    background-color:            #21252B;
-    lightbg:                     #3D4A50;
+    background-color:            #222222;
+    lightbg:                     #4C4F54;
     red:                         #f15d22;
     orange:                      #faa41a; 
-    blue:                        #3D4A50; 
+    blue:                        #4C4F54; 
 
     selected-normal-foreground:  @foreground;
     normal-foreground:           @foreground;
@@ -33,7 +33,7 @@
 }
 window {
     border: 2px;
-    border-color: #3D4A50;
+    border-color: #4C4F54;
     text-color: @foreground;
     background-color: rgb (79, 45, 71);
     padding:    5;
