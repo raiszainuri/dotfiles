@@ -305,7 +305,6 @@ tail = true
 interval = 1
 format = <label>
 label = " %output% "
-click-left = "xfce4-popup-applicationsmenu"
 label-background = #4C4F54
 label-foreground = ${colors.foreground}
 
@@ -412,7 +411,8 @@ host = 127.0.0.1
 port = 6601
 interval = 5
 
-format-online-background = ${colors.foreground_dark}
+format-online-background = #2E2E2E
+#format-online-background = ${colors.foreground_dark}
 format-online-foreground = ${colors.foreground}
 format-online-padding = 2
 
@@ -426,7 +426,8 @@ label = " %{T1}%output% "
 label-background = ${colors.background}
 label-foreground = ${colors.foreground}
 
-click-left = mousepad ~/.config/reminder.txt
+click-right = mousepad ~/.config/reminder.txt
+click-left = ~/.config/MySetting/show_reminder.sh
 
 [module/xkill]
 type = custom/script
