@@ -1,7 +1,7 @@
 # dotfiles
 My Dotfiles, its for backup my settings.
 
-currently im using [bspwm](https://github.com/baskerville/bspwm),
+currently, im using [bspwm](https://github.com/baskerville/bspwm),
 
 <br>
 
