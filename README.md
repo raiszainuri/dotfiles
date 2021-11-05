@@ -1,6 +1,10 @@
 # dotfiles
 My Dotfiles, its for backup my settings.
 
-currently im usign bspwm,
+currently im using [bspwm](https://github.com/baskerville/bspwm),
 
-![img1](img/img1.png)
+<br>
+
+| ![img1](img/img1.png) |
+|:--:|
+| ncmpcpp, cava, nautilus, neofetch, figlet, rangerImage Credits - Fig.2 - 4K Mountains Wallpaper |
