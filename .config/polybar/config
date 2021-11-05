@@ -120,7 +120,7 @@ radius = 0
 fixed-center = true
 override-redirect = false
 
-margin-bottom = 10
+margin-bottom = 0
 
 ;monitor = ${env:MONITOR:HDMI-1}
 ;offset-x = 1%
@@ -165,7 +165,7 @@ tray-padding = 4
 tray-margin = 2
 tray-background = #4C4F54
 
-bottom = true
+bottom = falsc
 
 
 # BAR ====================================================================
@@ -436,7 +436,7 @@ tail = true
 radius = 5.0
 interval = 600
 format = <label>
-label = " %output% "
+label = " bersyukur | %output% "
 label-background = ${colors.foreground_dark}
 label-foreground = ${colors.foreground}
 
@@ -663,7 +663,7 @@ screenchange-reload = true
 
 [global/wm]
 margin-top = 0
-margin-bottom = 10
+margin-bottom = 0
 margin-left = 10
 margin-right = 10
 

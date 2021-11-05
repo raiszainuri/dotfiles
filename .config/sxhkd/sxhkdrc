@@ -4,7 +4,7 @@ super + Return
 	kitty
 
 super + t
-    thunar
+    nautilus
 
 super + shift + t
     kotatogram-desktop
@@ -28,13 +28,13 @@ super + x
     ~/.config/MySetting/start_xcompmgr.sh
 
 super + Tab
-    j4-dmenu-desktop --dmenu="dmenu -b -f -i -p '' -h 20 -nf '#848484' -nb '#21252B' -sb '#A4A5AD' -sf '#222222' -fn 'victor mono semibold-9'"
+    j4-dmenu-desktop --dmenu="dmenu -f -i -p '' -h 20 -nf '#848484' -nb '#222222' -sb '#A4A5AD' -sf '#222222' -fn 'victor mono semibold-9'"
 
 super + Escape
 	pkill -USR1 -x sxhkd
 
 super + k
-    xinput set-prop 13 302 1
+    xinput set-prop 13 304 1
 
 XF86AudioRaiseVolume            
     pactl set-sink-volume @DEFAULT_SINK@ +5%
@@ -109,7 +109,7 @@ super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop
-alt + Tab
+shift + Tab
 	bspc {node} -f last
 
 # focus the older or newer node in the focus history

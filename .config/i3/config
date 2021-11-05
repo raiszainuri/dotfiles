@@ -200,8 +200,8 @@ exec            --no-startup-id mpd
 # ====================================
 
 # ---- exec wallpaper
-bindsym Mod1+Shift+1            exec --no-startup-id feh --no-fehbg --bg-fill -Z ~/Pictures/Wallpaper/andrea-caramello-jBxee1u2RAU-unsplash.jpg
-bindsym Mod1+Shift+2            exec --no-startup-id feh --no-fehbg --bg-fill -Z ~/Pictures/Wallpaper/luke-chesser-CxBx_J3yp9g-unsplash.jpg
+#bindsym Mod1+Shift+1            exec --no-startup-id feh --no-fehbg --bg-fill -Z ~/Pictures/Wallpaper/andrea-caramello-jBxee1u2RAU-unsplash.jpg
+#bindsym Mod1+Shift+2            exec --no-startup-id feh --no-fehbg --bg-fill -Z ~/Pictures/Wallpaper/luke-chesser-CxBx_J3yp9g-unsplash.jpg
 
 # ---- exec rofi
 bindsym $mod+d                  exec --no-startup-id rofi -show drun
@@ -231,7 +231,7 @@ bindsym $mod+Shift+s            exec --no-startup-id       screenkey
 bindsym $mod+Shift+Control+l    exec --no-startup-id .config/MySetting/lock_script.sh
 
 # ---- dsb
-bindsym Mod1+Tab                focus left
+#bindsym Mod1+Tab                focus left
 #bindsym Mod1+Shift+Tab          focus left; move right; move right;
 #bindsym Mod1+Tab                exec --no-startup-id ~/.config/MySetting/rofi_windows_switcher.sh
 
