@@ -33,11 +33,7 @@ always_run_script = true
 title = Dunst
 class = Dunst
 
-[shortcuts]
-close = ctrl+space
-close_all = ctrl+shift+space
-history = ctrl+grave
-context = ctrl+shift+period
+dmenu = /usr/bin/rofi -dmenu -p dunst
 
 [urgency_low]
 timeout = 10

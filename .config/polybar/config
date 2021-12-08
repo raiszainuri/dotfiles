@@ -165,7 +165,7 @@ tray-padding = 4
 tray-margin = 2
 tray-background = #4C4F54
 
-bottom = falsc
+bottom = false
 
 
 # BAR ====================================================================

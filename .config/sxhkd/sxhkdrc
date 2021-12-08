@@ -6,6 +6,9 @@ super + Return
 super + t
     nautilus
 
+super + d
+    rofi -show drun
+
 super + shift + t
     kotatogram-desktop
 
@@ -141,6 +144,16 @@ super + ctrl + space
 # cancel the preselection for the focused desktop
 super + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+# DUNST
+ctrl + space 
+    dunstctl close
+
+ctrl + grave
+    dunstctl history-pop
+
+ctrl + shift + o
+	dunstctl context
 
 #
 # move/resize

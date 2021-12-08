@@ -31,10 +31,10 @@ wmname LG3D &
 flameshot &
 nm-applet &
 /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
-#feh --no-fehbg --bg-fill -Z ~/Pictures/Wallpaper/wallpaper.png &
-feh --no-fehbg --bg-fill -Z ~/Pictures/Wallpaper/bg_8.jpg &
+feh --no-fehbg --bg-fill -Z ~/Pictures/Wallpaper/wallpaper2.png &
+#feh --no-fehbg --bg-fill -Z ~/Pictures/Wallpaper/bg_8.jpg &
 #feh --no-fehbg --bg-fill -Z ~/Pictures/Wallpaper/wallpaper_kata.png &
 picom -o 0.75 -D 2 -m 0.88 -i 1.0 -e 1.0 --active-opacity 1.0 --no-fading-openclose &
 $HOME/.config/polybar/launch3.sh &
-xinput set-prop 12 282 1 &
+xinput set-prop 12 283 1 &
 dunst -config ~/.config/dunst/dunstrc &
